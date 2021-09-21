@@ -3,18 +3,18 @@ import React from 'react'
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Home from "./components/Pages/Home";
 // import About from "./components/Pages/About";
-import logo from '.images/logo/stpetepetDraft.png'
+//import logo from '.images/logo/stpetepetDraft.png'
 
 export function App() {
   return (
     <>
       <header>
-        <img
+        {/* <img
           src={logo}
           alt="St Pete Pet logo of dog and cat at the beach."
           height="64"
           width="64"
-        />
+        /> */}
 
         <h1>StPete.Pet</h1>
       </header>
