@@ -37,14 +37,19 @@ h1 {
   margin: 0;
 }
 
-.logo,
-.seal {
+.logo {
   display: flex;
   justify-content: center;
   width: 200px;
   height: 150px;
 }
 
+.seal {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 250px;
+}
 main {
   display: flex;
   justify-content: center;
@@ -89,7 +94,7 @@ main {
 .listing-photo img {
   display: flex;
   justify-content: center;
-  width: 250px;
+  width: 300px;
   height: 200px;
   border: var(--background-gradient-bottom);
   border-width: 3px;
@@ -125,6 +130,11 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.instruction {
+  font-size: small;
+  opacity: 60%;
 }
 
 .listing1,

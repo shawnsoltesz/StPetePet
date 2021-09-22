@@ -1,27 +1,19 @@
 import React from 'react'
-import garden from '../images/recreation/UTenn.jpg'
+import fortdesoto from '../images/recreation/FortDesoto.jpg'
 
 export function ListingDetail() {
   return (
     <>
-      <h1 className="listing-name">UTenn Garden</h1>
+      <h1 className="listing-name">Fort Desoto</h1>
       <div className="listing-photo">
-        <img
-          src={garden}
-          alt="University of Tennessee dog mascot wearing an orange and white checkered cape"
-        />
+        <img src={fortdesoto} alt="cocker spaniel at the beach" />
       </div>
       <div className="description">
         <p>
-          <strong>Lorem Ipsum</strong> is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry&apos;s
-          standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
+          <strong>Fort Desoto</strong> has the only dog park where dogs are
+          allowed on the beach in a designated area. There are also 2 fenced-in
+          areas near the beach for large and small dogs with water stations
+          &#40;beach entrance is at the far southwest corner of dog park&#41;.
         </p>
       </div>
       <div className="contact-details">
@@ -30,16 +22,18 @@ export function ListingDetail() {
             <i className="fas fa-map"></i>
           </button>
           <p>
-            <strong>Address:</strong>134 Central Avenue, St. Petersburg, FL
-            33713
+            <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde, FL
+            33715
           </p>
         </div>
         <div className="phone">
           <button className="listing-button">
-            <i className="fas fa-phone"></i>
+            <i className="fas fa-phone">
+              <a href="tel:+17275822100"></a>
+            </i>
           </button>
           <p>
-            <strong>Phone:</strong>(727) 342-9877
+            <strong>Phone: </strong>727-582-2100
           </p>
         </div>
         <div className="website">
@@ -47,7 +41,10 @@ export function ListingDetail() {
             <i className="fas fa-globe"></i>
           </button>
           <p>
-            <strong>Website:</strong>http://www.google.com
+            <strong>Website: </strong>
+            <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
+              Fort Desoto Dog Beach
+            </a>
           </p>
         </div>
       </div>
