@@ -5,7 +5,7 @@
   --background-gradient-top: #f7e8a5;
   --background-gradient-bottom: #47afd4;
   --map-border: rgb(212, 203, 186);
-  --page-text: #23241e;
+  --page-text: #3b1b09;
   --heart: red;
   --paw: saddlebrown;
   --h1-font: 'Alegreya Sans SC', sans-serif;
@@ -34,6 +34,7 @@ header {
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 50px;
+  margin: 0;
 }
 
 .logo,
@@ -94,6 +95,30 @@ main {
   border-width: 3px;
   border-radius: 3%;
   border-style: solid;
+}
+
+.login {
+  height: 1.5em;
+  border-radius: 3px;
+  border: 3px solid var(--background-gradient-bottom);
+  transition: border 0.4s ease-out;
+  padding: 13px;
+  font-family: Oxygen, sans-serif;
+  font-size: 19px;
+  color: #3e3e42;
+  background: rgba(15, 15, 15, 0.01);
+  display: flex;
+  justify-content: center;
+  flex-wrap: center;
+}
+
+.login-input:hover {
+  border: 2px solid var(--background-gradient-bottom);
+}
+
+.login-input:focus {
+  border: 2px solid #6565e7;
+  box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
 }
 
 .listing1,

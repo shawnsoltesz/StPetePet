@@ -1,11 +1,21 @@
 import React from 'react'
 
-const Login = () => {
+export function Login() {
   return (
     <>
-      <h1>Login</h1>
+      <h1 className="listing-name">Login</h1>
+      <div className="login">
+        <label htmlFor="username">Username: </label>
+        <input type="text" name="username" />
+
+        <label>Password:</label>
+        <input type="text" name="password" />
+
+        <br />
+        <br />
+
+        <input type="submit" value="Submit" />
+      </div>
     </>
   )
 }
-
-export default Login
