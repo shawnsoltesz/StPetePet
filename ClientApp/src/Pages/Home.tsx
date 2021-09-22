@@ -1,5 +1,5 @@
 import React from 'react'
-import StPete from './images/map/map-stpete-fl.gif'
+import StPete from '../images/map/map-stpete-fl.gif'
 
 export function Home() {
   return (

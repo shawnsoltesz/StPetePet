@@ -2,6 +2,12 @@
 
 :root {
   font: 16px / 1 sans-serif;
+  --background-gradient-top: #f7e8a5;
+  --background-gradient-bottom: #47afd4;
+  --map-border: rgb(212, 203, 186);
+  --page-text: #23241e;
+  --heart: red;
+  --paw: saddlebrown;
 }
 
 html {
@@ -12,8 +18,12 @@ body {
   margin: 0;
   min-height: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #f7e8a5, #47afd4);
-  color: #23241e;
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-bottom)
+  );
+  color: var(--page-text);
 }
 
 header {
@@ -21,7 +31,8 @@ header {
   justify-content: center;
 }
 
-.logo {
+.logo,
+.seal {
   display: flex;
   justify-content: center;
   width: 200px;
@@ -48,8 +59,8 @@ main {
   justify-content: center;
   width: 225px;
   height: 225px;
-  background-color: #47afd4;
-  border: rgb(212, 203, 186);
+  background-color: var(--background-gradient-bottom);
+  border: var(--map-border);
   border-width: 3px;
   border-style: solid;
   padding-bottom: 5px;
@@ -66,7 +77,7 @@ main {
   justify-content: center;
   width: 250px;
   height: 200px;
-  border: #47afd4;
+  border: var(--background-gradient-bottom);
   border-width: 3px;
   border-radius: 3%;
   border-style: solid;
@@ -90,11 +101,11 @@ footer {
 }
 
 .heart {
-  color: red;
+  color: var(--heart);
 }
 
 .paw {
-  color: saddlebrown;
+  color: var(--paw);
   transform: rotate(35deg);
 }
 
