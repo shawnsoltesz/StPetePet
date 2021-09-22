@@ -26,8 +26,6 @@ header {
   justify-content: center;
   width: 250px;
   height: 200px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 main {
@@ -38,7 +36,6 @@ main {
 .search {
   display: flex;
   justify-content: center;
-  border-radius: 1%;
   padding-bottom: 1rem;
 }
 
@@ -46,17 +43,22 @@ main {
   display: flex;
   justify-content: center;
 }
-.mapimage {
+.map-image {
   display: flex;
   justify-content: center;
-  width: 250px;
-  height: 250px;
-  background-color: rgb(240, 224, 194);
-  border: rgb(209, 195, 168);
+  width: 225px;
+  height: 225px;
+  background-color: rgb(241, 233, 216);
+  border: rgb(212, 203, 186);
   border-width: 3px;
   border-style: solid;
   padding-bottom: 5px;
   padding-top: 5px;
+}
+
+.listing-photo {
+  width: 225px;
+  height: 225px;
 }
 
 .listing1,
@@ -68,6 +70,11 @@ main {
 footer {
   display: flex;
   justify-content: center;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .heart {
