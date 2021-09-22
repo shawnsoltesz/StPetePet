@@ -19,7 +19,7 @@ export function Login() {
         <br />
         <br />
 
-        <input type="submit" value="Submit" />
+        <button className="button is-warning is-small">Login</button>
       </div>
     </>
   )

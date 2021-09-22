@@ -74,7 +74,9 @@ export function NewListing() {
         <br />
         <br />
 
-        <input type="submit" value="Create New Listing" />
+        <button className="button is-warning is-small">
+          Create New Listing{' '}
+        </button>
       </div>
     </>
   )
