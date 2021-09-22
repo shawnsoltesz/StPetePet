@@ -1,5 +1,5 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&display=swap');
 :root {
   font: 16px / 1 sans-serif;
   --background-gradient-top: #f7e8a5;
@@ -8,6 +8,7 @@
   --page-text: #23241e;
   --heart: red;
   --paw: saddlebrown;
+  --h1-font: 'Alegreya Sans SC', sans-serif;
 }
 
 html {
@@ -30,6 +31,10 @@ header {
   display: flex;
   justify-content: center;
 }
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 50px;
+}
 
 .logo,
 .seal {
@@ -42,6 +47,14 @@ header {
 main {
   display: flex;
   justify-content: center;
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .search {
