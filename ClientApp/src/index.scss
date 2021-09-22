@@ -24,8 +24,8 @@ header {
 .logo {
   display: flex;
   justify-content: center;
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
 }
 
 main {
@@ -56,9 +56,16 @@ main {
   padding-top: 5px;
 }
 
+.listing-name {
+  display: flex;
+  justify-content: center;
+}
+
 .listing-photo {
-  width: 225px;
-  height: 225px;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
 }
 
 .listing1,
@@ -74,7 +81,7 @@ footer {
 
 .contact-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .heart {

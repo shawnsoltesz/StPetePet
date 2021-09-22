@@ -4,7 +4,7 @@ import garden from '../images/recreation/UTenn.jpg'
 export function ListingDetail() {
   return (
     <>
-      <h1>Listing Detail</h1>
+      <h1 className="listing-name">UTenn Garden</h1>
       <div className="listing-photo">
         <img
           src={garden}
@@ -24,17 +24,21 @@ export function ListingDetail() {
           Aldus PageMaker including versions of Lorem Ipsum.
         </p>
       </div>
-      <div className="name">
-        <h2>Name</h2>
-      </div>
+      <div className="name"></div>
       <div className="address">
-        <p>134 Central Avenue, St. Petersburg, FL 33713</p>
+        <p>
+          <strong>Address:</strong>134 Central Avenue, St. Petersburg, FL 33713
+        </p>
       </div>
       <div className="phone">
-        <p>(727) 342-9877</p>
+        <p>
+          <strong>Phone:</strong>(727) 342-9877
+        </p>
       </div>
       <div className="website">
-        <p>http://www.google.com</p>
+        <p>
+          <strong>Website:</strong>http://www.google.com
+        </p>
       </div>
       <div className="contact-buttons">
         <div className="map-listing-button">
