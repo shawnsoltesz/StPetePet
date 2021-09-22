@@ -3,8 +3,9 @@
 
 :root {
   font: 16px / 1 sans-serif;
-  --background-gradient-top: #f7e8a5;
-  --background-gradient-bottom: #47afd4;
+  --background-gradient-top: #faf3d4;
+  --background-gradient-bottom: #d9e6eb;
+  --img-border: #65bfe2;
   --map-border: rgb(212, 203, 186);
   --page-text: #3b1b09;
   --heart: red;
@@ -97,7 +98,7 @@ main {
   justify-content: center;
   width: 300px;
   height: 200px;
-  border: var(--background-gradient-bottom);
+  border: var(--img-border);
   border-width: 3px;
   border-radius: 3%;
   border-style: solid;

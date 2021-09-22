@@ -4,6 +4,18 @@ import seal from '../images/stpetepet/stpetepetDraft.png'
 export function About() {
   return (
     <>
+      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li className="is-active">
+            <a href="#" aria-current="page">
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
       <h1 className="listing-name">About</h1>
       <div className="about">
         <div className="seal">

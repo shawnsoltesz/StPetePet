@@ -4,6 +4,18 @@ import fortdesoto from '../images/recreation/FortDesoto.jpg'
 export function ListingDetail() {
   return (
     <>
+      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li className="is-active">
+            <a href="#" aria-current="page">
+              Listing Detail
+            </a>
+          </li>
+        </ul>
+      </nav>
       <h1 className="listing-name">Fort Desoto</h1>
       <div className="listing-photo">
         <img src={fortdesoto} alt="cocker spaniel at the beach" />
@@ -21,14 +33,20 @@ export function ListingDetail() {
           {/* <button className="listing-button">
             <i className="fas fa-map"></i>
           </button> */}
-
-          <button className="button is-warning is-small">
-            <i className="fas fa-map"></i>
-          </button>
-          <p>
-            <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde, FL
-            33715
-          </p>
+          <ul>
+            <li>
+              <button className="button is-warning is-small">
+                <i className="fas fa-map"></i>
+              </button>
+            </li>
+            <li>
+              {' '}
+              <p>
+                <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde,
+                FL 33715
+              </p>
+            </li>
+          </ul>{' '}
         </div>
         <div className="phone">
           {/* <button className="listing-button">
@@ -36,30 +54,42 @@ export function ListingDetail() {
               <a href="tel:+17275822100"></a>
             </i>
           </button> */}
-          <button className="button is-warning is-small">
-            <i className="fas fa-phone">
-              <a href="tel:+17275822100"></a>
-            </i>
-          </button>
+          <ul>
+            <li>
+              <button className="button is-warning is-small">
+                <i className="fas fa-phone">
+                  <a href="tel:+17275822100"></a>
+                </i>
+              </button>
+            </li>
 
-          <p>
-            <strong>Phone: </strong>727-582-2100
-          </p>
+            <li>
+              <p>
+                <strong>Phone: </strong>727-582-2100
+              </p>
+            </li>
+          </ul>
         </div>
         <div className="website">
           {/* <button className="listing-button">
             <i className="fas fa-globe"></i>
           </button> */}
-          <button className="button is-warning is-small">
-            <i className="fas fa-globe"></i>
-          </button>
+          <ul>
+            <li>
+              <button className="button is-warning is-small">
+                <i className="fas fa-globe"></i>
+              </button>
+            </li>
 
-          <p>
-            <strong>Website: </strong>
-            <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
-              Fort Desoto Dog Beach
-            </a>
-          </p>
+            <li>
+              <p>
+                <strong>Website: </strong>
+                <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
+                  Fort Desoto Dog Beach
+                </a>
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </>

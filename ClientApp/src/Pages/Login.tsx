@@ -3,6 +3,18 @@ import React from 'react'
 export function Login() {
   return (
     <>
+      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li className="is-active">
+            <a href="#" aria-current="page">
+              Login
+            </a>
+          </li>
+        </ul>
+      </nav>
       <h1 className="listing-name">Login</h1>
       <div className="login">
         <label>Username: </label>
