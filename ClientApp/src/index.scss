@@ -7,10 +7,7 @@
 html {
   height: 100%;
 }
-h1 {
-  display: flex;
-  justify-content: center;
-}
+
 body {
   margin: 0;
   min-height: 100%;
@@ -31,15 +28,41 @@ body {
 
   color: #effe92;
 }
+header {
+  display: flex;
+  justify-content: center;
+}
 
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 200px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 200px;
+}
 footer {
   display: flex;
   justify-content: center;
 }
 
-i {
-  transform: rotate(45deg);
+.heart {
   color: red;
+}
+
+.paw {
+  color: saddlebrown;
+  transform: rotate(35deg);
 }
 
 .pages {
