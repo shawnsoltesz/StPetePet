@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="550"
+   height="100"
+   viewBox="0 0 145.52084 26.458333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="SPPlogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.5787037"
+     inkscape:cx="443.232"
+     inkscape:cy="540"
+     inkscape:window-width="1312"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     width="300px" />
+  <defs
+     id="defs2">
+    <rect
+       x="387.07199"
+       y="478.65601"
+       width="585.79199"
+       height="126.144"
+       id="rect3267" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-107.442,-130.7592)"
+       id="text3265"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.45;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';text-align:center;white-space:pre;shape-inside:url(#rect3267);mix-blend-mode:color-burn;fill:#ff6600;fill-opacity:1;stroke:#020007;stroke-opacity:1"
+       x="102.76367"
+       y="0"><tspan
+         x="427.49902"
+         y="574.76744"
+         id="tspan87073"><tspan
+           style="font-weight:bold;font-family:'American Typewriter';-inkscape-font-specification:'American Typewriter, Bold';fill:#ff2d00"
+           id="tspan87071">StPete.Pet</tspan></tspan></text>
+  </g>
+</svg>

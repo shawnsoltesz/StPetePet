@@ -2,7 +2,7 @@ import React from 'react'
 // import { Home } from './Pages/Home'
 // import { ListingDetail } from './Pages/ListingDetail'
 import { About } from './Pages/About'
-import logo from './images/stpetepet/logo.jpeg'
+import logo from './images/stpetepet/SPPlogo.svg'
 
 export function App() {
   return (
