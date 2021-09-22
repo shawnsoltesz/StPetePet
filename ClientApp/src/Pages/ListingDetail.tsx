@@ -18,7 +18,11 @@ export function ListingDetail() {
       </div>
       <div className="contact-details">
         <div className="address">
-          <button className="listing-button">
+          {/* <button className="listing-button">
+            <i className="fas fa-map"></i>
+          </button> */}
+
+          <button className="button is-warning is-small">
             <i className="fas fa-map"></i>
           </button>
           <p>
@@ -27,19 +31,29 @@ export function ListingDetail() {
           </p>
         </div>
         <div className="phone">
-          <button className="listing-button">
+          {/* <button className="listing-button">
+            <i className="fas fa-phone">
+              <a href="tel:+17275822100"></a>
+            </i>
+          </button> */}
+          <button className="button is-warning is-small">
             <i className="fas fa-phone">
               <a href="tel:+17275822100"></a>
             </i>
           </button>
+
           <p>
             <strong>Phone: </strong>727-582-2100
           </p>
         </div>
         <div className="website">
-          <button className="listing-button">
+          {/* <button className="listing-button">
+            <i className="fas fa-globe"></i>
+          </button> */}
+          <button className="button is-warning is-small">
             <i className="fas fa-globe"></i>
           </button>
+
           <p>
             <strong>Website: </strong>
             <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
