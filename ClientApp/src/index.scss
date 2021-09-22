@@ -123,6 +123,8 @@ main {
 
 .new-listing {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .listing1,
