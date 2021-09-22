@@ -5,16 +5,18 @@ export function NewListing() {
     <>
       <h1 className="listing-name">New Listing</h1>
       <div className="new-listing">
-        <label>Listing type:</label>
-        <p className="instruction">Select from the dropdown</p>
+        <label>Type:</label>
+
         <select name="listing-type" id="listing-type">
+          <option value="null">Select from the dropdown </option>
           <option value="business">Business</option>
           <option value="recreation">Recreation</option>
         </select>
 
-        <label>Listing specialty: </label>
-        <p className="instruction">Select from the dropdown</p>
+        <label>Specialty: </label>
+
         <select name="listing-specialty" id="listing-specialty">
+          <option value="null">Select from the dropdown </option>
           <option value="bar-restaurant">Bar &amp; Restaurant </option>
           <option value="beach">Beach</option>
           <option value="boarding">Boarding</option>
@@ -30,8 +32,8 @@ export function NewListing() {
         </select>
 
         <label>Suitable For:</label>
-        <p className="instruction">Select from the dropdown</p>
         <select name="pet-suitability" id="pet-suitability">
+          <option value="null">Select from the dropdown </option>
           <option value="all">All</option>
           <option value="bird">Bird</option>
           <option value="cat">Cat</option>
@@ -47,15 +49,27 @@ export function NewListing() {
         <input type="textarea" name="description" />
 
         <label>Address:</label>
-        <input type="text" name="address" />
+        <input
+          type="text"
+          name="address"
+          placeholder="Format: 123 Central Ave, St Petersburg, FL 33713"
+        />
 
         <label>Website:</label>
-        <p className="instruction">Format: http://www.stpete.pet</p>
-        <input type="text" name="website" />
+
+        <input
+          type="text"
+          name="website"
+          placeholder="Format: http://www.stpete.pet"
+        />
 
         <label>Phone Number:</label>
-        <p className="instruction">Format: 727-555-1212</p>
-        <input type="text" name="phone-number" />
+
+        <input
+          type="text"
+          name="phone-number"
+          placeholder="Format: 727-555-1212"
+        />
 
         <br />
         <br />
