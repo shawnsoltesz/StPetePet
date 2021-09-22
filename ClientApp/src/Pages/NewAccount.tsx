@@ -16,6 +16,9 @@ export function NewAccount() {
 
         <br />
         <br />
+        <p>Already have an account, login</p>
+        <br />
+        <br />
 
         <input type="submit" value="Submit" />
       </div>
