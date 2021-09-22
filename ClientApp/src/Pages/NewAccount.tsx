@@ -20,7 +20,7 @@ export function NewAccount() {
         <br />
         <br />
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Create New Account" />
       </div>
     </>
   )

@@ -56,7 +56,7 @@ export function NewListing() {
         <br />
         <br />
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Create New Listing" />
       </div>
     </>
   )
