@@ -20,7 +20,9 @@ export function NewAccount() {
         <br />
         <br />
 
-        <input type="submit" value="Create New Account" />
+        <button className="button is-warning is-small">
+          Create New Account
+        </button>
       </div>
     </>
   )

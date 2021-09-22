@@ -56,7 +56,7 @@ export function UpdateListing() {
         <br />
         <br />
 
-        <input type="submit" value="Update Listing" />
+        <button className="button is-warning is-small">Update Listing</button>
       </div>
     </>
   )
