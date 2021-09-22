@@ -14,12 +14,12 @@ export function SearchListing() {
         <br />
         <br />
 
-        <input type="submit" value="Update" />
+        <input type="submit" value="Update Listing" />
 
         <br />
         <br />
 
-        <input type="submit" value="Delete" />
+        <input type="submit" value="Delete Listing" />
       </div>
     </>
   )

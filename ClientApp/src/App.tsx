@@ -5,7 +5,8 @@ import React from 'react'
 // import { Login } from './Pages/Login'
 // import { NewAccount } from './Pages/NewAccount'
 // import { NewListing } from './Pages/NewListing'
-import { SearchListing } from './Pages/SearchListing'
+//import { SearchListing } from './Pages/SearchListing'
+import { UpdateListing } from './Pages/UpdateListing'
 import logo from './images/stpetepet/SPPlogo.svg'
 
 export function App() {
@@ -16,7 +17,7 @@ export function App() {
           <img src={logo} alt="St Pete Pet logo of dog and cat at the beach." />
         </div>
       </header>
-      <SearchListing />
+      <UpdateListing />
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
