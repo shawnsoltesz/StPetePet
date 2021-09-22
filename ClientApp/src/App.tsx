@@ -15,14 +15,14 @@ export function App() {
         </div>
       </header>
 
-      <div className="search">
+      {/* <div className="search">
         <input type="text" placeholder="Search..." />
       </div>
-
-      <div className="mapimage">
-        <img src={stpete} alt="aerial map of St Petersburg, FL" />
-      </div>
-
+      <span className="map">
+        <div className="mapimage">
+          <img src={stpete} alt="aerial map of St Petersburg, FL" />
+        </div>
+      </span>
       <div>
         <ul className="listing1">
           <li>
@@ -54,7 +54,7 @@ export function App() {
             <p>Address</p>
           </li>
         </ul>
-      </div>
+      </div> */}
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
