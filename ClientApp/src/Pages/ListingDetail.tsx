@@ -24,37 +24,31 @@ export function ListingDetail() {
           Aldus PageMaker including versions of Lorem Ipsum.
         </p>
       </div>
-      <div className="name"></div>
-      <div className="address">
-        <p>
-          <strong>Address:</strong>134 Central Avenue, St. Petersburg, FL 33713
-        </p>
-      </div>
-      <div className="phone">
-        <p>
-          <strong>Phone:</strong>(727) 342-9877
-        </p>
-      </div>
-      <div className="website">
-        <p>
-          <strong>Website:</strong>http://www.google.com
-        </p>
-      </div>
-      <div className="contact-buttons">
-        <div className="map-listing-button">
-          <button>
-            <i className="paw fas fa-paw"></i>
+      <div className="contact-details">
+        <div className="address">
+          <button className="listing-button">
+            <i className="fas fa-map"></i>
           </button>
+          <p>
+            <strong>Address:</strong>134 Central Avenue, St. Petersburg, FL
+            33713
+          </p>
         </div>
-        <div className="phone-listing-button">
-          <button>
-            <i className="paw fas fa-paw"></i>
+        <div className="phone">
+          <button className="listing-button">
+            <i className="fas fa-phone"></i>
           </button>
+          <p>
+            <strong>Phone:</strong>(727) 342-9877
+          </p>
         </div>
-        <div className="web-listing-button">
-          <button>
-            <i className="paw fas fa-paw"></i>
+        <div className="website">
+          <button className="listing-button">
+            <i className="fas fa-globe"></i>
           </button>
+          <p>
+            <strong>Website:</strong>http://www.google.com
+          </p>
         </div>
       </div>
     </>
