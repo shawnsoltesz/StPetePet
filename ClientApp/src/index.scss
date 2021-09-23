@@ -11,6 +11,7 @@
   --heart: red;
   --paw: saddlebrown;
   --h1-font: 'Alegreya Sans SC', sans-serif;
+  --form-border: rgb(230, 82, 13);
 }
 
 html {
@@ -52,6 +53,8 @@ ul {
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 45px;
+  margin: 0;
+  padding-bottom: 15px;
 }
 
 .logo {
@@ -101,6 +104,7 @@ main {
   border-style: solid;
   padding-bottom: 5px;
   padding-top: 5px;
+  border-radius: 5%;
 }
 
 .listing-name {
@@ -115,7 +119,7 @@ main {
   height: 100px;
   border: var(--img-border);
   border-width: 3px;
-  border-radius: 3%;
+  border-radius: 5%;
   border-style: solid;
 }
 
@@ -123,7 +127,7 @@ main {
 .new-account {
   border-radius: 5px;
   border: 3px;
-  border-color: rgb(230, 82, 13);
+  border-color: var(--form-border);
   border-style: solid;
   padding: 13px;
   display: flex;
@@ -132,12 +136,22 @@ main {
   flex-wrap: center;
 }
 
-.new-listing {
+.dropdown {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  padding-top: 20px;
+}
+
+.new-listing,
+.update-listing {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 13px;
+  font-size: small;
+  border-radius: 5px;
+  border-color: var(--form-border);
+  border-style: solid;
 }
 
 .listing1,

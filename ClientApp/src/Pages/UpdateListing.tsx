@@ -13,60 +13,88 @@ export function UpdateListing() {
           </li>
         </ul>
       </div>
-      <h1 className="listing-name">Update Listing</h1>
-      <div className="new-listing">
-        <label>Listing type:</label>
-        <select name="listing-type" id="listing-type">
-          <option value="business">Business</option>
-          <option value="recreation">Recreation</option>
-        </select>
+      <div>
+        <h1 className="listing-name">Update Listing</h1>
+      </div>
+      <div className="update-listing">
+        <div className="dropdown">
+          <p>Type:</p>
 
-        <label>Listing specialty:</label>
-        <select name="listing-specialty" id="listing-specialty">
-          <option value="bar">Bar</option>
-          <option value="beach">Beach</option>
-          <option value="boarding">Boarding</option>
-          <option value="event">Event</option>
-          <option value="grooming">Grooming</option>
-          <option value="lodging">Lodging</option>
-          <option value="medical-care">Medical Care</option>
-          <option value="park">Park</option>
-          <option value="pet-sitter">Pet Sitter</option>
-          <option value="restaurant">Restaurant</option>
-          <option value="specialty">Specialty</option>
-          <option value="supplies">Supplies &amp; Care</option>
-          <option value="transportation">Transportation</option>
-        </select>
+          <select name="listing-type" id="listing-type">
+            <option value="null">Select</option>
+            <option value="business">Business</option>
+            <option value="recreation">Recreation</option>
+          </select>
 
-        <label>Suitable For:</label>
-        <select name="pet-suitability" id="pet-suitability">
-          <option value="all">All</option>
-          <option value="bird">Bird</option>
-          <option value="cat">Cat</option>
-          <option value="dog">Dog</option>
-          <option value="rabbit">Rabbit</option>
-          <option value="specialty">Specialty</option>
-        </select>
+          <p>Specialty: </p>
 
-        <label>Name:</label>
+          <select name="listing-specialty" id="listing-specialty">
+            <option value="null">Select</option>
+            <option value="bar-restaurant">Bar &amp; Restaurant </option>
+            <option value="beach">Beach</option>
+            <option value="boarding">Boarding</option>
+            <option value="event">Event</option>
+            <option value="grooming">Grooming</option>
+            <option value="lodging">Lodging</option>
+            <option value="medical-care">Medical Care</option>
+            <option value="park">Park</option>
+            <option value="pet-sitter">Pet Sitter</option>
+            <option value="specialty">Specialty</option>
+            <option value="supplies">Supplies &amp; Care</option>
+            <option value="transportation">Transportation</option>
+          </select>
+
+          <p>Suitable For:</p>
+          <select name="pet-suitability" id="pet-suitability">
+            <option value="null">Select</option>
+            <option value="all">All</option>
+            <option value="bird">Bird</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="specialty">Specialty</option>
+          </select>
+        </div>
+        <p>Name:</p>
         <input type="text" name="name" />
 
-        <label>Description:</label>
-        <input type="text" name="description" />
+        <p>Description:</p>
+        {/* <input type="textarea" name="description" /> */}
 
-        <label>Address:</label>
-        <input type="text" name="address" />
+        <textarea id="description" name="description" />
 
-        <label>Website:</label>
-        <input type="text" name="website" />
+        <p>Address:</p>
+        <input
+          type="text"
+          name="address"
+          placeholder="Format: 123 Central Ave, St Petersburg, FL 33713"
+        />
 
-        <label>Phone Number:</label>
-        <input type="text" name="phone-number" />
+        <p>Website:</p>
+
+        <input
+          type="text"
+          name="website"
+          placeholder="Format: http://www.stpete.pet"
+        />
+
+        <p>Phone Number:</p>
+
+        <input
+          type="text"
+          name="phone-number"
+          placeholder="Format: 727-555-1212"
+        />
 
         <br />
         <br />
-
-        <button className="button is-warning is-small">Update Listing</button>
+        <p>Click on the &quot;Browse&quot; button to upload an image:</p>
+        <form action="/action_page.php">
+          <input type="file" id="listing-image" name="filename" />
+        </form>
+        <br />
+        <br />
+        <button>Update Listing</button>
       </div>
     </>
   )
