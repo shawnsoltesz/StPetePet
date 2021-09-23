@@ -3,7 +3,7 @@ import React from 'react'
 // import { About } from './Pages/About'
 // import { Login } from './Pages/Login'
 // import { NewAccount } from './Pages/NewAccount'
-// import { NewListing } from './Pages/NewListing'
+import { NewListing } from './Pages/NewListing'
 // import { SearchListings } from './Pages/SearchListing'
 // import { UpdateListing } from './Pages/UpdateListing'
 import { ListingDetail } from './Pages/ListingDetail'
@@ -36,7 +36,7 @@ export function App() {
       {/* <About /> */}
       {/* <Login /> */}
       {/* <NewAccount /> */}
-      {/* <NewListing /> */}
+      <NewListing />
       {/* <SearchListings /> */}
       {/* <UpdateListing /> */}
       <ListingDetail />

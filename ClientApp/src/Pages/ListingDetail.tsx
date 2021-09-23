@@ -1,5 +1,5 @@
 import React from 'react'
-import fortdesoto from '../images/recreation/FortDesoto.jpg'
+import fortdesoto from '../images/listings/FortDesoto.jpg'
 
 export function ListingDetail() {
   return (
@@ -23,15 +23,37 @@ export function ListingDetail() {
       <div className="listing-photo">
         <img src={fortdesoto} alt="cocker spaniel at the beach" />
       </div>
+
       <div className="description">
         <p>
-          <strong>Fort Desoto</strong> has the only dog park where dogs are
-          allowed on the beach in a designated area. There are also 2 fenced-in
-          areas near the beach for large and small dogs with water stations
-          &#40;beach entrance is at the far southwest corner of dog park&#41;.
+          Fort Desoto has the only dog park where dogs are allowed on the beach
+          in a designated area. There are also 2 fenced-in areas near the beach
+          for large and small dogs with water stations &#40;beach entrance is at
+          the far southwest corner of dog park&#41;.
         </p>
       </div>
       <div className="contact-details">
+        <div className="contact-buttons">
+          <ul>
+            <li>
+              <button className="map">
+                <i className="fas fa-map"></i>
+              </button>
+            </li>
+            <li>
+              <button className="phone">
+                <i className="fas fa-phone">
+                  <a href="tel:+17275822100"></a>
+                </i>
+              </button>
+            </li>
+            <li>
+              <button className="web-search">
+                <i className="fas fa-globe"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
         <ul className="address">
           <li>
             <p>
@@ -55,27 +77,17 @@ export function ListingDetail() {
             </p>
           </li>
         </ul>
-      </div>
-      <div className="contact-buttons">
-        <ul>
-          <li>
-            <button className="map">
-              <i className="fas fa-map"></i>
-            </button>
-          </li>
-          <li>
-            <button className="phone">
-              <i className="fas fa-phone">
-                <a href="tel:+17275822100"></a>
-              </i>
-            </button>
-          </li>
-          <li>
-            <button className="web-search">
-              <i className="fas fa-globe"></i>
-            </button>
-          </li>
-        </ul>
+        <div className="rating">
+          <p>
+            <i className="useful fas fa-thumbs-up"> Useful &#40;0&#41;</i>
+          </p>
+          <p>
+            <i className="not-useful fas fa-thumbs-down">
+              {' '}
+              Not Useful &#40;0&#41;
+            </i>
+          </p>
+        </div>
       </div>
     </>
   )
