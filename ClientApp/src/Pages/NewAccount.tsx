@@ -3,18 +3,16 @@ import React from 'react'
 export function NewAccount() {
   return (
     <>
-      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+      <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <p>Breadcrumb: Home /</p>
           </li>
           <li className="is-active">
-            <a href="#" aria-current="page">
-              New Account
-            </a>
+            <p aria-current="page"> &nbsp;New Account</p>
           </li>
         </ul>
-      </nav>
+      </div>
       <h1 className="listing-name">New Account</h1>
       <div className="new-account">
         <label htmlFor="name">Name: </label>

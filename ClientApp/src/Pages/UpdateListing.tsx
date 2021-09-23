@@ -3,18 +3,16 @@ import React from 'react'
 export function UpdateListing() {
   return (
     <>
-      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+      <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <p>Breadcrumb: Home /</p>
           </li>
           <li className="is-active">
-            <a href="#" aria-current="page">
-              Update a Listing
-            </a>
+            <p aria-current="page"> &nbsp;Update Listing</p>
           </li>
         </ul>
-      </nav>
+      </div>
       <h1 className="listing-name">Update Listing</h1>
       <div className="new-listing">
         <label>Listing type:</label>

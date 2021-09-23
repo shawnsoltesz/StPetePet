@@ -34,17 +34,20 @@ header {
   display: flex;
   justify-content: center;
 }
-h1 {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 45px;
-  margin: 0;
-}
 
 ul {
   margin: 0;
   list-style: none;
   padding: 0;
+}
+
+.breadcrumb ul {
   display: flex;
+}
+
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 45px;
 }
 
 .logo {
@@ -144,7 +147,9 @@ main {
   justify-content: center;
 }
 
-.contact-details {
+.address ul,
+.phone ul,
+.website ul {
   display: flex;
   flex-direction: column;
 }

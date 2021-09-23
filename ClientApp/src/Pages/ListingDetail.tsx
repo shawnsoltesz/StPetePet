@@ -7,12 +7,10 @@ export function ListingDetail() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <p>Breadcrumb: Home /</p>
           </li>
           <li className="is-active">
-            <a href="#" aria-current="page">
-              Listing Detail
-            </a>
+            <p aria-current="page"> &nbsp;Listing Detail</p>
           </li>
         </ul>
       </div>

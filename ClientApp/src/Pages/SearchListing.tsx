@@ -3,18 +3,16 @@ import React from 'react'
 export function SearchListing() {
   return (
     <>
-      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+      <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <p>Breadcrumb: Home /</p>
           </li>
           <li className="is-active">
-            <a href="#" aria-current="page">
-              Search Listings
-            </a>
+            <p aria-current="page"> &nbsp;Search Listings</p>
           </li>
         </ul>
-      </nav>
+      </div>
       <h1 className="listing-name">Search Listing</h1>
       <div className="search-listing">
         <label>Search for a Listing </label>
