@@ -28,7 +28,9 @@ export function NewAccount() {
 
         <br />
         <br />
-        <p>Already have an account, login</p>
+        <div className="login-redirect3">
+          <a href="#">Already have an account, login</a>
+        </div>
         <br />
         <br />
 

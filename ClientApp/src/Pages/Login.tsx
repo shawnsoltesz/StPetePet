@@ -25,9 +25,12 @@ export function Login() {
 
         <br />
         <br />
-        <p>Forgot Password</p>
-        <p>Already have an account, login</p>
-
+        <div className="login-redirect1">
+          <a href="#">Forgot Password</a>
+        </div>
+        <div className="login-redirect2">
+          <a href="#">Already have an account, login</a>
+        </div>
         <br />
         <br />
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Home } from './Pages/Home'
+// import { Home } from './Pages/Home'
 import { About } from './Pages/About'
-import { Login } from './Pages/Login'
-import { NewAccount } from './Pages/NewAccount'
-import { NewListing } from './Pages/NewListing'
-import { SearchListing } from './Pages/SearchListing'
-import { UpdateListing } from './Pages/UpdateListing'
-import { ListingDetail } from './Pages/ListingDetail'
+// import { Login } from './Pages/Login'
+// import { NewAccount } from './Pages/NewAccount'
+// import { NewListing } from './Pages/NewListing'
+// import { SearchListing } from './Pages/SearchListing'
+// import { UpdateListing } from './Pages/UpdateListing'
+// import { ListingDetail } from './Pages/ListingDetail'
 
 import logo from './images/stpetepet/SPPlogo.svg'
 
@@ -32,14 +32,14 @@ export function App() {
         </nav>
       </div>
 
-      <Home />
+      {/* <Home /> */}
       <About />
-      <Login />
-      <NewAccount />
-      <NewListing />
-      <SearchListing />
-      <UpdateListing />
-      <ListingDetail />
+      {/* <Login /> */}
+      {/* <NewAccount /> */}
+      {/* <NewListing /> */}
+      {/* <SearchListing /> */}
+      {/* <UpdateListing /> */}
+      {/* <ListingDetail /> */}
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
