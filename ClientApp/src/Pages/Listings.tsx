@@ -3,6 +3,7 @@ import { useQuery } from 'react-query'
 
 import StPete from '../images/map/map-stpete-fl.gif'
 import { ListingType } from '../types'
+import { SingleListingFromList } from '../components/SingleListingFromList'
 
 export function Listings() {
   const { data: listings = [] } = useQuery<ListingType[]>(
@@ -47,13 +48,7 @@ export function Listings() {
       <div>
         <ul className="listing">
           {listings.map(function (listing) {
-            return (
-              <li key={listing.id}>
-                <h2>{listing.name}</h2>
-                <p>Type: {listing.listingType}</p>
-                <p>{listing.address}</p>
-              </li>
-            )
+            return <SingleListingFromList key={listing.id} listing={listing} />
           })}
         </ul>
       </div>
