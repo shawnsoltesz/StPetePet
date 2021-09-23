@@ -13,12 +13,14 @@ export function Login() {
           </li>
         </ul>
       </div>
-      <h1 className="listing-name">Login</h1>
+      <div>
+        <h1 className="listing-name">Login</h1>
+      </div>
       <div className="login">
-        <label>Username: </label>
+        <p>Username: </p>
         <input type="text" name="username" />
 
-        <label>Password:</label>
+        <p>Password:</p>
         <input type="text" name="password" />
 
         <br />
@@ -29,7 +31,7 @@ export function Login() {
         <br />
         <br />
 
-        <button className="button is-warning is-small">Login</button>
+        <button>Login</button>
       </div>
     </>
   )

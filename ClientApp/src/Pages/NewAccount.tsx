@@ -13,15 +13,17 @@ export function NewAccount() {
           </li>
         </ul>
       </div>
-      <h1 className="listing-name">New Account</h1>
+      <div>
+        <h1 className="listing-name">New Account</h1>
+      </div>
       <div className="new-account">
-        <label htmlFor="name">Name: </label>
+        <p>Name: </p>
         <input type="text" name="username" />
 
-        <label>E-mail Address:</label>
+        <p>E-mail Address:</p>
         <input type="text" name="email address" />
 
-        <label>Password:</label>
+        <p>Password:</p>
         <input type="text" name="password" />
 
         <br />
@@ -30,9 +32,7 @@ export function NewAccount() {
         <br />
         <br />
 
-        <button className="button is-warning is-small">
-          Create New Account
-        </button>
+        <button>Create New Account</button>
       </div>
     </>
   )
