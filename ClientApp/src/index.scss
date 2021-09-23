@@ -8,10 +8,10 @@
   --img-border: #65bfe2;
   --map-border: rgb(212, 203, 186);
   --page-text: #3b1b09;
-  --heart: red;
+  --heart: rgb(230, 64, 13);
   --paw: saddlebrown;
   --h1-font: 'Alegreya Sans SC', sans-serif;
-  --form-border: rgb(230, 82, 13);
+  --form-border: rgba(243, 61, 20, 0.92);
 }
 
 html {
@@ -36,6 +36,16 @@ body {
 header {
   display: flex;
   justify-content: center;
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-end;
+  background-color: var(--form-border);
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 ul {
@@ -87,6 +97,7 @@ main {
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .map {
@@ -154,11 +165,14 @@ main {
   border-style: solid;
 }
 
-.listing1,
-.listing2,
-.listing3 {
+ul.listing1,
+ul.listing2,
+ul.listing3 {
   display: flex;
+
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .contact-buttons ul {
   display: flex;

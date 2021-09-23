@@ -13,7 +13,7 @@ export function SearchListing() {
           </li>
         </ul>
       </div>
-      <h1 className="listing-name">Search Listing</h1>
+      <h1 className="listing-name">Search Listings</h1>
       <div className="search-listing">
         <label>Search for a Listing </label>
 
@@ -24,12 +24,12 @@ export function SearchListing() {
         <br />
         <br />
 
-        <button className="button is-warning is-small">Update Listing</button>
+        <button>Update Listing</button>
 
         <br />
         <br />
 
-        <button className="button is-warning is-small">Delete Listing</button>
+        <button>Delete Listing</button>
       </div>
     </>
   )
