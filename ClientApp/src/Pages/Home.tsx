@@ -4,6 +4,7 @@ import StPete from '../images/map/map-stpete-fl.gif'
 export function Home() {
   return (
     <>
+      <h1 className="listing-name">Welcome!</h1>
       <div className="search">
         <input type="text" placeholder="Search..." />
       </div>
