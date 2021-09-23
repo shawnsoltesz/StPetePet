@@ -20,13 +20,13 @@ export function NewListing() {
       <h1 className="listing-name">New Listing</h1>
       <div className="new-listing">
         <div className="dropdown">
-          <p>Type:</p>
+          {/* <p>Type:</p>
 
           <select name="listing-type" id="listing-type">
             <option value="null">Select</option>
             <option value="business">Business</option>
             <option value="recreation">Recreation</option>
-          </select>
+          </select> */}
 
           <p>Specialty: </p>
 
@@ -41,12 +41,13 @@ export function NewListing() {
             <option value="medical-care">Medical Care</option>
             <option value="park">Park</option>
             <option value="pet-sitter">Pet Sitter</option>
+            <option value="residential">Residential</option>
             <option value="specialty">Specialty</option>
             <option value="supplies">Supplies &amp; Care</option>
             <option value="transportation">Transportation</option>
           </select>
 
-          <p>Suitable For:</p>
+          {/* <p>Suitable For:</p>
           <select name="pet-suitability" id="pet-suitability">
             <option value="null">Select</option>
             <option value="all">All</option>
@@ -55,7 +56,7 @@ export function NewListing() {
             <option value="dog">Dog</option>
             <option value="rabbit">Rabbit</option>
             <option value="specialty">Specialty</option>
-          </select>
+          </select> */}
         </div>
         <p>Name:</p>
         <input type="text" name="name" />
