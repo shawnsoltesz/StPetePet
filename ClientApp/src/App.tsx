@@ -4,7 +4,7 @@ import React from 'react'
 // import { Login } from './Pages/Login'
 // import { NewAccount } from './Pages/NewAccount'
 // import { NewListing } from './Pages/NewListing'
-// import { SearchListing } from './Pages/SearchListing'
+// import { SearchListings } from './Pages/SearchListing'
 // import { UpdateListing } from './Pages/UpdateListing'
 import { ListingDetail } from './Pages/ListingDetail'
 
@@ -37,7 +37,7 @@ export function App() {
       {/* <Login /> */}
       {/* <NewAccount /> */}
       {/* <NewListing /> */}
-      {/* <SearchListing /> */}
+      {/* <SearchListings /> */}
       {/* <UpdateListing /> */}
       <ListingDetail />
       <footer>
