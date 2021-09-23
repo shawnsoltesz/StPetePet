@@ -11,12 +11,13 @@
   --page-text: #3b1b09;
   --heart: rgb(230, 64, 13);
   --paw: saddlebrown;
+  --admin-background-color: rgb(212, 203, 186);
+  --form-border: rgba(243, 61, 20, 0.92);
   --h1-font: 'Alegreya Sans SC', sans-serif;
   --h2-font: 'Merienda', cursive;
   // --body-font: 'Poiret One', cursive;
 
   // font-family: 'Quattrocento Sans', sans-serif;
-  --form-border: rgba(243, 61, 20, 0.92);
 }
 
 html {
@@ -69,9 +70,7 @@ ul {
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 45px;
-
   padding-bottom: 15px;
-
   border-bottom: 0.5px solid var(--form-border);
   margin-top: 10px;
   // display: flex;
@@ -175,6 +174,15 @@ main {
   flex-wrap: center;
 }
 
+.admin-page {
+  background-color: var(--admin-background-color);
+  margin-top: 30px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
 .contact-details {
   border-radius: 5px;
   border: 3px;
@@ -270,7 +278,7 @@ footer {
   display: flex;
   justify-content: center;
   font-family: var(--h2-font);
-  font-size: 1px;
+  font-size: 12px;
   //new css to experiment with
   position: relative;
   height: 64px;

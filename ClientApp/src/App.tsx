@@ -5,10 +5,10 @@ import React from 'react'
 // import { NewAccount } from './Pages/NewAccount'
 // import { AdminWelcome } from './Pages/AdminWelcome'
 // import { UserAdmin } from './Pages/UserAdmin'
-// import { NewListing } from './Pages/NewListing'
+import { NewListing } from './Pages/NewListing'
 // import { SearchListings } from './Pages/SearchListing'
 // import { UpdateListing } from './Pages/UpdateListing'
-import { ListingDetail } from './Pages/ListingDetail'
+// import { ListingDetail } from './Pages/ListingDetail'
 
 import logo from './images/stpetepet/SPPlogo.svg'
 
@@ -40,10 +40,10 @@ export function App() {
       {/* <NewAccount /> */}
       {/* <AdminWelcome /> */}
       {/* <UserAdmin /> */}
-      {/* <NewListing /> */}
+      <NewListing />
       {/* <SearchListings /> */}
       {/* <UpdateListing /> */}
-      <ListingDetail />
+      {/* <ListingDetail /> */}
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
