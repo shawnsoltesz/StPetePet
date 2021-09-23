@@ -87,7 +87,7 @@ export function UpdateListing() {
         <br />
         <br />
 
-        <button>Update Listing</button>
+        <button className="update-button">Update Listing</button>
       </div>
     </>
   )

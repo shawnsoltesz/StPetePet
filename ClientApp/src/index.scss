@@ -165,6 +165,13 @@ main {
   border-style: solid;
 }
 
+.create-button,
+.update-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 ul.listing1,
 ul.listing2,
 ul.listing3 {
@@ -183,9 +190,12 @@ ul.listing3 {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  padding-bottom: 5px;
 }
 
 footer {
+  border-top: 0.5px solid var(--form-border);
+  margin-top: 2px;
   display: flex;
   justify-content: center;
 }
