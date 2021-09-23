@@ -1,14 +1,14 @@
 import React from 'react'
-import { Home } from './Pages/Home'
-import { About } from './Pages/About'
+// import { Home } from './Pages/Home'
+// import { About } from './Pages/About'
 import { Login } from './Pages/Login'
-import { NewAccount } from './Pages/NewAccount'
-import { AdminWelcome } from './Pages/AdminWelcome'
-import { UserAdmin } from './Pages/UserAdmin'
-import { NewListing } from './Pages/NewListing'
-import { SearchListings } from './Pages/SearchListing'
-import { UpdateListing } from './Pages/UpdateListing'
-import { ListingDetail } from './Pages/ListingDetail'
+// import { NewAccount } from './Pages/NewAccount'
+// import { AdminWelcome } from './Pages/AdminWelcome'
+// import { UserAdmin } from './Pages/UserAdmin'
+// import { NewListing } from './Pages/NewListing'
+// import { SearchListings } from './Pages/SearchListing'
+// import { UpdateListing } from './Pages/UpdateListing'
+// import { ListingDetail } from './Pages/ListingDetail'
 
 import logo from './images/stpetepet/SPPlogo.svg'
 
@@ -34,16 +34,16 @@ export function App() {
         </nav>
       </div>
 
-      <Home />
-      <About />
+      {/* <Home /> */}
+      {/* <About /> */}
       <Login />
-      <NewAccount />
-      <AdminWelcome />
+      {/* <NewAccount /> */}
+      {/* <AdminWelcome />
       <UserAdmin />
       <NewListing />
       <SearchListings />
       <UpdateListing />
-      <ListingDetail />
+      <ListingDetail /> */}
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
