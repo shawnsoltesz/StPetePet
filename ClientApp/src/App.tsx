@@ -1,11 +1,12 @@
 import React from 'react'
-// import { Home } from './Pages/Home'
-// import { About } from './Pages/About'
-// import { Login } from './Pages/Login'
-// import { NewAccount } from './Pages/NewAccount'
+import { Home } from './Pages/Home'
+import { About } from './Pages/About'
+import { Login } from './Pages/Login'
+import { NewAccount } from './Pages/NewAccount'
+import { AdminWelcome } from './Pages/AdminWelcome'
 import { NewListing } from './Pages/NewListing'
-// import { SearchListings } from './Pages/SearchListing'
-// import { UpdateListing } from './Pages/UpdateListing'
+import { SearchListings } from './Pages/SearchListing'
+import { UpdateListing } from './Pages/UpdateListing'
 import { ListingDetail } from './Pages/ListingDetail'
 
 import logo from './images/stpetepet/SPPlogo.svg'
@@ -32,13 +33,14 @@ export function App() {
         </nav>
       </div>
 
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Login /> */}
-      {/* <NewAccount /> */}
+      <Home />
+      <About />
+      <Login />
+      <NewAccount />
+      <AdminWelcome />
       <NewListing />
-      {/* <SearchListings /> */}
-      {/* <UpdateListing /> */}
+      <SearchListings />
+      <UpdateListing />
       <ListingDetail />
       <footer>
         <p>
