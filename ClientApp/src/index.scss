@@ -1,6 +1,7 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quattrocento+Sans&display=swap');
 :root {
   font: 16px / 1 sans-serif;
   --background-gradient-top: #eee2af;
@@ -11,6 +12,10 @@
   --heart: rgb(230, 64, 13);
   --paw: saddlebrown;
   --h1-font: 'Alegreya Sans SC', sans-serif;
+  --h2-font: 'Merienda', cursive;
+  // --body-font: 'Poiret One', cursive;
+
+  // font-family: 'Quattrocento Sans', sans-serif;
   --form-border: rgba(243, 61, 20, 0.92);
 }
 
@@ -22,15 +27,16 @@ body {
   margin: 0;
   min-height: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    var(--background-gradient-top),
-    var(--background-gradient-bottom)
-  );
+  // background: linear-gradient(
+  //   to bottom,
+  //   var(--background-gradient-top),
+  //   var(--background-gradient-bottom)
+  // );
   color: var(--page-text);
   list-style: none;
   padding-left: 25px;
   padding-right: 25px;
+  font-family: var(--body-font);
 }
 
 header {
@@ -46,6 +52,7 @@ header {
   border-radius: 50% 20% / 10% 40%;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-family: var(--h2-font);
 }
 
 ul {
@@ -65,6 +72,10 @@ h1 {
   font-size: 45px;
   margin: 0;
   padding-bottom: 15px;
+}
+
+h2 {
+  font-family: var(--h2-font);
 }
 
 .logo {
@@ -198,6 +209,8 @@ footer {
   margin-top: 2px;
   display: flex;
   justify-content: center;
+  font-family: var(--h2-font);
+  font-size: 12px;
 }
 
 .heart {
