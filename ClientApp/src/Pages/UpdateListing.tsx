@@ -44,7 +44,7 @@ export function UpdateListing() {
               <option value="bar-restaurant">Bar &amp; Restaurant </option>
               <option value="beach">Beach</option>
               <option value="boarding">Boarding</option>
-              <option value="event">Event</option>
+              {/* <option value="event">Event</option> */}
               <option value="grooming">Grooming</option>
               <option value="lodging">Lodging</option>
               <option value="medical-care">Medical Care</option>
@@ -53,7 +53,7 @@ export function UpdateListing() {
               <option value="residential">Residential</option>
               <option value="specialty">Specialty</option>
               <option value="supplies">Supplies &amp; Care</option>
-              <option value="transportation">Transportation</option>
+              {/* <option value="transportation">Transportation</option> */}
             </select>
 
             {/* <p>Suitable For:</p>
