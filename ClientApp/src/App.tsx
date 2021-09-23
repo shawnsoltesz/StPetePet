@@ -1,11 +1,12 @@
 import React from 'react'
 // import { Home } from './Pages/Home'
 // import { About } from './Pages/About'
+import { Listings } from './Pages/Listings'
 // import { Login } from './Pages/Login'
 // import { NewAccount } from './Pages/NewAccount'
 // import { AdminWelcome } from './Pages/AdminWelcome'
 // import { UserAdmin } from './Pages/UserAdmin'
-import { NewListing } from './Pages/NewListing'
+// import { NewListing } from './Pages/NewListing'
 // import { SearchListings } from './Pages/SearchListing'
 // import { UpdateListing } from './Pages/UpdateListing'
 // import { ListingDetail } from './Pages/ListingDetail'
@@ -36,11 +37,12 @@ export function App() {
 
       {/* <Home /> */}
       {/* <About /> */}
+      <Listings />
       {/* <Login /> */}
       {/* <NewAccount /> */}
       {/* <AdminWelcome /> */}
       {/* <UserAdmin /> */}
-      <NewListing />
+      {/* <NewListing /> */}
       {/* <SearchListings /> */}
       {/* <UpdateListing /> */}
       {/* <ListingDetail /> */}
