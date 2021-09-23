@@ -31,13 +31,19 @@ namespace StPetePet.Controllers
         // Returns a list of all your Listings
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Listing>>> GetListings()
+        public async Task<ActionResult<IEnumerable<Listing>>> GetListings(string filter)
         {
             // Uses the database context in `_context` to request all of the Listings, sort
             // them by row id and return them as a JSON array.
-            return await _context.Listings.OrderBy(row => row.Id).ToListAsync();
+            
+            if (filter == null) {
+                return await _context.Listings.OrderBy(row => row.Name).ToListAsync();
+        } else {
+            return await _context.Listings.OrderBy(row => row.Name).
+            Where(listing => listing.Name.ToLower().Contains(filter.ToLower())).
+            ToListAsync();
         }
-
+        }
         // GET: api/Listings/5
         //
         // Fetches and returns a specific listing by finding it by id. The id is specified in the
