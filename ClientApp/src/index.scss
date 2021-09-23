@@ -270,6 +270,18 @@ footer {
   justify-content: center;
   font-family: var(--h2-font);
   font-size: 12px;
+  //new css to experiment with
+  position: relative;
+  height: 64px;
+  margin-top: 128px;
+  align-items: center;
+}
+
+footer {
+  position: relative;
+  height: 64px;
+  margin-top: 128px;
+  align-items: center;
 }
 
 .heart {
