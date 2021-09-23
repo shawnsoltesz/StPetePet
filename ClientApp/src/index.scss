@@ -208,10 +208,17 @@ main {
 }
 
 .create-button,
-.update-button {
+.update-button,
+.delete-button {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+}
+
+.update-listing-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 ul.listing1,

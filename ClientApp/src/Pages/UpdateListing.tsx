@@ -18,15 +18,15 @@ export function UpdateListing() {
       </div>
       <div className="update-listing">
         <div className="dropdown">
-          <p>Type:</p>
+          {/* <p>Type:</p>
 
           <select name="listing-type" id="listing-type">
             <option value="null">Select</option>
             <option value="business">Business</option>
             <option value="recreation">Recreation</option>
-          </select>
+          </select> */}
 
-          <p>Specialty: </p>
+          <p>Listing Type: </p>
 
           <select name="listing-specialty" id="listing-specialty">
             <option value="null">Select</option>
@@ -39,12 +39,13 @@ export function UpdateListing() {
             <option value="medical-care">Medical Care</option>
             <option value="park">Park</option>
             <option value="pet-sitter">Pet Sitter</option>
+            <option value="residential">Residential</option>
             <option value="specialty">Specialty</option>
             <option value="supplies">Supplies &amp; Care</option>
             <option value="transportation">Transportation</option>
           </select>
 
-          <p>Suitable For:</p>
+          {/* <p>Suitable For:</p>
           <select name="pet-suitability" id="pet-suitability">
             <option value="null">Select</option>
             <option value="all">All</option>
@@ -53,7 +54,7 @@ export function UpdateListing() {
             <option value="dog">Dog</option>
             <option value="rabbit">Rabbit</option>
             <option value="specialty">Specialty</option>
-          </select>
+          </select> */}
         </div>
         <p>Name:</p>
         <input type="text" name="name" />
@@ -86,8 +87,10 @@ export function UpdateListing() {
         </form>
         <br />
         <br />
-
-        <button className="update-button">Update Listing</button>
+        <div className="update-listing-buttons">
+          <button className="update-button">Update Listing</button>
+          <button className="delete-button">Delete Listing</button>
+        </div>
       </div>
     </>
   )

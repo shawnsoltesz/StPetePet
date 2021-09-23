@@ -28,7 +28,7 @@ export function NewListing() {
             <option value="recreation">Recreation</option>
           </select> */}
 
-          <p>Specialty: </p>
+          <p>Listing Type: </p>
 
           <select name="listing-specialty" id="listing-specialty">
             <option value="null">Select</option>

@@ -3,7 +3,8 @@ import { Home } from './Pages/Home'
 import { About } from './Pages/About'
 import { Login } from './Pages/Login'
 import { NewAccount } from './Pages/NewAccount'
-import { AdminWelcome } from './Pages/AdminWelcome.tsx'
+import { AdminWelcome } from './Pages/AdminWelcome'
+import { UserAdmin } from './Pages/UserAdmin'
 import { NewListing } from './Pages/NewListing'
 import { SearchListings } from './Pages/SearchListing'
 import { UpdateListing } from './Pages/UpdateListing'
@@ -38,6 +39,7 @@ export function App() {
       <Login />
       <NewAccount />
       <AdminWelcome />
+      <UserAdmin />
       <NewListing />
       <SearchListings />
       <UpdateListing />
