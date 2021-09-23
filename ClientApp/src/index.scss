@@ -242,12 +242,10 @@ main {
   justify-content: space-evenly;
 }
 
-ul.listing1,
-ul.listing2,
-ul.listing3 {
+ul.listing {
   display: flex;
-
   justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
 }

@@ -1,7 +1,18 @@
 import React from 'react'
+import { useQuery } from 'react-query'
+
 import StPete from '../images/map/map-stpete-fl.gif'
+import { ListingType } from '../types'
 
 export function Listings() {
+  const { data: listings = [] } = useQuery<ListingType[]>(
+    'listings',
+    async function () {
+      const response = await fetch('/api/listings')
+      return response.json()
+    }
+  )
+  console.log({ listings })
   return (
     <>
       <h1 className="listing-name">Search Listings</h1>
@@ -21,7 +32,7 @@ export function Listings() {
           <option value="lodging">Lodging</option>
           <option value="medical-care">Medical Care</option>
           <option value="park">Park</option>
-          <option value="pet-sitter">Pet Sitter</option>
+          <option value="pet sitter">Pet Sitter</option>
           <option value="residential">Residential</option>
           <option value="specialty">Specialty</option>
           <option value="supplies">Supplies &amp; Care</option>
@@ -34,35 +45,16 @@ export function Listings() {
         </div>
       </span>
       <div>
-        <ul className="listing1">
-          <li>
-            <h2>Name</h2>
-          </li>
-          <li>
-            <p>Address</p>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <ul className="listing2">
-          <li>
-            <h2>Name</h2>
-          </li>
-          <li>
-            <p>Address</p>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <ul className="listing3">
-          <li>
-            <h2>Name</h2>
-          </li>
-          <li>
-            <p>Address</p>
-          </li>
+        <ul className="listing">
+          {listings.map(function (listing) {
+            return (
+              <li key={listing.id}>
+                <h2>{listing.name}</h2>
+                <p>Type: {listing.listingType}</p>
+                <p>{listing.address}</p>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </>
