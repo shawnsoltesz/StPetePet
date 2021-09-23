@@ -4,7 +4,7 @@ import fortdesoto from '../images/recreation/FortDesoto.jpg'
 export function ListingDetail() {
   return (
     <>
-      <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+      <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
             <a href="#">Home</a>
@@ -15,7 +15,7 @@ export function ListingDetail() {
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
       <h1 className="listing-name">Fort Desoto</h1>
       <div className="listing-photo">
         <img src={fortdesoto} alt="cocker spaniel at the beach" />
@@ -30,33 +30,24 @@ export function ListingDetail() {
       </div>
       <div className="contact-details">
         <div className="address">
-          {/* <button className="listing-button">
-            <i className="fas fa-map"></i>
-          </button> */}
           <ul>
             <li>
-              <button className="button is-warning is-small">
+              <button className="listing-button">
                 <i className="fas fa-map"></i>
               </button>
             </li>
             <li>
-              {' '}
               <p>
                 <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde,
                 FL 33715
               </p>
             </li>
-          </ul>{' '}
+          </ul>
         </div>
         <div className="phone">
-          {/* <button className="listing-button">
-            <i className="fas fa-phone">
-              <a href="tel:+17275822100"></a>
-            </i>
-          </button> */}
           <ul>
             <li>
-              <button className="button is-warning is-small">
+              <button className="listing-button">
                 <i className="fas fa-phone">
                   <a href="tel:+17275822100"></a>
                 </i>
@@ -71,12 +62,9 @@ export function ListingDetail() {
           </ul>
         </div>
         <div className="website">
-          {/* <button className="listing-button">
-            <i className="fas fa-globe"></i>
-          </button> */}
           <ul>
             <li>
-              <button className="button is-warning is-small">
+              <button className="listing-button">
                 <i className="fas fa-globe"></i>
               </button>
             </li>

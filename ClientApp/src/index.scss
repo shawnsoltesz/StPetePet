@@ -3,8 +3,8 @@
 
 :root {
   font: 16px / 1 sans-serif;
-  --background-gradient-top: #faf3d4;
-  --background-gradient-bottom: #d9e6eb;
+  --background-gradient-top: #eee2af;
+  --background-gradient-bottom: #7fc2dd;
   --img-border: #65bfe2;
   --map-border: rgb(212, 203, 186);
   --page-text: #3b1b09;
@@ -27,6 +27,7 @@ body {
     var(--background-gradient-bottom)
   );
   color: var(--page-text);
+  list-style: none;
 }
 
 header {
@@ -35,8 +36,15 @@ header {
 }
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
 .logo {

@@ -86,9 +86,7 @@ export function NewListing() {
         <br />
         <br />
 
-        <button className="button is-warning is-small">
-          Create New Listing{' '}
-        </button>
+        <button className="create-listing">Create New Listing</button>
       </div>
     </>
   )
