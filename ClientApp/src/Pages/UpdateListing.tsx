@@ -67,24 +67,16 @@ export function UpdateListing() {
         <input
           type="text"
           name="address"
-          placeholder="Format: 123 Central Ave, St Petersburg, FL 33713"
+          placeholder="123 Central Ave, St Petersburg, FL 33713"
         />
 
         <p>Website:</p>
 
-        <input
-          type="text"
-          name="website"
-          placeholder="Format: http://www.stpete.pet"
-        />
+        <input type="text" name="website" placeholder="http://www.stpete.pet" />
 
         <p>Phone Number:</p>
 
-        <input
-          type="text"
-          name="phone-number"
-          placeholder="Format: 727-555-1212"
-        />
+        <input type="text" name="phone-number" placeholder="727-555-1212" />
 
         <br />
         <br />
@@ -94,6 +86,7 @@ export function UpdateListing() {
         </form>
         <br />
         <br />
+
         <button>Update Listing</button>
       </div>
     </>
