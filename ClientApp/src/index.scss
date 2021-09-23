@@ -254,6 +254,7 @@ ul.listing3 {
 }
 .not-useful {
   color: rgb(201, 99, 99);
+  transform: rotate(180deg);
 }
 
 .contact-buttons ul li {
@@ -269,7 +270,7 @@ footer {
   display: flex;
   justify-content: center;
   font-family: var(--h2-font);
-  font-size: 12px;
+  font-size: 1px;
   //new css to experiment with
   position: relative;
   height: 64px;

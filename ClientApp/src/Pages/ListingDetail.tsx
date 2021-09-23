@@ -79,13 +79,11 @@ export function ListingDetail() {
         </ul>
         <div className="rating">
           <p>
-            <i className="useful fas fa-thumbs-up"> Useful &#40;0&#41;</i>
+            <i className="useful fas fa-paw"></i> &nbsp;Useful &#40;0&#41;
           </p>
           <p>
-            <i className="not-useful fas fa-thumbs-down">
-              {' '}
-              Not Useful &#40;0&#41;
-            </i>
+            <i className="not-useful fas fa-paw"></i>&nbsp; Not Useful
+            &#40;0&#41;
           </p>
         </div>
       </div>
