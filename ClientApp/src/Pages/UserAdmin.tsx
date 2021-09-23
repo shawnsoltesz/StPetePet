@@ -10,6 +10,11 @@ export function UserAdmin() {
               <u>Home</u> /
             </p>
           </li>
+          <li>
+            <p>
+              <u>Admin Welcome</u> /
+            </p>
+          </li>
           <li className="is-active">
             <p aria-current="page">
               {' '}
@@ -19,7 +24,8 @@ export function UserAdmin() {
         </ul>
       </div>
       <div>
-        <h1 className="listing-name">New Account</h1>
+        <h1 className="listing-name">User Admin</h1>
+        <button className="logout">Logout</button>
       </div>
       <h2>Create A New Account</h2>
       <div className="new-account">
@@ -38,7 +44,7 @@ export function UserAdmin() {
         <button>Create New Account</button>
       </div>
 
-      <h2>Update/Delete A New Account</h2>
+      <h2>Update/Delete An Account</h2>
       <div className="new-account">
         <p>Name: </p>
         <input type="text" name="username" />
@@ -53,8 +59,8 @@ export function UserAdmin() {
         <br />
 
         <div className="update-listing-buttons">
-          <button className="update-button">Update Listing</button>
-          <button className="delete-button">Delete Listing</button>
+          <button className="update-button">Update User</button>
+          <button className="delete-button">Delete User</button>
         </div>
       </div>
     </>

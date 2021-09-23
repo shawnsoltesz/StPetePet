@@ -6,15 +6,25 @@ export function UpdateListing() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>Breadcrumb: Home /</p>
+            <p>
+              <u>Home</u> /
+            </p>
+          </li>
+          <li>
+            <p>
+              <u>Admin Welcome</u> /
+            </p>
           </li>
           <li className="is-active">
-            <p aria-current="page"> &nbsp;Update Listing</p>
+            <p aria-current="page">
+              &nbsp;<u>Update Listing</u>
+            </p>
           </li>
         </ul>
       </div>
       <div>
         <h1 className="listing-name">Update Listing</h1>
+        <button className="logout">Logout</button>
       </div>
       <div className="update-listing">
         <div className="dropdown">

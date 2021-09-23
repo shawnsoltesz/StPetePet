@@ -10,6 +10,11 @@ export function NewListing() {
               <u>Home</u> /
             </p>
           </li>
+          <li>
+            <p>
+              <u>Admin Welcome</u> /
+            </p>
+          </li>
           <li className="is-active">
             <p aria-current="page">
               &nbsp;<u>New Listing</u>
@@ -18,6 +23,7 @@ export function NewListing() {
         </ul>
       </div>
       <h1 className="listing-name">New Listing</h1>
+      <button className="logout">Logout</button>
       <div className="new-listing">
         <div className="dropdown">
           {/* <p>Type:</p>

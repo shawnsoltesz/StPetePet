@@ -149,6 +149,12 @@ main {
   border-style: solid;
 }
 
+.logout {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
 .login,
 .new-account {
   border-radius: 5px;

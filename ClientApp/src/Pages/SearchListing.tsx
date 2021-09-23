@@ -10,6 +10,11 @@ export function SearchListings() {
               <u>Home</u> /
             </p>
           </li>
+          <li>
+            <p>
+              <u>Admin Welcome</u> /
+            </p>
+          </li>
           <li className="is-active">
             <p aria-current="page">
               {' '}
@@ -19,6 +24,7 @@ export function SearchListings() {
         </ul>
       </div>
       <h1 className="listing-name">Search Listings</h1>
+      <button className="logout">Logout</button>
       <div className="search-listing">
         <label>Search for a Listing </label>
 
