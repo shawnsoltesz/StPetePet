@@ -1,15 +1,20 @@
 import React from 'react'
 
-export function SearchListing() {
+export function SearchListings() {
   return (
     <>
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>Breadcrumb: Home /</p>
+            <p>
+              <u>Home</u> /
+            </p>
           </li>
           <li className="is-active">
-            <p aria-current="page"> &nbsp;Search Listings</p>
+            <p aria-current="page">
+              {' '}
+              &nbsp;<u>Search Listings</u>
+            </p>
           </li>
         </ul>
       </div>

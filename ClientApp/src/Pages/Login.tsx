@@ -6,10 +6,15 @@ export function Login() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>Breadcrumb: Home /</p>
+            <p>
+              <u>Home</u> /
+            </p>
           </li>
           <li className="is-active">
-            <p aria-current="page"> &nbsp;Login</p>
+            <p aria-current="page">
+              {' '}
+              &nbsp;<u>Login</u>
+            </p>
           </li>
         </ul>
       </div>

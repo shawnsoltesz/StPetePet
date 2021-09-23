@@ -6,10 +6,15 @@ export function NewAccount() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>Breadcrumb: Home /</p>
+            <p>
+              <u>Home</u> /
+            </p>
           </li>
           <li className="is-active">
-            <p aria-current="page"> &nbsp;New Account</p>
+            <p aria-current="page">
+              {' '}
+              &nbsp;<u>New Account</u>
+            </p>
           </li>
         </ul>
       </div>

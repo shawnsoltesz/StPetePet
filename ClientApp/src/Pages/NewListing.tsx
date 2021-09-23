@@ -6,10 +6,14 @@ export function NewListing() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>Breadcrumb: Home /</p>
+            <p>
+              <u>Home</u> /
+            </p>
           </li>
           <li className="is-active">
-            <p aria-current="page"> &nbsp;New Listing</p>
+            <p aria-current="page">
+              &nbsp;<u>New Listing</u>
+            </p>
           </li>
         </ul>
       </div>
