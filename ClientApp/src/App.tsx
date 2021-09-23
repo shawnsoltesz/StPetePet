@@ -26,20 +26,11 @@ export function App() {
       {/* <SearchListing /> */}
       {/* <UpdateListing /> */}
       <ListingDetail />
-      {/* <footer>
+      <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,
           Florida. <i className="paw fas fa-paw"></i>
         </p>
-      </footer> */}
-
-      <footer className="$footer-padding">
-        <div className="content has-text-centered">
-          <p>
-            Built with <i className="heart fa fa-heart"></i> in St Petersburg,
-            Florida. <i className="paw fas fa-paw"></i>
-          </p>
-        </div>
       </footer>
     </>
   )

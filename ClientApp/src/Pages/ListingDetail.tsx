@@ -27,56 +27,50 @@ export function ListingDetail() {
         </p>
       </div>
       <div className="contact-details">
-        <div className="address">
-          <ul>
-            <li>
-              <button className="listing-button">
-                <i className="fas fa-map"></i>
-              </button>
-            </li>
-            <li>
-              <p>
-                <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde,
-                FL 33715
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div className="phone">
-          <ul>
-            <li>
-              <button className="listing-button">
-                <i className="fas fa-phone">
-                  <a href="tel:+17275822100"></a>
-                </i>
-              </button>
-            </li>
+        <ul className="address">
+          <li>
+            <p>
+              <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde,
+              FL 33715
+            </p>
+          </li>
 
-            <li>
-              <p>
-                <strong>Phone: </strong>727-582-2100
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div className="website">
-          <ul>
-            <li>
-              <button className="listing-button">
-                <i className="fas fa-globe"></i>
-              </button>
-            </li>
+          <li className="phone">
+            <p>
+              <strong>Phone: </strong>727-582-2100
+            </p>
+          </li>
 
-            <li>
-              <p>
-                <strong>Website: </strong>
-                <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
-                  Fort Desoto Dog Beach
-                </a>
-              </p>
-            </li>
-          </ul>
-        </div>
+          <li className="website">
+            <p>
+              <strong>Website: </strong>
+              <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
+                Fort Desoto Dog Beach
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div className="contact-buttons">
+        <ul>
+          <li>
+            <button className="map">
+              <i className="fas fa-map"></i>
+            </button>
+          </li>
+          <li>
+            <button className="phone">
+              <i className="fas fa-phone">
+                <a href="tel:+17275822100"></a>
+              </i>
+            </button>
+          </li>
+          <li>
+            <button className="web-search">
+              <i className="fas fa-globe"></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </>
   )
