@@ -27,14 +27,6 @@ export function NewListing() {
         <button className="logout">Logout</button>
         <div className="new-listing">
           <div className="dropdown">
-            {/* <p>Type:</p>
-
-          <select name="listing-type" id="listing-type">
-            <option value="null">Select</option>
-            <option value="business">Business</option>
-            <option value="recreation">Recreation</option>
-          </select> */}
-
             <p>Listing Type: </p>
 
             <select name="listing-specialty" id="listing-specialty">
@@ -53,23 +45,11 @@ export function NewListing() {
               <option value="supplies">Supplies &amp; Care</option>
               {/* <option value="transportation">Transportation</option> */}
             </select>
-
-            {/* <p>Suitable For:</p>
-          <select name="pet-suitability" id="pet-suitability">
-            <option value="null">Select</option>
-            <option value="all">All</option>
-            <option value="bird">Bird</option>
-            <option value="cat">Cat</option>
-            <option value="dog">Dog</option>
-            <option value="rabbit">Rabbit</option>
-            <option value="specialty">Specialty</option>
-          </select> */}
           </div>
           <p>Name:</p>
           <input type="text" name="name" />
 
           <p>Description:</p>
-          {/* <input type="textarea" name="description" /> */}
 
           <textarea id="description" name="description" />
 

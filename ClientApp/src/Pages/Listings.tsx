@@ -37,37 +37,40 @@ export function Listings() {
         </ul>
       </div>
       <h1 className="listing-name">Search Listings</h1>
-      <form className="search">
-        <input
-          type="text"
-          placeholder="Search by Name..."
-          value={filterText}
-          onChange={function (event) {
-            setFilterText(event.target.value)
-          }}
-        />
-      </form>
-      <div className="search-dropdown">
-        <p>Listing Type: &nbsp; &nbsp; </p>
-
-        <form action={filterText}>
-          <select name="listing-specialty" id="listing-specialty">
-            <option value="Null">Select</option>
-            <option value="Bar Restaurant">Bar &amp; Restaurant </option>
-            <option value="Beach">Beach</option>
-            <option value="Boarding">Boarding</option>
-            {/* <option value="Event">Event</option> */}
-            <option value="Groomer">Grooming</option>
-            <option value="Lodging">Lodging</option>
-            <option value="Medical Care">Medical Care</option>
-            <option value="Park">Park</option>
-            <option value="Pet Sitter">Pet Sitter</option>
-            <option value="Residential">Residential</option>
-            <option value="Specialty">Specialty</option>
-            <option value="Supplies">Supplies &amp; Care</option>
-            {/* <option value="Transportation">Transportation</option> */}
-          </select>
+      <div className="search-options">
+        <h2>Search by Name:&nbsp; </h2>
+        <form className="search">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={filterText}
+            onChange={function (event) {
+              setFilterText(event.target.value)
+            }}
+          />
         </form>
+        <div className="search-dropdown">
+          <h2>Listing Type: &nbsp; </h2>
+
+          <form action={filterText}>
+            <select name="listing-specialty" id="listing-specialty">
+              <option value="Null">Select</option>
+              <option value="Bar Restaurant">Bar &amp; Restaurant </option>
+              <option value="Beach">Beach</option>
+              <option value="Boarding">Boarding</option>
+              {/* <option value="Event">Event</option> */}
+              <option value="Groomer">Grooming</option>
+              <option value="Lodging">Lodging</option>
+              <option value="Medical Care">Medical Care</option>
+              <option value="Park">Park</option>
+              <option value="Pet Sitter">Pet Sitter</option>
+              <option value="Residential">Residential</option>
+              <option value="Specialty">Specialty</option>
+              <option value="Supplies">Supplies &amp; Care</option>
+              {/* <option value="Transportation">Transportation</option> */}
+            </select>
+          </form>
+        </div>
       </div>
       <span className="map">
         <div className="map-image">
