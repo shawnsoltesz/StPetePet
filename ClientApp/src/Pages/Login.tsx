@@ -8,7 +8,7 @@ export function Login() {
           <ul>
             <li>
               <p>
-                <u>Home</u> /
+                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
               </p>
             </li>
             <li className="is-active">
@@ -23,10 +23,10 @@ export function Login() {
           <h1 className="listing-name">Login</h1>
         </div>
         <div className="login">
-          <p>Username: </p>
+          <p>Username </p>
           <input type="text" name="username" />
 
-          <p>Password:</p>
+          <p>Password</p>
           <input type="text" name="password" />
 
           <button className="login-button">Login</button>

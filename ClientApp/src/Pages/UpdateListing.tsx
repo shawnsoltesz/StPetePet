@@ -9,7 +9,7 @@ export function UpdateListing() {
           <ul>
             <li>
               <p>
-                <u>Home</u> /
+                <i className="home fas fa-home"></i> <u>Home</u> /
               </p>
             </li>
             <li>
@@ -29,7 +29,7 @@ export function UpdateListing() {
         </div>
         <div className="update-listing">
           <div className="dropdown">
-            <p>Listing Type: </p>
+            <p>Listing Type </p>
 
             <select name="listing-specialty" id="listing-specialty">
               <option value="null">Select</option>
@@ -47,21 +47,20 @@ export function UpdateListing() {
             </select>
           </div>
 
-          <p>Name:</p>
+          <p>Name</p>
           <input type="text" name="name" />
 
-          <p>Description:</p>
-
+          <p>Description</p>
           <textarea id="description" name="description" />
 
-          <p>Address:</p>
+          <p>Address</p>
           <input
             type="text"
             name="address"
             placeholder="123 Central Ave, St Petersburg, FL 33713"
           />
 
-          <p>Website:</p>
+          <p>Website</p>
 
           <input
             type="text"
@@ -69,7 +68,7 @@ export function UpdateListing() {
             placeholder="http://www.stpete.pet"
           />
 
-          <p>Phone Number:</p>
+          <p>Phone Number</p>
 
           <input type="text" name="phone-number" placeholder="727-555-1212" />
 

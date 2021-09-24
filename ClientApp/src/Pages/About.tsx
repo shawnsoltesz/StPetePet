@@ -8,7 +8,7 @@ export function About() {
         <ul>
           <li>
             <p>
-              <u>Home</u> /
+              <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
             </p>
           </li>
           <li className="is-active">

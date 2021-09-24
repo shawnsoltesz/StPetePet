@@ -8,7 +8,7 @@ export function NewAccount() {
           <ul>
             <li>
               <p>
-                <u>Home</u> /
+                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
               </p>
             </li>
             <li className="is-active">
@@ -23,13 +23,13 @@ export function NewAccount() {
           <h1 className="listing-name">New Account</h1>
         </div>
         <div className="new-account">
-          <p>Name: </p>
+          <p>Name </p>
           <input type="text" name="username" />
 
-          <p>E-mail Address:</p>
+          <p>E-mail Address</p>
           <input type="text" name="email address" />
 
-          <p>Password:</p>
+          <p>Password</p>
           <input type="text" name="password" />
 
           <br />

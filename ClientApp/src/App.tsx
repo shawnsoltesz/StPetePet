@@ -1,14 +1,14 @@
 import React from 'react'
-// import { Home } from './Pages/Home'
-// import { About } from './Pages/About'
-// import { Listings } from './Pages/Listings'
-// import { ListingDetail } from './Pages/ListingDetail'
+import { Home } from './Pages/Home'
+import { About } from './Pages/About'
+import { Listings } from './Pages/Listings'
+import { ListingDetail } from './Pages/ListingDetail'
 import { Login } from './Pages/Login'
-// import { NewAccount } from './Pages/NewAccount'
-// import { AdminWelcome } from './Pages/AdminWelcome'
-// import { NewListing } from './Pages/NewListing'
-// import { UpdateListing } from './Pages/UpdateListing'
-// import { UserAdmin } from './Pages/UserAdmin'
+import { NewAccount } from './Pages/NewAccount'
+import { AdminWelcome } from './Pages/AdminWelcome'
+import { NewListing } from './Pages/NewListing'
+import { UpdateListing } from './Pages/UpdateListing'
+import { UserAdmin } from './Pages/UserAdmin'
 
 // import { SearchListings } from './Pages/SearchListing'
 
@@ -36,16 +36,16 @@ export function App() {
         </nav>
       </div>
 
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Listings /> */}
-      {/* <ListingDetail /> */}
+      <Home />
+      <About />
+      <Listings />
+      <ListingDetail />
       <Login />
-      {/* <NewAccount /> */}
-      {/* <AdminWelcome /> */}
-      {/* <NewListing /> */}
-      {/* <UpdateListing /> */}
-      {/* <UserAdmin /> */}
+      <NewAccount />
+      <AdminWelcome />
+      <NewListing />
+      <UpdateListing />
+      <UserAdmin />
 
       {/* <SearchListings /> */}
 

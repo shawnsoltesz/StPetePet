@@ -20,6 +20,10 @@
   // font-family: 'Quattrocento Sans', sans-serif;
 }
 
+.home {
+  color: var(--form-border);
+}
+
 html {
   height: 100%;
 }
@@ -48,7 +52,12 @@ header {
 .top-nav ul {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--form-border);
+  // background-color: var(--form-border);
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-bottom)
+  );
   border-radius: 50% 20% / 10% 40%;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -66,6 +75,30 @@ ul {
   justify-content: start;
   font-size: small;
 }
+
+// button {
+//   border: var(--form-border);
+//   background-color: white;
+//   border-width: 2px;
+//   border-radius: 5px;
+//   color: var(--page-text);
+// }
+
+// button.hover {
+//   border: var(--form-border);
+//   background-color: rgb(184, 182, 182);
+//   border-width: 2px;
+//   border-radius: 5px;
+//   color: var(--form-border);
+// }
+
+// button.hover {
+//   border: var(--form-border);
+//   background-color: rgb(126, 126, 126);
+//   border-width: 2px;
+//   border-radius: 5px;
+//   color: var(--form-border);
+// }
 
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -109,7 +142,13 @@ main {
 
 input,
 textarea {
-  max-width: 300px;
+  max-width: 500px;
+}
+
+textarea {
+  max-width: 500px;
+  height: 4rem;
+  margin-top: 10px;
 }
 
 .search {
@@ -183,11 +222,17 @@ textarea {
   flex-direction: column;
   justify-content: center;
   flex-wrap: center;
-  align-content: center;
+  align-items: center;
 }
 
 .admin-page {
-  background-color: var(--admin-background-color);
+  // background-color: var(--admin-background-color);
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-bottom)
+  );
+
   margin-top: 30px;
   border-radius: 5px;
   padding-left: 20px;
@@ -206,6 +251,11 @@ textarea {
   flex-direction: column;
   justify-content: center;
   flex-wrap: center;
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-bottom)
+  );
 }
 
 .dropdown {
@@ -249,10 +299,17 @@ textarea {
 ul.listing {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   padding: 0;
-  margin: 0;
+  margin-top: 2rem;
+  width: 30rem;
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-bottom)
+  );
 }
+
 .contact-buttons ul,
 .rating {
   display: flex;
@@ -260,10 +317,10 @@ ul.listing {
 }
 
 .useful {
-  color: rgb(93, 179, 126);
+  color: rgb(27, 120, 104);
 }
 .not-useful {
-  color: rgb(201, 99, 99);
+  color: rgb(228, 83, 57);
   transform: rotate(180deg);
 }
 

@@ -8,7 +8,7 @@ export function ListingDetail() {
         <ul>
           <li>
             <p>
-              <u>Home</u> /
+              <i className="home fas fa-home"></i> <u>Home</u> /
             </p>
           </li>
           <li className="is-active">
