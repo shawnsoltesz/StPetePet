@@ -35,7 +35,7 @@ export function NewAccount() {
           <br />
           <br />
 
-          <button>Create New Account</button>
+          <button className="new-account-button">Create New Account</button>
         </div>
       </div>
     </>

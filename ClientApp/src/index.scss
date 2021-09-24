@@ -162,7 +162,7 @@ main {
 
 .logout {
   display: flex;
-  justify-content: center;
+  align-self: flex-end;
   background-color: red;
 }
 
@@ -221,10 +221,16 @@ main {
 
 .create-button,
 .update-button,
-.delete-button {
+.delete-button,
+.login-button,
+.new-account-button,
+.new-listing-button,
+.create-new-account-button {
+  width: max-content;
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .update-listing-buttons {

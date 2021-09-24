@@ -29,7 +29,7 @@ export function Login() {
           <p>Password:</p>
           <input type="text" name="password" />
 
-          <button>Login</button>
+          <button className="login-button">Login</button>
         </div>
       </div>
     </>

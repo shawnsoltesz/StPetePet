@@ -42,7 +42,9 @@ export function UserAdmin() {
           <br />
           <br />
 
-          <button>Create New Account</button>
+          <button className="create-new-account-button">
+            Create New Account
+          </button>
         </div>
 
         <h2>Update/Delete An Account</h2>

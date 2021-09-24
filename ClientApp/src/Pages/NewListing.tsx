@@ -77,7 +77,7 @@ export function NewListing() {
           </form>
           <br />
           <br />
-          <button className="create-button">Create New Listing</button>
+          <button className="new-listing-button">Create New Listing</button>
         </div>
       </div>
     </>
