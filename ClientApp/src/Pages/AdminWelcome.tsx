@@ -21,14 +21,6 @@ export function AdminWelcome() {
         <h1 className="listing-name">StPete.Pet Admin</h1>
         <button className="logout">Logout</button>
         <div className="search-listing">
-          <label>Search for a Listing </label>
-
-          <div className="search">
-            <input type="text" placeholder="Enter Name..." />
-          </div>
-
-          <br />
-          <br />
           <div className="admin-menu">
             <h2>Listings</h2>
 

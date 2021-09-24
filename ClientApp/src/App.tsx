@@ -1,15 +1,16 @@
 import React from 'react'
-// import { Home } from './Pages/Home'
-// import { About } from './Pages/About'
+import { Home } from './Pages/Home'
+import { About } from './Pages/About'
 import { Listings } from './Pages/Listings'
-// import { Login } from './Pages/Login'
-// import { NewAccount } from './Pages/NewAccount'
-// import { AdminWelcome } from './Pages/AdminWelcome'
-// import { UserAdmin } from './Pages/UserAdmin'
-// import { NewListing } from './Pages/NewListing'
+import { ListingDetail } from './Pages/ListingDetail'
+import { Login } from './Pages/Login'
+import { NewAccount } from './Pages/NewAccount'
+import { AdminWelcome } from './Pages/AdminWelcome'
+import { NewListing } from './Pages/NewListing'
+import { UpdateListing } from './Pages/UpdateListing'
+import { UserAdmin } from './Pages/UserAdmin'
+
 // import { SearchListings } from './Pages/SearchListing'
-// import { UpdateListing } from './Pages/UpdateListing'
-// import { ListingDetail } from './Pages/ListingDetail'
 
 import logo from './images/stpetepet/SPPlogo.svg'
 
@@ -35,17 +36,19 @@ export function App() {
         </nav>
       </div>
 
-      {/* <Home /> */}
-      {/* <About /> */}
+      <Home />
+      <About />
       <Listings />
-      {/* <Login /> */}
-      {/* <NewAccount /> */}
-      {/* <AdminWelcome /> */}
-      {/* <UserAdmin /> */}
-      {/* <NewListing /> */}
+      <ListingDetail />
+      <Login />
+      <NewAccount />
+      <AdminWelcome />
+      <NewListing />
+      <UpdateListing />
+      <UserAdmin />
+
       {/* <SearchListings /> */}
-      {/* <UpdateListing /> */}
-      {/* <ListingDetail /> */}
+
       <footer>
         <p>
           Built with <i className="heart fa fa-heart"></i> in St Petersburg,

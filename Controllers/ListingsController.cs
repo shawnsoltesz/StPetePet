@@ -40,7 +40,8 @@ namespace StPetePet.Controllers
                 return await _context.Listings.OrderBy(row => row.Name).ToListAsync();
         } else {
             return await _context.Listings.OrderBy(row => row.Name).
-            Where(listing => listing.Name.ToLower().Contains(filter.ToLower())).
+            Where(listing => listing.Name.ToLower().Contains(filter.ToLower()) || 
+            listing.ListingType.ToLower ().Contains(filter.ToLower())).
             ToListAsync();
         }
         }
