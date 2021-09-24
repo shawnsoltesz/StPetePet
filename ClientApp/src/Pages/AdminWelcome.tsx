@@ -3,6 +3,8 @@ import React from 'react'
 export function AdminWelcome() {
   return (
     <>
+      <button className="logout">Logout</button>
+
       <div className="admin-page">
         <div className="breadcrumb" aria-label="breadcrumbs">
           <ul>
@@ -19,7 +21,7 @@ export function AdminWelcome() {
           </ul>
         </div>
         <h1 className="listing-name">StPete.Pet Admin</h1>
-        <button className="logout">Logout</button>
+
         <div className="search-listing">
           <div className="admin-menu">
             <h2>Listings</h2>

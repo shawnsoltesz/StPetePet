@@ -3,6 +3,7 @@ import React from 'react'
 export function UserAdmin() {
   return (
     <>
+      <button className="logout">Logout</button>
       <div className="admin-page">
         <div className="breadcrumb" aria-label="breadcrumbs">
           <ul>
@@ -26,7 +27,6 @@ export function UserAdmin() {
         </div>
         <div>
           <h1 className="listing-name">User Admin</h1>
-          <button className="logout">Logout</button>
         </div>
         <h2>Create A New Account</h2>
         <div className="new-account">

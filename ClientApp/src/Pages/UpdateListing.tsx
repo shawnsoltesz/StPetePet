@@ -3,6 +3,7 @@ import React from 'react'
 export function UpdateListing() {
   return (
     <>
+      <button className="logout">Logout</button>
       <div className="admin-page">
         <div className="breadcrumb" aria-label="breadcrumbs">
           <ul>
@@ -25,7 +26,6 @@ export function UpdateListing() {
         </div>
         <div>
           <h1 className="listing-name">Update Listing</h1>
-          <button className="logout">Logout</button>
         </div>
         <div className="update-listing">
           <div className="dropdown">
