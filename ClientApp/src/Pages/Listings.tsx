@@ -58,7 +58,6 @@ export function Listings() {
               <option value="Bar Restaurant">Bar &amp; Restaurant </option>
               <option value="Beach">Beach</option>
               <option value="Boarding">Boarding</option>
-              {/* <option value="Event">Event</option> */}
               <option value="Groomer">Grooming</option>
               <option value="Lodging">Lodging</option>
               <option value="Medical Care">Medical Care</option>
@@ -67,7 +66,6 @@ export function Listings() {
               <option value="Residential">Residential</option>
               <option value="Specialty">Specialty</option>
               <option value="Supplies">Supplies &amp; Care</option>
-              {/* <option value="Transportation">Transportation</option> */}
             </select>
           </form>
         </div>

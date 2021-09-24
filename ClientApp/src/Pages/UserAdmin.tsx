@@ -13,7 +13,7 @@ export function UserAdmin() {
             </li>
             <li>
               <p>
-                <u>Admin Welcome</u> /
+                &nbsp;<u>Admin Welcome</u> /
               </p>
             </li>
             <li className="is-active">
