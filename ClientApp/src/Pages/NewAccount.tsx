@@ -34,11 +34,6 @@ export function NewAccount() {
 
           <br />
           <br />
-          <div className="login-redirect3">
-            <a href="#">Already have an account, login</a>
-          </div>
-          <br />
-          <br />
 
           <button>Create New Account</button>
         </div>

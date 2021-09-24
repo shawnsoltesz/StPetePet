@@ -29,17 +29,6 @@ export function Login() {
           <p>Password:</p>
           <input type="text" name="password" />
 
-          <br />
-          <br />
-          <div className="login-redirect1">
-            <a href="#">Forgot Password</a>
-          </div>
-          <div className="login-redirect2">
-            <a href="#">Already have an account, login</a>
-          </div>
-          <br />
-          <br />
-
           <button>Login</button>
         </div>
       </div>
