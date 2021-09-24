@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 
 import StPete from '../images/map/map-stpete-fl.gif'
@@ -6,20 +6,33 @@ import { ListingType } from '../types'
 import { SingleListingFromList } from '../components/SingleListingFromList'
 
 export function Listings() {
+  const [filterText, setFilterText] = useState('')
+
   const { data: listings = [] } = useQuery<ListingType[]>(
-    'listings',
+    ['listings', filterText],
     async function () {
-      const response = await fetch('/api/listings')
+      const response = await fetch(
+        filterText.length === 0
+          ? 'api/listings'
+          : `/api/listings?filter=${filterText}`
+      )
       return response.json()
     }
   )
-  console.log({ listings })
+
   return (
     <>
       <h1 className="listing-name">Search Listings</h1>
-      <div className="search">
-        <input type="text" placeholder="Search..." />
-      </div>
+      <form className="search">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={filterText}
+          onChange={function (event) {
+            setFilterText(event.target.value)
+          }}
+        />
+      </form>
       <div className="search-dropdown">
         <p>Listing Type: &nbsp; &nbsp; </p>
 
