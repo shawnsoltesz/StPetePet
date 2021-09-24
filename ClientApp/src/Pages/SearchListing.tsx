@@ -28,9 +28,9 @@ export function SearchListings() {
       <div className="search-listing">
         <label>Search for a Listing </label>
 
-        <div className="search">
+        <form className="search">
           <input type="text" placeholder="Enter Name..." />
-        </div>
+        </form>
 
         <br />
         <br />
