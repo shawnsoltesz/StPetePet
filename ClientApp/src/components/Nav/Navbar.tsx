@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Burger from './Burger'
-import RightNav from './RightNav'
 
-// import logo from './images/stpetepet/SPPlogo.svg'
+import logo from '../images/stpetepet/SPPlogo.svg'
 
 const Nav = styled.nav`
   width: 100%;
@@ -21,14 +20,10 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="logo-test">
-        Nav Bar
-        {/* <img
-          src={logo}
-          alt="St Pete dot Pet logo of dog and cat at the beach."
-        /> */}
+        StPete.Pet
+        <img src={logo} alt="St Pete dot Pet website logo" />
       </div>
       <Burger />
-      <RightNav open={undefined} />
     </Nav>
   )
 }

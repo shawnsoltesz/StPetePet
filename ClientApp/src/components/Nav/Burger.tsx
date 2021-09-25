@@ -48,7 +48,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} HTMLIn={undefined} />
+      <RightNav open={open} />
     </>
   )
 }
