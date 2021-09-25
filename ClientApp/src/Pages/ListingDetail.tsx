@@ -2,8 +2,10 @@ import React from 'react'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router'
 import { ListingType } from '../types'
+
 import fortdesoto from '../images/listings/FortDesoto.jpg'
 import StPete from '../images/map/map-stpete-fl.gif'
+import { Link } from 'react-router-dom'
 
 async function loadOneListing(id: string) {
   const response = await fetch(`/api/listings/${id}`)
@@ -42,13 +44,23 @@ export function ListingDetail() {
         <ul>
           <li>
             <p>
-              <i className="home fas fa-home"></i> <u>Home</u> /
+              <i className="home fas fa-home"></i>{' '}
+              <u>
+                <Link to="/">Home</Link>
+              </u>
+              &nbsp;/
+            </p>
+          </li>
+          <li>
+            <p>
+              <u>
+                &nbsp;<Link to="/listings">Search Listings</Link>
+              </u>{' '}
+              &nbsp;/
             </p>
           </li>
           <li className="is-active">
-            <p aria-current="page">
-              &nbsp;<u>Listing Detail</u>
-            </p>
+            <p aria-current="page">&nbsp;Listing Detail</p>
           </li>
         </ul>
       </div>
