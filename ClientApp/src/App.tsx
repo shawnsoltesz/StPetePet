@@ -1,18 +1,17 @@
 import React from 'react'
+import { Route, Switch } from 'react-router'
+
 import Navbar from './components/Nav/Navbar'
-
-// import { Home } from './Pages/Home'
-// import { About } from './Pages/About'
-// import { Listings } from './Pages/Listings'
-// import { ListingDetail } from './Pages/ListingDetail'
-// import { Login } from './Pages/Login'
-// import { NewAccount } from './Pages/NewAccount'
-// import { AdminWelcome } from './Pages/AdminWelcome'
+import { Home } from './Pages/Home'
+import { About } from './Pages/About'
+import { Listings } from './Pages/Listings'
+import { ListingDetail } from './Pages/ListingDetail'
+import { Login } from './Pages/Login'
+import { NewAccount } from './Pages/NewAccount'
+import { AdminWelcome } from './Pages/AdminWelcome'
 import { NewListing } from './Pages/NewListing'
-//import { UpdateListing } from './Pages/UpdateListing'
-// import { UserAdmin } from './Pages/UserAdmin'
-
-// import { SearchListings } from './Pages/SearchListing'
+import { UpdateListing } from './Pages/UpdateListing'
+import { UserAdmin } from './Pages/UserAdmin'
 
 // import logo from './images/stpetepet/SPPlogo.svg'
 
@@ -20,7 +19,49 @@ export function App() {
   return (
     <>
       <div className="navbar">
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/new">
+            <NewListing />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/search">
+            <Listings />
+          </Route>
+          <Route exact path="/listing">
+            <ListingDetail />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/newaccount">
+            <NewAccount />
+          </Route>
+          <Route exact path="/admin">
+            <AdminWelcome />
+          </Route>
+          <Route exact path="/updatelisting">
+            <UpdateListing />
+          </Route>
+          <Route exact path="/accountadmin">
+            <UserAdmin />
+          </Route>
+        </Switch>
+
+        <footer>
+          <p>
+            Built with <i className="heart fa fa-heart"></i> in St Petersburg,
+            Florida. <i className="paw fas fa-paw"></i>
+          </p>
+        </footer>
 
         {/* <header>
           <div className="logo">
@@ -43,28 +84,6 @@ export function App() {
             </ul>
           </nav>
         </div> */}
-<Switch>
-  <Route exact path="/"
-
-        {/* <Home /> */}
-        {/* <About /> */}
-        {/* <Listings /> */}
-        {/* <ListingDetail /> */}
-        {/* <Login /> */}
-        {/* <NewAccount /> */}
-        {/* <AdminWelcome /> */}
-        <NewListing />
-        {/* <UpdateListing /> */}
-        {/* <UserAdmin /> */}
-</Switch>
-      
-
-        <footer>
-          <p>
-            Built with <i className="heart fa fa-heart"></i> in St Petersburg,
-            Florida. <i className="paw fas fa-paw"></i>
-          </p>
-        </footer>
       </div>
     </>
   )

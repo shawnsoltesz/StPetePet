@@ -26,7 +26,7 @@ export function UserAdmin() {
           </ul>
         </div>
         <div>
-          <h1 className="listing-name">User Admin</h1>
+          <h1 className="listing-name">Account Admin</h1>
         </div>
         <h2>Create A New Account</h2>
         <div className="new-account">
