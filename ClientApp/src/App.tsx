@@ -43,6 +43,8 @@ export function App() {
             </ul>
           </nav>
         </div> */}
+<Switch>
+  <Route exact path="/"
 
         {/* <Home /> */}
         {/* <About /> */}
@@ -54,8 +56,8 @@ export function App() {
         <NewListing />
         {/* <UpdateListing /> */}
         {/* <UserAdmin /> */}
-
-        {/* <SearchListings /> */}
+</Switch>
+      
 
         <footer>
           <p>
