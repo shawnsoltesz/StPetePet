@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 interface Props {
@@ -32,9 +33,18 @@ const Ul = styled.ul<Props>`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>About</li>
-      <li>Search Listings</li>
+      <li>
+        <Link to="/home">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/search">Search Listings</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
     </Ul>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import seal from '../images/stpetepet/stpetepetDraft.png'
 
 export function About() {
@@ -7,14 +8,18 @@ export function About() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <p>
-              <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
-            </p>
+            <Link to="/home">
+              <p>
+                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
+              </p>
+            </Link>
           </li>
           <li className="is-active">
-            <p aria-current="page">
-              &nbsp;<u>About</u>
-            </p>
+            <Link to="/about">
+              <p aria-current="page">
+                &nbsp;<u>About</u>
+              </p>
+            </Link>
           </li>
         </ul>
       </div>
