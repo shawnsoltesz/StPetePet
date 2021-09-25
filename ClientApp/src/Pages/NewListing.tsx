@@ -3,9 +3,7 @@ import React from 'react'
 export function NewListing() {
   return (
     <>
-      <button className="logout">Logout</button>
-
-      <div className="admin-page">
+      <div className="admin-logout">
         <div className="breadcrumb" aria-label="breadcrumbs">
           <ul>
             <li>
@@ -25,6 +23,12 @@ export function NewListing() {
             </li>
           </ul>
         </div>
+        <div className="logout">
+          <button>Logout</button>
+        </div>
+      </div>
+
+      <div className="admin-page">
         <h1 className="listing-name">New Listing</h1>
 
         <div className="new-listing">
