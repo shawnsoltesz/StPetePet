@@ -5,7 +5,7 @@ export interface CSSStarsProperties extends CSSProperties {
 }
 
 export type ListingType = {
-  id: number
+  id: number | undefined
   isActive: boolean
   listingType: string
   name: string
