@@ -30,61 +30,67 @@ export function NewListing() {
 
       <div className="admin-page">
         <h1 className="listing-name">New Listing</h1>
+        <div className="input-form-instructions">
+          <p>All fields are required.</p>
+        </div>
 
-        <div className="new-listing">
+        <form className="new-listing" action="#">
           <div className="dropdown">
-            <p>Listing Type </p>
+            <p className="form-input">
+              <strong>Listing Type &nbsp;</strong>
 
-            <select name="listing-specialty" id="listing-specialty">
-              <option value="null">Select</option>
-              <option value="bar-restaurant">Bar &amp; Restaurant </option>
-              <option value="beach">Beach</option>
-              <option value="boarding">Boarding</option>
-              <option value="grooming">Grooming</option>
-              <option value="lodging">Lodging</option>
-              <option value="medical-care">Medical Care</option>
-              <option value="park">Park</option>
-              <option value="pet-sitter">Pet Sitter</option>
-              <option value="residential">Residential</option>
-              <option value="specialty">Specialty</option>
-              <option value="supplies">Supplies &amp; Care</option>
-            </select>
+              <select name="listing-specialty" id="listing-specialty">
+                <option value="null">Select</option>
+                <option value="bar-restaurant">Bar &amp; Restaurant </option>
+                <option value="beach">Beach</option>
+                <option value="boarding">Boarding</option>
+                <option value="grooming">Grooming</option>
+                <option value="lodging">Lodging</option>
+                <option value="medical-care">Medical Care</option>
+                <option value="park">Park</option>
+                <option value="pet-sitter">Pet Sitter</option>
+                <option value="residential">Residential</option>
+                <option value="specialty">Specialty</option>
+                <option value="supplies">Supplies &amp; Care</option>
+              </select>
+            </p>
           </div>
-          <p>Name</p>
+          <p className="form-input">
+            <strong>Name&nbsp;</strong>
+          </p>
           <input type="text" name="name" />
 
-          <p>Description</p>
-
+          <p className="form-input">
+            <strong>Description</strong>{' '}
+          </p>
           <textarea id="description" name="description" />
 
-          <p>Address</p>
+          <p>Address&nbsp;</p>
           <input
             type="text"
             name="address"
             placeholder="123 Central Ave, St Petersburg, FL 33713"
           />
 
-          <p>Website</p>
-
+          <p>Website&nbsp;</p>
           <input
             type="text"
             name="website"
             placeholder="http://www.stpete.pet"
           />
 
-          <p>Phone Number</p>
-
+          <p>Phone Number&nbsp;</p>
           <input type="text" name="phone-number" placeholder="727-555-1212" />
-          <br />
-          <br />
-          <p>Click on the &quot;Browse&quot; button to upload an image:</p>
-          <form action="/action_page.php">
-            <input type="file" id="listing-image" name="filename" />
-          </form>
-          <br />
-          <br />
+
+          <p>Picture&nbsp;</p>
+          <div className="picture-upload">
+            <p>Click on the &quot;Browse&quot; button to upload an image:</p>
+            <form action="/action_page.php">
+              <input type="file" id="listing-image" name="filename" />
+            </form>
+          </div>
           <button className="new-listing-button">Create New Listing</button>
-        </div>
+        </form>
       </div>
     </>
   )
