@@ -44,23 +44,25 @@ export function ListingDetail() {
         <ul>
           <li>
             <p>
-              <i className="home fas fa-home"></i>{' '}
+              <i className="breadcrumb-icon fas fa-home"></i>{' '}
               <u>
                 <Link to="/">Home</Link>
               </u>
-              &nbsp;/
+              &nbsp;/&nbsp;
             </p>
           </li>
           <li>
             <p>
-              <u>
-                &nbsp;<Link to="/listings">Search Listings</Link>
-              </u>{' '}
-              &nbsp;/
+              <i className="breadcrumb-icon fas fa-search"></i>
+              &nbsp;<Link to="/listings">Search Listings</Link>
+              &nbsp;/&nbsp;
             </p>
           </li>
           <li className="is-active">
-            <p aria-current="page">&nbsp;Listing Detail</p>
+            <p aria-current="page">
+              <i className="breadcrumb-icon fas fa-list"></i>&nbsp;Listing
+              Detail
+            </p>
           </li>
         </ul>
       </div>

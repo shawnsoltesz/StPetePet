@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ListingType } from '../types'
 
 export function NewListing() {
@@ -34,17 +35,19 @@ export function NewListing() {
           <ul>
             <li>
               <p>
-                <i className="home fas fa-home"></i> <u>Home</u> /
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>&nbsp;/&nbsp;
               </p>
             </li>
             <li>
               <p>
-                &nbsp;<u>Admin Welcome</u> /
+                <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;
+                <Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
               </p>
             </li>
             <li className="is-active">
               <p aria-current="page">
-                &nbsp;<u>New Listing</u>
+                <i className="breadcrumb-icon fas fa-list"></i>&nbsp;New Listing
               </p>
             </li>
           </ul>
@@ -102,8 +105,10 @@ export function NewListing() {
           <p className="form-input">
             <label htmlFor="description">Description</label>
           </p>
+
           <textarea
             name="description"
+            placeholder="Include html tagging for Description to appear correctly."
             value={newListing.description}
             onChange={handleStringFieldChange}
           />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function Login() {
   return (
@@ -8,13 +9,15 @@ export function Login() {
           <ul>
             <li>
               <p>
-                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>
+                &nbsp;/&nbsp;
               </p>
             </li>
             <li className="is-active">
               <p aria-current="page">
-                {' '}
-                &nbsp;<u>Login</u>
+                <i className="breadcrumb-icon fas fa-sign-in-alt"></i>{' '}
+                &nbsp;Login
               </p>
             </li>
           </ul>

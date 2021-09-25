@@ -44,7 +44,7 @@ export function App() {
           <Route exact path="/admin">
             <AdminWelcome />
           </Route>
-          <Route exact path="/newaccount">
+          <Route exact path="/admin/newaccount">
             <NewAccount />
           </Route>
           <Route exact path="/admin/updatelisting">

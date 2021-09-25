@@ -8,18 +8,17 @@ export function About() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <Link to="/home">
-              <p>
-                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
-              </p>
-            </Link>
+            <p>
+              <i className="breadcrumb-icon fas fa-home"></i>{' '}
+              <Link to="/">Home</Link>
+              &nbsp;/
+            </p>
           </li>
           <li className="is-active">
-            <Link to="/about">
-              <p aria-current="page">
-                &nbsp;<u>About</u>
-              </p>
-            </Link>
+            <p aria-current="page">
+              &nbsp;
+              <i className="breadcrumb-icon fas fa-info-circle"></i>&nbsp;About
+            </p>
           </li>
         </ul>
       </div>

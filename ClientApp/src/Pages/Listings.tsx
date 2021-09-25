@@ -27,15 +27,18 @@ export function Listings() {
         <ul>
           <li>
             <p>
-              <i className="home fas fa-home"></i>{' '}
+              <i className="breadcrumb-icon fas fa-home"></i>{' '}
               <u>
                 <Link to="/">Home</Link>
               </u>
-              &nbsp;/
+              &nbsp;/&nbsp;
             </p>
           </li>
           <li className="is-active">
-            <p aria-current="page">&nbsp;Search Listings</p>
+            <p aria-current="page">
+              <i className="breadcrumb-icon fas fa-search"></i>&nbsp;Search
+              Listings
+            </p>
           </li>
         </ul>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function UserAdmin() {
   return (
@@ -9,18 +10,22 @@ export function UserAdmin() {
           <ul>
             <li>
               <p>
-                <i className="home fas fa-home"></i> <u>Home</u> /
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>
+                &nbsp;/&nbsp;
               </p>
             </li>
             <li>
               <p>
-                &nbsp;<u>Admin Welcome</u> /
+                <i className="breadcrumb-icon fas fa-paw"></i>
+                &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
               </p>
             </li>
+
             <li className="is-active">
               <p aria-current="page">
-                {' '}
-                &nbsp;<u>Update/Delete Account</u>
+                <i className="breadcrumb-icon fas fa-user"></i>{' '}
+                &nbsp;Update/Delete Account
               </p>
             </li>
           </ul>

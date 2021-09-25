@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function NewAccount() {
   return (
@@ -8,13 +9,22 @@ export function NewAccount() {
           <ul>
             <li>
               <p>
-                <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>
+                &nbsp;/&nbsp;
               </p>
             </li>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-paw"></i>
+                &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
+              </p>
+            </li>
+
             <li className="is-active">
               <p aria-current="page">
-                {' '}
-                &nbsp;<u>New Account</u>
+                <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New
+                Account
               </p>
             </li>
           </ul>
