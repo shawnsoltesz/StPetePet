@@ -69,7 +69,7 @@ export function NewListing() {
               id="listing-type"
               name="listing-type"
               value={newListing.listingType}
-              onChange={(event) => setState(event.target.value)}
+              // onChange={(event) => useState(event.target.value)}
             >
               <option value="null">Select</option>
               <option value="Bar &amp; Restaurant">

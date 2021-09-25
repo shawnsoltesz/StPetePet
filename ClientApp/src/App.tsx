@@ -36,7 +36,7 @@ export function App() {
           <Route exact path="/search">
             <Listings />
           </Route>
-          <Route exact path="/listing">
+          <Route exact path="/listings/:id">
             <ListingDetail />
           </Route>
           <Route exact path="/login">

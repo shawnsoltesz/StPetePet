@@ -389,6 +389,12 @@ footer {
   transform: rotate(35deg);
 }
 
+.construction {
+  display: flex;
+  justify-content: center;
+  color: rgb(228, 83, 57);
+}
+
 @media only screen and (max-width: 768px) {
   .pages {
     font-size: 2.5rem;
