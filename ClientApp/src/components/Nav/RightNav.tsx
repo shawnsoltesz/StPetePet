@@ -22,7 +22,7 @@ const Ul = styled.ul<Props>`
     height: 100vh;
     width: 200px;
     padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     li {
       color: #3b1b09;
     }

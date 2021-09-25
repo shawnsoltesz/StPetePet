@@ -14,7 +14,7 @@ import { NewListing } from './Pages/NewListing'
 
 // import { SearchListings } from './Pages/SearchListing'
 
-import logo from './images/stpetepet/SPPlogo.svg'
+// import logo from './images/stpetepet/SPPlogo.svg'
 
 export function App() {
   return (
@@ -22,7 +22,7 @@ export function App() {
       <div className="navbar">
         <Navbar />
 
-        <header>
+        {/* <header>
           <div className="logo">
             <img
               src={logo}
@@ -36,13 +36,13 @@ export function App() {
               <li className="nav-button">Home</li>
               <li className="nav-button">About</li>
               <li className="nav-button">Search Listings</li>
-              {/* <li>Login</li>
+              <li>Login</li>
             <li>Create Account</li>
             <li>Create Listing</li>
-            <li>Update Listing</li> */}
+            <li>Update Listing</li>
             </ul>
           </nav>
-        </div>
+        </div> */}
 
         {/* <Home /> */}
         {/* <About /> */}
