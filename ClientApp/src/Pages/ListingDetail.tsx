@@ -1,7 +1,41 @@
 import React from 'react'
+import { useQuery } from 'react-query'
+import { useParams } from 'react-router'
+import { ListingType } from '../types'
 import fortdesoto from '../images/listings/FortDesoto.jpg'
+import StPete from '../images/map/map-stpete-fl.gif'
+
+async function loadOneListing(id: string) {
+  const response = await fetch(`/api/listings/${id}`)
+
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
+}
+
+const NullListing: ListingType = {
+  id: undefined,
+  isActive: true,
+  listingType: '',
+  name: '',
+  description: '',
+  address: '',
+  website: '',
+  phoneNumber: '',
+  createdDate: new Date(),
+  updatedDate: new Date(),
+}
 
 export function ListingDetail() {
+  const { id } = useParams<{ id: string }>()
+
+  const { data: listing = NullListing } = useQuery<ListingType>(
+    ['one-listing', id],
+    () => loadOneListing(id)
+  )
+
   return (
     <>
       <div className="breadcrumb" aria-label="breadcrumbs">
@@ -13,24 +47,24 @@ export function ListingDetail() {
           </li>
           <li className="is-active">
             <p aria-current="page">
-              {' '}
               &nbsp;<u>Listing Detail</u>
             </p>
           </li>
         </ul>
       </div>
-      <h1 className="listing-name">Fort Desoto</h1>
+      <h1 className="listing-name">{listing.name}</h1>
       <div className="listing-photo">
         <img src={fortdesoto} alt="cocker spaniel at the beach" />
       </div>
 
+      <span className="map">
+        <div className="map-image">
+          <img src={StPete} alt="aerial map of St Petersburg, FL" />
+        </div>
+      </span>
+
       <div className="description">
-        <p>
-          Fort Desoto has the only dog park where dogs are allowed on the beach
-          in a designated area. There are also 2 fenced-in areas near the beach
-          for large and small dogs with water stations &#40;beach entrance is at
-          the far southwest corner of dog park&#41;.
-        </p>
+        <p>{listing.description}</p>
       </div>
       <div className="contact-details">
         <div className="contact-buttons">
@@ -43,7 +77,7 @@ export function ListingDetail() {
             <li>
               <button className="phone">
                 <i className="fas fa-phone">
-                  <a href="tel:+17275822100"></a>
+                  <a href={`tel:+1${listing.phoneNumber}`} />
                 </i>
               </button>
             </li>
@@ -57,23 +91,22 @@ export function ListingDetail() {
         <ul className="address">
           <li>
             <p>
-              <strong>Address: </strong>3500 Pinellas Bayway S., Tierra Verde,
-              FL 33715
+              <strong>Address: </strong>
+              {listing.address}
             </p>
           </li>
 
           <li className="phone">
             <p>
-              <strong>Phone: </strong>727-582-2100
+              <strong>Phone: </strong>
+              {listing.phoneNumber}
             </p>
           </li>
 
           <li className="website">
             <p>
               <strong>Website: </strong>
-              <a href="https://www.pinellascounty.org/park/05_ft_desoto.htm">
-                Fort Desoto Dog Beach
-              </a>
+              <a href={listing.website}>{listing.name}</a>
             </p>
           </li>
         </ul>
