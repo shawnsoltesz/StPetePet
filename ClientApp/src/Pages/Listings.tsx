@@ -3,7 +3,7 @@ import { useQuery } from 'react-query'
 
 import StPete from '../images/map/map-stpete-fl.gif'
 import { ListingType } from '../types'
-import { SingleListingFromList } from '../components/SingleListingFromList'
+import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
 
 export function Listings() {
   const [filterText, setFilterText] = useState('')
