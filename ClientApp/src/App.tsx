@@ -27,13 +27,11 @@ export function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/new">
-            <NewListing />
-          </Route>
+
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/search">
+          <Route exact path="/listings">
             <Listings />
           </Route>
           <Route exact path="/listings/:id">
@@ -42,16 +40,20 @@ export function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/newaccount">
-            <NewAccount />
-          </Route>
+
           <Route exact path="/admin">
             <AdminWelcome />
           </Route>
-          <Route exact path="/updatelisting">
+          <Route exact path="/newaccount">
+            <NewAccount />
+          </Route>
+          <Route exact path="/admin/updatelisting">
             <UpdateListing />
           </Route>
-          <Route exact path="/accountadmin">
+          <Route exact path="/admin/newlisting">
+            <NewListing />
+          </Route>
+          <Route exact path="/admin/updateaccount">
             <UserAdmin />
           </Route>
         </Switch>

@@ -1,4 +1,11 @@
 {
-  "cSpell.words": ["accountadmin", "newaccount", "stpete", "updatelisting"],
+  "cSpell.words": [
+    "accountadmin",
+    "newaccount",
+    "newlisting",
+    "stpete",
+    "updateaccount",
+    "updatelisting"
+  ],
   "cSpell.ignoreWords": ["Ooops", "navi"]
 }

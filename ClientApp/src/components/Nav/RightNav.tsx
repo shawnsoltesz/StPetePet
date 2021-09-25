@@ -40,7 +40,7 @@ const RightNav = ({ open }) => {
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/search">Search Listings</Link>
+        <Link to="/listings">Search Listings</Link>
       </li>
       <li>
         <Link to="/login">Login</Link>
