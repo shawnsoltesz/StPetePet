@@ -22,42 +22,43 @@ export function App() {
         <header>
           <Navbar />
         </header>
+        <body>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/listings">
+              <Listings />
+            </Route>
+            <Route exact path="/listings/:id">
+              <ListingDetail />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
 
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/listings">
-            <Listings />
-          </Route>
-          <Route exact path="/listings/:id">
-            <ListingDetail />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-
-          <Route exact path="/admin">
-            <AdminWelcome />
-          </Route>
-          <Route exact path="/admin/newaccount">
-            <NewAccount />
-          </Route>
-          <Route exact path="/admin/updatelisting">
-            <UpdateListing />
-          </Route>
-          <Route exact path="/admin/newlisting">
-            <NewListing />
-          </Route>
-          <Route exact path="/admin/updateaccount">
-            <UserAdmin />
-          </Route>
-        </Switch>
-
+            <Route exact path="/admin">
+              <AdminWelcome />
+            </Route>
+            <Route exact path="/admin/newaccount">
+              <NewAccount />
+            </Route>
+            <Route exact path="/admin/updatelisting">
+              <UpdateListing />
+            </Route>
+            <Route exact path="/admin/newlisting">
+              <NewListing />
+            </Route>
+            <Route exact path="/admin/updateaccount">
+              <UserAdmin />
+            </Route>
+          </Switch>
+          {/* <script>(function(){var s = document.createElement("script");s.setAttribute("data-account","WUasJwQ0rn");s.setAttribute("src","https://cdn.userway.org/widget.js");document.body.appendChild(s);})();</script><noscript>Enable JavaScript to ensure <a href="https://userway.org">website accessibility</a></noscript> */}
+        </body>
         <footer>
           <p>
             Built with <i className="heart fa fa-heart"></i> in St Petersburg,
