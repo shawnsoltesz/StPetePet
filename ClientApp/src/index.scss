@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quattrocento+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
   --background-gradient-top: #eee2af;
@@ -58,10 +60,19 @@ header {
     var(--background-gradient-top),
     var(--background-gradient-bottom)
   );
-  border-radius: 50% 20% / 10% 40%;
+  // border-radius: 55% 20% / 10% 45%;
+  border-radius: 15%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: var(--h2-font);
+}
+
+.nav-button {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-family: var(--h2-font);
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: slateblue;
 }
 
 ul {
@@ -72,7 +83,7 @@ ul {
 
 .breadcrumb ul {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   font-size: small;
 }
 
@@ -151,6 +162,14 @@ textarea {
   margin-top: 10px;
 }
 
+.admin-logout {
+  display: flex;
+  // line-height: 1.5;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -207,8 +226,8 @@ textarea {
 .logout {
   display: flex;
   align-self: flex-end;
-  background-color: red;
-  margin-top: 20px;
+  // margin-top: 20px;
+  margin-left: auto;
 }
 
 .login,
@@ -233,10 +252,10 @@ textarea {
     var(--background-gradient-bottom)
   );
 
-  margin-top: 30px;
+  margin-top: 4rem;
   border-radius: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 30px;
 }
 
