@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import StPete from '../images/map/map-stpete-fl.gif'
 import { ListingType } from '../types'
 import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
+import { Link } from 'react-router-dom'
 
 export function Listings() {
   const [filterText, setFilterText] = useState('')
@@ -26,13 +27,15 @@ export function Listings() {
         <ul>
           <li>
             <p>
-              <i className="home fas fa-home"></i> <u>Home</u>&nbsp;/
+              <i className="home fas fa-home"></i>{' '}
+              <u>
+                <Link to="/">Home</Link>
+              </u>
+              &nbsp;/
             </p>
           </li>
           <li className="is-active">
-            <p aria-current="page">
-              &nbsp;<u>Search Listings</u>
-            </p>
+            <p aria-current="page">&nbsp;Search Listings</p>
           </li>
         </ul>
       </div>
