@@ -16,7 +16,7 @@ export function Login() {
             </li>
             <li className="is-active">
               <p aria-current="page">
-                <i className="breadcrumb-icon fas fa-sign-in-alt"></i>{' '}
+                <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
                 &nbsp;Login
               </p>
             </li>

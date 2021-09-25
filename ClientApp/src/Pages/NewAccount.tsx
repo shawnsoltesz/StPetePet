@@ -9,7 +9,7 @@ export function NewAccount() {
           <ul>
             <li>
               <p>
-                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <i className="breadcrumb-icon fas fa-home"></i>
                 <Link to="/">Home</Link>
                 &nbsp;/&nbsp;
               </p>

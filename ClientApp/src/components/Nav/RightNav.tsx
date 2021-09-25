@@ -34,15 +34,19 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
       <li>
+        <i className="breadcrumb-icon fas fa-home"></i>&nbsp;
         <Link to="/">Home</Link>
       </li>
       <li>
+        <i className="breadcrumb-icon fas fa-info-circle"></i>&nbsp;
         <Link to="/about">About</Link>
       </li>
       <li>
+        <i className="breadcrumb-icon fas fa-search"></i>&nbsp;
         <Link to="/listings">Search Listings</Link>
       </li>
       <li>
+        <i className="breadcrumb-icon fas fa-sign-in-alt"></i>&nbsp;
         <Link to="/login">Login</Link>
       </li>
     </Ul>
