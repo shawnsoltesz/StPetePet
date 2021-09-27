@@ -326,6 +326,13 @@ textarea {
   align-self: center;
 }
 
+.form-error {
+  background-color: yellow;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
 .update-listing-buttons {
   margin-top: 10px;
   display: flex;

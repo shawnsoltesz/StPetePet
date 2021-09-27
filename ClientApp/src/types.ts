@@ -16,3 +16,11 @@ export type ListingType = {
   createdDate: Date
   updatedDate: Date
 }
+
+export type APIError = {
+  errors: Record<string, string[]>
+  status: number
+  title: string
+  traceId: string
+  type: string
+}

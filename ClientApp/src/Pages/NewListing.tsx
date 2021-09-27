@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { Link, useHistory } from 'react-router-dom'
-import { ListingType } from '../types'
+import { APIError, ListingType } from '../types'
 
 async function submitNewListing(listingToCreate: ListingType) {
   const response = await fetch('/api/Listings', {
@@ -9,8 +9,11 @@ async function submitNewListing(listingToCreate: ListingType) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(listingToCreate),
   })
-
-  return response.json()
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 
 export function NewListing() {
@@ -27,13 +30,18 @@ export function NewListing() {
     updatedDate: new Date(),
   })
 
-  const history = useHistory()
+  const [errorMessage, setErrorMessage] = useState('')
 
   const createNewListing = useMutation(submitNewListing, {
     onSuccess: function () {
       history.push('/admin')
     },
+    onError: function (apiError: APIError) {
+      setErrorMessage(Object.values(apiError.errors).join(' '))
+    },
   })
+
+  const history = useHistory()
 
   async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -99,9 +107,7 @@ export function NewListing() {
               value={newListing.listingType}
               onChange={handleStringFieldChange}
             >
-              <option value="" disabled selected>
-                Select
-              </option>
+              <option value="Null">Select</option>
               <option value="Bar &amp; Restaurant">
                 Bar &amp; Restaurant{' '}
               </option>
@@ -176,12 +182,14 @@ export function NewListing() {
           <p className="form-input">
             <label htmlFor="picture">Picture</label>
           </p>
-          <div className="picture-upload">
-            <p>Click on the &quot;Browse&quot; button to upload an image:</p>
-            <form action="/action_page.php">
-              <input type="file" id="listing-image" name="filename" />
-            </form>
-          </div>
+
+          <p className="form-input">
+            Click on the &quot;Browse&quot; button to upload an image:
+            <input type="file" name="picture" />
+          </p>
+
+          {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
+
           <button className="new-listing-button">Create New Listing</button>
         </form>
       </div>
