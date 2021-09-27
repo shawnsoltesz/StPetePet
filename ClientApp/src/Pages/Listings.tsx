@@ -59,7 +59,7 @@ export function Listings() {
           <h2>Listing Type: &nbsp; </h2>
 
           <form action={filterText}>
-            <select name="listing-specialty" id="listing-specialty">
+            <select name="listing-type" id="listing-type">
               <option value="Null">Select</option>
               <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
                 Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters

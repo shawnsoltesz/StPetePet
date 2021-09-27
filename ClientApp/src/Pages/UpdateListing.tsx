@@ -35,7 +35,7 @@ export function UpdateListing() {
           <div className="dropdown">
             <p>Listing Type </p>
 
-            <select name="listing-specialty" id="listing-specialty">
+            <select name="listing-type" id="listing-type">
               <option value="Null">Select</option>
               <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
                 Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters

@@ -191,7 +191,7 @@ export function NewListing() {
           </p>
 
           <p className="form-input">
-            Click on the &quot;Browse&quot; button to upload an image:
+            Click on the &quot;Browse&quot; button to upload an image: &nbsp;
             <input type="file" name="picture" />
           </p>
 
