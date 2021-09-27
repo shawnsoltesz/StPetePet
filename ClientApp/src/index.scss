@@ -374,11 +374,16 @@ footer {
   justify-content: center;
   font-family: var(--h2-font);
   font-size: 12px;
+  // background-color: rgb(245, 138, 120);
   //new css to experiment with
   position: relative;
   height: 64px;
-  margin-top: 128px;
+  margin-top: 68px;
   align-items: center;
+  // position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .heart {
