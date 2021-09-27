@@ -85,7 +85,7 @@ export function NewListing() {
       <div className="admin-page">
         <h1 className="listing-name">New Listing</h1>
         <div className="input-form-instructions">
-          <p>All fields are required.</p>
+          <p>All fields are required</p>
         </div>
 
         <form className="new-listing" onSubmit={handleFormSubmit}>
@@ -99,7 +99,9 @@ export function NewListing() {
               value={newListing.listingType}
               onChange={handleStringFieldChange}
             >
-              <option value="null">Select</option>
+              <option value="" disabled selected>
+                Select
+              </option>
               <option value="Bar &amp; Restaurant">
                 Bar &amp; Restaurant{' '}
               </option>
