@@ -108,19 +108,26 @@ export function NewListing() {
               onChange={handleStringFieldChange}
             >
               <option value="Null">Select</option>
-              <option value="Bar &amp; Restaurant">
-                Bar &amp; Restaurant{' '}
+              <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
+                Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
               </option>
-              <option value="Beach">Beach</option>
-              <option value="Boarding">Boarding</option>
-              <option value="Grooming">Grooming</option>
-              <option value="Lodging">Lodging</option>
-              <option value="Medical&nbsp;Care">Medical Care</option>
-              <option value="Park">Park</option>
-              <option value="Pet&nbsp;Sitter">Pet Sitter</option>
-              <option value="Residential">Residential</option>
-              <option value="Specialty">Specialty</option>
-              <option value="Supplies">Supplies &amp; Care</option>
+              <option value="Dining&nbsp;&amp;&nbsp;Drinks">
+                Dining&nbsp;&amp;&nbsp;Drinks
+              </option>
+              <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
+                Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
+              </option>
+              <option value="For Rent">For&nbsp;Rent</option>
+              <option value="Food&nbsp;&amp;&nbsp;Supplies">
+                Food&nbsp;&amp;&nbsp;Supplies
+              </option>
+              <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
+                Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
+              </option>
+              <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Travel">Travel</option>
+              <option value="Veterinarians">Veterinarians</option>
             </select>
           </div>
 
@@ -169,7 +176,7 @@ export function NewListing() {
           />
 
           <p className="form-input">
-            <label htmlFor="phoneNumber">Telephone</label>
+            <label htmlFor="phoneNumber">Telephone Number</label>
           </p>
           <input
             type="text"

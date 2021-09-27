@@ -36,18 +36,27 @@ export function UpdateListing() {
             <p>Listing Type </p>
 
             <select name="listing-specialty" id="listing-specialty">
-              <option value="null">Select</option>
-              <option value="bar-restaurant">Bar &amp; Restaurant </option>
-              <option value="beach">Beach</option>
-              <option value="boarding">Boarding</option>
-              <option value="grooming">Grooming</option>
-              <option value="lodging">Lodging</option>
-              <option value="medical-care">Medical Care</option>
-              <option value="park">Park</option>
-              <option value="pet-sitter">Pet Sitter</option>
-              <option value="residential">Residential</option>
-              <option value="specialty">Specialty</option>
-              <option value="supplies">Supplies &amp; Care</option>
+              <option value="Null">Select</option>
+              <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
+                Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
+              </option>
+              <option value="Dining&nbsp;&amp;&nbsp;Drinks">
+                Dining&nbsp;&amp;&nbsp;Drinks
+              </option>
+              <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
+                Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
+              </option>
+              <option value="For Rent">For&nbsp;Rent</option>
+              <option value="Food&nbsp;&amp;&nbsp;Supplies">
+                Food&nbsp;&amp;&nbsp;Supplies
+              </option>
+              <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
+                Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
+              </option>
+              <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Travel">Travel</option>
+              <option value="Veterinarians">Veterinarians</option>
             </select>
           </div>
 
