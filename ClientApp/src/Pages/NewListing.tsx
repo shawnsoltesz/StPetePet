@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { ListingType } from '../types'
 
 async function submitNewListing(listingToCreate: ListingType) {
@@ -27,7 +27,13 @@ export function NewListing() {
     updatedDate: new Date(),
   })
 
-  const createNewListing = useMutation(submitNewListing)
+  const history = useHistory()
+
+  const createNewListing = useMutation(submitNewListing, {
+    onSuccess: function () {
+      history.push('/admin')
+    },
+  })
 
   async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
