@@ -1,6 +1,17 @@
 import React, { useState } from 'react'
+import { useMutation } from 'react-query'
 import { Link } from 'react-router-dom'
 import { ListingType } from '../types'
+
+async function submitNewListing(listingToCreate: ListingType) {
+  const response = await fetch('/api/Listings', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(listingToCreate),
+  })
+
+  return response.json()
+}
 
 export function NewListing() {
   const [newListing, setNewListing] = useState<ListingType>({
@@ -16,9 +27,17 @@ export function NewListing() {
     updatedDate: new Date(),
   })
 
+  const createNewListing = useMutation(submitNewListing)
+
+  async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    createNewListing.mutate(newListing)
+  }
+
   function handleStringFieldChange(
     event: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLOptionElement['form']
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) {
     const value = event.target.value
@@ -63,16 +82,16 @@ export function NewListing() {
           <p>All fields are required.</p>
         </div>
 
-        <form className="new-listing" action="#">
+        <form className="new-listing" onSubmit={handleFormSubmit}>
           <div className="dropdown">
             <p className="form-input">
               <label htmlFor="listing-type">Type</label>
             </p>
             <select
               id="listing-type"
-              name="listing-type"
+              name="listingType"
               value={newListing.listingType}
-              // onChange={(event) => useState(event.target.value)}
+              onChange={handleStringFieldChange}
             >
               <option value="null">Select</option>
               <option value="Bar &amp; Restaurant">
