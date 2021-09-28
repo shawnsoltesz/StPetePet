@@ -7,11 +7,11 @@ import { About } from './Pages/About'
 import { Listings } from './Pages/Listings'
 import { ListingDetail } from './Pages/ListingDetail'
 import { Login } from './Pages/Login'
-import { NewUser } from './Pages/NewUser'
 import { AdminWelcome } from './Pages/AdminWelcome'
+import { NewUser } from './Pages/NewUser'
+import { UserAdmin } from './Pages/UserAdmin'
 import { NewListing } from './Pages/NewListing'
 import { UpdateListing } from './Pages/UpdateListing'
-import { UserAdmin } from './Pages/UserAdmin'
 
 export function App() {
   return (
