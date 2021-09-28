@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom'
 import { recordAuthentication } from '../auth'
 import { APIError, LoginSuccess, LoginUserType } from '../types'
 
-export function Login() {
-  async function loginUser(user: LoginUserType): Promise<LoginSuccess> {
-    const response = await fetch('/api/Sessions', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(user),
-    })
+async function loginUser(user: LoginUserType): Promise<LoginSuccess> {
+  const response = await fetch('/api/Sessions', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(user),
+  })
 
-    if (response.ok) {
-      return response.json()
-    } else {
-      return await response.json()
-    }
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
   }
+}
 
+export function Login() {
   const [errorMessage, setErrorMessage] = useState('')
 
   const [user, setUser] = useState<LoginUserType>({
@@ -37,8 +37,6 @@ export function Login() {
 
   const loginUserMutation = useMutation(loginUser, {
     onSuccess: function (apiResponse) {
-      // TODO: record the authentication information we receive
-
       recordAuthentication(apiResponse)
       window.location.assign('/admin')
     },
@@ -80,7 +78,7 @@ export function Login() {
           <div className="login">
             <p>Username </p>
             <input
-              type="text"
+              type="email"
               name="email"
               value={user.email}
               onChange={handleStringFieldChange}

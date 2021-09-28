@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export function UserAdmin() {
+export function UpdateUser() {
   return (
     <>
       <button className="logout">Logout</button>
@@ -31,28 +31,10 @@ export function UserAdmin() {
           </ul>
         </div>
         <div>
-          <h1 className="listing-name">Account Admin</h1>
-        </div>
-        <h2>Create A New Account</h2>
-        <div className="new-account">
-          <p>Name: </p>
-          <input type="text" name="username" />
-
-          <p>E-mail Address:</p>
-          <input type="text" name="email address" />
-
-          <p>Password:</p>
-          <input type="text" name="password" />
-
-          <br />
-          <br />
-
-          <button className="create-new-account-button">
-            Create New Account
-          </button>
+          <h1 className="listing-name">Update User</h1>
         </div>
 
-        <h2>Update/Delete An Account</h2>
+        <h2>Update/Delete A User</h2>
         <div className="new-account">
           <p>Name: </p>
           <input type="text" name="username" />

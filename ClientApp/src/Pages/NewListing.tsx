@@ -148,7 +148,7 @@ export function NewListing() {
 
           <textarea
             name="description"
-            placeholder="Include html tagging for Description to appear correctly."
+            // placeholder="Include html tagging for Description to appear correctly."
             value={newListing.description}
             onChange={handleStringFieldChange}
           />

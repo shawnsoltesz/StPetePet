@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { isLoggedIn } from '../../auth'
 
 interface Props {
   open: boolean
@@ -45,10 +46,21 @@ const RightNav = ({ open }) => {
         <i className="breadcrumb-icon fas fa-search"></i>&nbsp;
         <Link to="/listings">Search Listings</Link>
       </li>
-      <li>
-        <i className="breadcrumb-icon fas fa-sign-in-alt"></i>&nbsp;
-        <Link to="/login">Login</Link>
-      </li>
+      {isLoggedIn() ? null : (
+        <li>
+          <Link to="/login">
+            <i className="breadcrumb-icon fas fa-sign-in-alt"></i>&nbsp;Login
+          </Link>
+        </li>
+      )}
+
+      {isLoggedIn() ? (
+        <li>
+          <Link to="/admin">
+            <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;Admin
+          </Link>
+        </li>
+      ) : null}
     </Ul>
   )
 }

@@ -30,8 +30,8 @@ export function AdminWelcome() {
           <div className="admin-menu">
             <h2>Listings</h2>
 
-            <Link className="listing-menu" to="/admin/newlisting">
-              <button>Create Listing</button>
+            <Link className="listing-menu" to="/admin/addlisting">
+              <button>Add Listing</button>
             </Link>
 
             <br />
@@ -44,8 +44,13 @@ export function AdminWelcome() {
 
             <br />
             <br />
-            <Link className="listing-menu" to="/admin/updateaccount">
-              <button>Update / Delete Listing</button>
+            <Link className="listing-menu" to="/admin/adduser">
+              <button>Add Users</button>
+            </Link>
+            <br />
+            <br />
+            <Link className="listing-menu" to="/admin/updateuser">
+              <button>Update / Delete Users</button>
             </Link>
 
             <br />

@@ -9,9 +9,11 @@ import { ListingDetail } from './Pages/ListingDetail'
 import { Login } from './Pages/Login'
 import { AdminWelcome } from './Pages/AdminWelcome'
 import { NewUser } from './Pages/NewUser'
-import { UserAdmin } from './Pages/UserAdmin'
+import { UpdateUser } from './Pages/UpdateUser'
 import { NewListing } from './Pages/NewListing'
 import { UpdateListing } from './Pages/UpdateListing'
+import { isLoggedIn } from './auth'
+import { Link } from 'react-router-dom'
 
 export function App() {
   return (
@@ -38,20 +40,20 @@ export function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-
           <Route exact path="/admin">
             <AdminWelcome />
           </Route>
-          <Route exact path="/admin/new-user">
+          {isLoggedIn() ? null : <Link to="/admin">Admin</Link>}
+          <Route exact path="/admin/adduser">
             <NewUser />
-            <Route exact path="/admin/user-admin">
-              <UserAdmin />
-            </Route>
           </Route>
-          <Route exact path="/admin/new-listing">
+          <Route exact path="/admin/updateuser">
+            <UpdateUser />
+          </Route>
+          <Route exact path="/admin/addlisting">
             <NewListing />
           </Route>
-          <Route exact path="/admin/update-listing">
+          <Route exact path="/admin/updatelisting">
             <UpdateListing />
           </Route>
         </Switch>
