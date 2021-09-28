@@ -83,7 +83,7 @@ export function NewAccount() {
         </div>
 
         <form
-          className="new-user"
+          className="new-user-form"
           onSubmit={(event) => {
             event.preventDefault()
 

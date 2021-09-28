@@ -8,6 +8,7 @@
   font: 16px / 1 sans-serif;
   --background-gradient-top: #eee2af;
   --background-gradient-bottom: #7fc2dd;
+  --form-error-background: rgb(240, 240, 124);
   --img-border: #65bfe2;
   --map-border: rgb(212, 203, 186);
   --page-text: #46230f;
@@ -312,6 +313,12 @@ textarea {
   border-style: solid;
 }
 
+.new-user-form {
+  margin-left: 65px;
+  margin-right: 65px;
+  padding-bottom: 30px;
+}
+
 .create-button,
 .update-button,
 .delete-button,
@@ -327,7 +334,7 @@ textarea {
 }
 
 .form-error {
-  background-color: yellow;
+  background-color: var(--form-error-background);
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
