@@ -3,7 +3,7 @@ import { useMutation } from 'react-query'
 import { Link, useHistory } from 'react-router-dom'
 import { APIError, NewUserType } from '../types'
 
-export function NewAccount() {
+export function NewUser() {
   async function submitNewUser(newUser: NewUserType) {
     const response = await fetch('/api/Users', {
       method: 'POST',

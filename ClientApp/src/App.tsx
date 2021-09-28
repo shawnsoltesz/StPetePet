@@ -7,7 +7,7 @@ import { About } from './Pages/About'
 import { Listings } from './Pages/Listings'
 import { ListingDetail } from './Pages/ListingDetail'
 import { Login } from './Pages/Login'
-import { NewAccount } from './Pages/NewAccount'
+import { NewUser } from './Pages/NewUser'
 import { AdminWelcome } from './Pages/AdminWelcome'
 import { NewListing } from './Pages/NewListing'
 import { UpdateListing } from './Pages/UpdateListing'
@@ -42,17 +42,17 @@ export function App() {
           <Route exact path="/admin">
             <AdminWelcome />
           </Route>
-          <Route exact path="/admin/newaccount">
-            <NewAccount />
+          <Route exact path="/admin/new-user">
+            <NewUser />
+            <Route exact path="/admin/user-admin">
+              <UserAdmin />
+            </Route>
           </Route>
-          <Route exact path="/admin/updatelisting">
-            <UpdateListing />
-          </Route>
-          <Route exact path="/admin/newlisting">
+          <Route exact path="/admin/new-listing">
             <NewListing />
           </Route>
-          <Route exact path="/admin/updateaccount">
-            <UserAdmin />
+          <Route exact path="/admin/update-listing">
+            <UpdateListing />
           </Route>
         </Switch>
 
