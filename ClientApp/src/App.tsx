@@ -13,8 +13,6 @@ import { NewListing } from './Pages/NewListing'
 import { UpdateListing } from './Pages/UpdateListing'
 import { UserAdmin } from './Pages/UserAdmin'
 
-// import logo from './images/stpetepet/SPPlogo.svg'
-
 export function App() {
   return (
     <>
@@ -65,27 +63,6 @@ export function App() {
           </p>
         </footer>
       </body>
-      {/* <header>
-          <div className="logo">
-            <img
-              src={logo}
-              alt="St Pete Pet logo of dog and cat at the beach."
-            />
-          </div>
-        </header>
-        <div>
-          <nav className="top-nav">
-            <ul>
-              <li className="nav-button">Home</li>
-              <li className="nav-button">About</li>
-              <li className="nav-button">Search Listings</li>
-              <li>Login</li>
-            <li>Create Account</li>
-            <li>Create Listing</li>
-            <li>Update Listing</li>
-            </ul>
-          </nav>
-        </div> */}
     </>
   )
 }
