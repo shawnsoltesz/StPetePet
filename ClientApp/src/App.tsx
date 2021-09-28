@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
 
-import Navbar from './components/Nav/Navbar'
+// import Navbar from './components/Nav/Navbar'
 import { Home } from './Pages/Home'
 import { About } from './Pages/About'
 import { Listings } from './Pages/Listings'
@@ -15,12 +15,58 @@ import { UpdateListing } from './Pages/UpdateListing'
 import { isLoggedIn } from './auth'
 import { Link } from 'react-router-dom'
 
+import logo from './images/stpetepet/SPPlogo.svg'
+
 export function App() {
   return (
     <>
       <body>
-        <header className="navbar">
-          <Navbar />
+        <header className="nav">
+          <ul className="nav-left">
+            <li>
+              <Link to="/">
+                <a>
+                  <img
+                    src={logo}
+                    alt="St Pete dot Pet website logo"
+                    width="200"
+                    height="45"
+                  />
+                </a>
+              </Link>
+            </li>
+          </ul>
+
+          <ul className="nav-right">
+            <li>
+              <i className="breadcrumb-icon fas fa-home"></i>&nbsp;
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <i className="breadcrumb-icon fas fa-info-circle"></i>&nbsp;
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <i className="breadcrumb-icon fas fa-search"></i>&nbsp;
+              <Link to="/listings">Search Listings</Link>
+            </li>
+            {isLoggedIn() ? null : (
+              <li>
+                <Link to="/login">
+                  <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
+                  &nbsp;Login
+                </Link>
+              </li>
+            )}
+
+            {isLoggedIn() ? (
+              <li>
+                <Link to="/admin">
+                  <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;Admin
+                </Link>
+              </li>
+            ) : null}
+          </ul>
         </header>
 
         <Switch>
