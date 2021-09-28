@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using TacoTuesday.Models;
-using TacoTuesday.Utils;
+using StPetePet.Models;
+using StPetePet.Utils;
 
 namespace StPetePet.Controllers
 {
@@ -59,7 +59,7 @@ namespace StPetePet.Controllers
                 var response = new
                 {
                     status = 400,
-                    errors = new List<string>()<p className="form-error">{ "User does not exist" }</p>
+                    errors = new List<string>(){ "User does not exist" }
                 };
 
                 // Return our error with the custom response
