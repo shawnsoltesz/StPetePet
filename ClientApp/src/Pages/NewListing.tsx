@@ -197,7 +197,9 @@ export function NewListing() {
 
           {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
 
-          <button className="new-listing-button">Create New Listing</button>
+          <button type="submit" className="new-listing-button">
+            Create New Listing
+          </button>
         </form>
       </div>
     </>
