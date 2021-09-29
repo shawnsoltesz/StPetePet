@@ -5,12 +5,13 @@ import { ListingType } from '../../types'
 export function SingleListingFromList(props: SingleListingFromListProps) {
   const urlForShowingListing = `/listings/${props.listing.id}`
   return (
-    <li>
-      <h3>
-        <Link to={urlForShowingListing}>{props.listing.name}</Link>
+    <li className="listing-display">
+      <h3 className="listing-heading">
+        <Link to={urlForShowingListing}>{props.listing.name}</Link>&nbsp;-&nbsp;
+        {props.listing.listingType}
       </h3>
-      <p>Type: {props.listing.listingType}</p>
-      <p>{props.listing.address}</p>
+      {/* <p className="listing-type">Type: {props.listing.listingType}</p> */}
+      <p className="listing-address">{props.listing.address}</p>
     </li>
   )
 }

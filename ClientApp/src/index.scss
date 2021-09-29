@@ -25,7 +25,7 @@
 }
 
 .breadcrumb-icon {
-  color: var(--img-border);
+  color: rgb(80, 132, 172);
 }
 
 html {
@@ -169,6 +169,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   align-items: center;
+  color: rgb(240, 47, 26);
 }
 
 h2,
@@ -219,9 +220,11 @@ textarea {
 
 .search-options {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
+.search-box,
 .search-dropdown {
   display: flex;
   justify-content: center;
@@ -245,9 +248,40 @@ textarea {
   border-radius: 5%;
 }
 
+.listing-type,
+.listing-address {
+  margin: 0;
+}
+
 .listing {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.listing-display {
+  border-color: lawngreen;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.listing-heading a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.listing-heading a {
+  text-decoration: none;
+  color: rgb(80, 132, 172);
+}
+
+.listing-heading a:hover {
+  text-decoration: none;
+  color: rgb(240, 47, 26);
 }
 
 .listing-name {

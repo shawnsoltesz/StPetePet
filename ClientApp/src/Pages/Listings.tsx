@@ -45,18 +45,21 @@ export function Listings() {
         </div>
 
         <h1 className="listing-name">Sniff Around</h1>
+
         <div className="search-options">
-          <h2>Search by Name:&nbsp; </h2>
-          <form className="search">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={filterText}
-              onChange={function (event) {
-                setFilterText(event.target.value)
-              }}
-            />
-          </form>
+          <div className="search-box">
+            <h2>Search by Name:&nbsp; </h2>
+            <form className="search">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={filterText}
+                onChange={function (event) {
+                  setFilterText(event.target.value)
+                }}
+              />
+            </form>
+          </div>
           <div className="search-dropdown">
             <h2>Type: &nbsp; </h2>
             <form className="search" action={filterText}>
