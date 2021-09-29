@@ -85,8 +85,7 @@ export function NewListing() {
             </li>
           </ul>
         </div>
-        <div className="logout">
-          <button>Logout</button>
+  
         </div>
       </div>
 
