@@ -15,7 +15,7 @@ export function Home() {
             </li>
           </ul>
         </div>
-        <h1 className="listing-name">Hello World</h1>
+        <h1 className="listing-name">#PetsWelcomeHere</h1>
         <p className="construction">
           <i className="fas fa-hammer">&nbsp;</i>Page under construction&nbsp;
           <i className="fas fa-tools"></i>
