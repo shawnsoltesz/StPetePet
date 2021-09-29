@@ -7,7 +7,6 @@ export function AdminWelcome() {
       <main>
         <nav>
           <div className="admin-nav">
-            <button className="logout">Logout</button>
             <div className="breadcrumb" aria-label="breadcrumbs">
               <ul>
                 <li>

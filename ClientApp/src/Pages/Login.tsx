@@ -70,7 +70,7 @@ export function Login() {
         </div>
         <form
           onSubmit={function (event) {
-            event.preventDefault
+            event.preventDefault()
 
             loginUserMutation.mutate(user)
           }}
