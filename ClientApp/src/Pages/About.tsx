@@ -10,13 +10,12 @@ export function About() {
           <li>
             <p>
               <i className="breadcrumb-icon fas fa-home"></i>
-              <Link to="/">Home</Link>
-              &nbsp;/
+              <Link to="/">&nbsp;Home</Link>
+              &nbsp;&nbsp;/&nbsp;&nbsp;
             </p>
           </li>
           <li className="is-active">
             <p aria-current="page">
-              &nbsp;
               <i className="breadcrumb-icon fas fa-info-circle"></i>&nbsp;About
             </p>
           </li>

@@ -59,7 +59,7 @@ export function NewUser() {
             <p>
               <i className="breadcrumb-icon fas fa-home"></i>
               <Link to="/">Home</Link>
-              &nbsp;/&nbsp;
+              &nbsp;&nbsp;/&nbsp;&nbsp;
             </p>
           </li>
           <li>

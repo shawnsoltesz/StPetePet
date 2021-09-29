@@ -12,7 +12,7 @@ export function AdminWelcome() {
                 <li>
                   <p>
                     <i className="breadcrumb-icon fas fa-home"></i>
-                    <Link to="/">Home</Link> &nbsp;/&nbsp;
+                    <Link to="/">Home</Link> &nbsp;&nbsp;/&nbsp;&nbsp;
                   </p>
                 </li>
                 <li className="is-active">

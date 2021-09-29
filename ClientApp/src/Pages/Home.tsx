@@ -10,7 +10,7 @@ export function Home() {
             <li>
               <p>
                 <i className="breadcrumb-icon fas fa-home"></i>
-                Home
+                &nbsp;Home
               </p>
             </li>
           </ul>

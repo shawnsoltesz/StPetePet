@@ -32,7 +32,7 @@ export function Listings() {
                 <u>
                   <Link to="/">Home</Link>
                 </u>
-                &nbsp;/&nbsp;
+                &nbsp;&nbsp;/&nbsp;&nbsp;
               </p>
             </li>
             <li className="is-active">

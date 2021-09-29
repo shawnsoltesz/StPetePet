@@ -50,14 +50,14 @@ export function ListingDetail() {
                   <u>
                     <Link to="/">Home</Link>
                   </u>
-                  &nbsp;/&nbsp;
+                  &nbsp;&nbsp;/&nbsp;&nbsp;
                 </p>
               </li>
               <li>
                 <p>
                   <i className="breadcrumb-icon fas fa-search"></i>
                   &nbsp;<Link to="/listings">Search Listings</Link>
-                  &nbsp;/&nbsp;
+                  &nbsp;&nbsp;/&nbsp;&nbsp;
                 </p>
               </li>
               <li className="is-active">
