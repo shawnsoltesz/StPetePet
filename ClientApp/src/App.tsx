@@ -30,14 +30,12 @@ export function App() {
           <ul className="nav-left">
             <li>
               <Link to="/">
-                <a>
-                  <img
-                    src={logo}
-                    alt="St Pete dot Pet website logo"
-                    width="200"
-                    height="45"
-                  />
-                </a>
+                <img
+                  src={logo}
+                  alt="St Pete dot Pet website logo"
+                  width="200"
+                  height="45"
+                />
               </Link>
             </li>
           </ul>

@@ -22,7 +22,7 @@ export function About() {
           </li>
         </ul>
       </div>
-      <body>
+      <div>
         <h1 className="listing-name">About</h1>
         <div className="about">
           <div className="seal">
@@ -37,13 +37,13 @@ export function About() {
               St&#46; Petersburg&#44; FL as a city comprised of numerous local
               businesses and points of interest that welcome pets and their
               humans&#46;
-              <p>
-                <strong>#PetsWelcomeHere</strong>
-              </p>
+            </p>
+            <p>
+              <strong>#PetsWelcomeHere</strong>
             </p>
           </div>
         </div>
-      </body>
+      </div>
     </>
   )
 }
