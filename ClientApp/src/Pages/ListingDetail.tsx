@@ -41,34 +41,33 @@ export function ListingDetail() {
   return (
     <>
       <main>
-        <header>
-          <div className="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-              <li>
-                <p>
-                  <i className="breadcrumb-icon fas fa-home"></i>{' '}
-                  <u>
-                    <Link to="/">Home</Link>
-                  </u>
-                  &nbsp;&nbsp;/&nbsp;&nbsp;
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i className="breadcrumb-icon fas fa-search"></i>
-                  &nbsp;<Link to="/listings">Search Listings</Link>
-                  &nbsp;&nbsp;/&nbsp;&nbsp;
-                </p>
-              </li>
-              <li className="is-active">
-                <p aria-current="page">
-                  <i className="breadcrumb-icon fas fa-list"></i>&nbsp;Listing
-                  Detail
-                </p>
-              </li>
-            </ul>
-          </div>
-        </header>
+        <div className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <u>
+                  <Link to="/">Home</Link>
+                </u>
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+              </p>
+            </li>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-search"></i>
+                &nbsp;<Link to="/listings">Search Listings</Link>
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+              </p>
+            </li>
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-list"></i>&nbsp;Listing
+                Detail
+              </p>
+            </li>
+          </ul>
+        </div>
+
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-photo">
           <img src={fortdesoto} alt="cocker spaniel at the beach" />

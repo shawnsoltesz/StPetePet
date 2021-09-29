@@ -59,8 +59,7 @@ export function Listings() {
           </form>
           <div className="search-dropdown">
             <h2>Listing Type: &nbsp; </h2>
-
-            <form action={filterText}>
+            <form className="search" action={filterText}>
               <select name="listing-type" id="listing-type">
                 <option value="Null">Select</option>
                 <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
