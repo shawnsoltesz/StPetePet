@@ -95,7 +95,7 @@ main {
   padding-bottom: 1rem;
   justify-content: flex-end;
   padding-top: 1rem;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 .nav-left li a {
@@ -182,41 +182,12 @@ ul {
   color: rgba(243, 61, 20, 0.92);
 }
 
-// button {
-//   border: var(--form-border);
-//   background-color: white;
-//   border-width: 2px;
-//   border-radius: 5px;
-//   color: var(--page-text);
-// }
-
-// button.hover {
-//   border: var(--form-border);
-//   background-color: rgb(184, 182, 182);
-//   border-width: 2px;
-//   border-radius: 5px;
-//   color: var(--form-border);
-// }
-
-// button.hover {
-//   border: var(--form-border);
-//   background-color: rgb(126, 126, 126);
-//   border-width: 2px;
-//   border-radius: 5px;
-//   color: var(--form-border);
-// }
-
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 45px;
   padding-bottom: 15px;
   border-bottom: 0.5px solid var(--form-border);
   padding-top: 15px;
-
-  // background-color: sandybrown;
-  // border-radius: 3rem;
-  // display: flex;
-  // justify-content: center;
 }
 
 h2 {
@@ -254,14 +225,6 @@ textarea {
   max-width: 500px;
   height: 4rem;
   margin-top: 10px;
-}
-
-.admin-logout {
-  display: flex;
-  // line-height: 1.5;
-  align-content: center;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .search {
@@ -348,7 +311,6 @@ textarea {
 }
 
 .admin-page {
-  // background-color: var(--admin-background-color);
   background: linear-gradient(
     to bottom,
     var(--background-gradient-top),
@@ -403,20 +365,6 @@ textarea {
   margin-left: 65px;
   margin-right: 65px;
   padding-bottom: 30px;
-}
-
-.create-button,
-.update-button,
-.delete-button,
-.login-button,
-.new-account-button,
-.new-listing-button,
-.create-new-account-button {
-  width: max-content;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
 }
 
 .form-error {

@@ -53,43 +53,42 @@ export function NewUser() {
 
   return (
     <>
-      <div className="admin-page">
-        <div className="breadcrumb" aria-label="breadcrumbs">
-          <ul>
-            <li>
-              <p>
-                <i className="breadcrumb-icon fas fa-home"></i>
-                <Link to="/">Home</Link>
-                &nbsp;/&nbsp;
-              </p>
-            </li>
-            <li>
-              <p>
-                <i className="breadcrumb-icon fas fa-paw"></i>
-                &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
-              </p>
-            </li>
+      <div className="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <p>
+              <i className="breadcrumb-icon fas fa-home"></i>
+              <Link to="/">Home</Link>
+              &nbsp;/&nbsp;
+            </p>
+          </li>
+          <li>
+            <p>
+              <i className="breadcrumb-icon fas fa-paw"></i>
+              &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
+            </p>
+          </li>
 
-            <li className="is-active">
-              <p aria-current="page">
-                <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New
-                Account
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h1 className="listing-name">New User Account</h1>
-        </div>
+          <li className="is-active">
+            <p aria-current="page">
+              <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New Account
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1 className="listing-name">New User Account</h1>
+      </div>
 
-        <form
-          className="new-user-form"
-          onSubmit={(event) => {
-            event.preventDefault()
+      <form
+        className="new-user-form"
+        onSubmit={(event) => {
+          event.preventDefault()
 
-            createUserMutation.mutate(newUser)
-          }}
-        >
+          createUserMutation.mutate(newUser)
+        }}
+      >
+        <div className="admin-page">
           <div className="new-account">
             <p>Full Name</p>
             <p>
@@ -128,8 +127,8 @@ export function NewUser() {
               Create New Account
             </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </>
   )
 }
