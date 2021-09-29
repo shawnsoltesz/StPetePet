@@ -53,82 +53,87 @@ export function NewUser() {
 
   return (
     <>
-      <div className="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-home"></i>
-              <Link to="/">Home</Link>
-              &nbsp;&nbsp;/&nbsp;&nbsp;
-            </p>
-          </li>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-paw"></i>
-              &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
-            </p>
-          </li>
+      <main>
+        <div className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>
+                <Link to="/">Home</Link>
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+              </p>
+            </li>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-paw"></i>
+                &nbsp;<Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
+              </p>
+            </li>
 
-          <li className="is-active">
-            <p aria-current="page">
-              <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New Account
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h1 className="listing-name">New User Account</h1>
-      </div>
-
-      <form
-        className="new-user-form"
-        onSubmit={(event) => {
-          event.preventDefault()
-
-          createUserMutation.mutate(newUser)
-        }}
-      >
-        <div className="admin-page">
-          <div className="new-account">
-            <p>Full Name</p>
-            <p>
-              <input
-                type="text"
-                name="fullName"
-                value={newUser.fullName}
-                onChange={handleStringFieldChange}
-              />
-            </p>
-
-            <p>E-mail Address</p>
-            <p>
-              <input
-                type="text"
-                name="email"
-                value={newUser.email}
-                onChange={handleStringFieldChange}
-              />
-            </p>
-
-            <p>Password</p>
-            <p>
-              <input
-                type="password"
-                name="password"
-                value={newUser.password}
-                onChange={handleStringFieldChange}
-              />
-            </p>
-
-            <br />
-            <br />
-            {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
-            <button type="submit" className="new-account-button">
-              Create New Account
-            </button>
-          </div>
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New
+                Account
+              </p>
+            </li>
+          </ul>
         </div>
-      </form>
+        <div>
+          <h1 className="listing-name">New User Account</h1>
+        </div>
+
+        <form
+          className="new-user-form"
+          onSubmit={(event) => {
+            event.preventDefault()
+
+            createUserMutation.mutate(newUser)
+          }}
+        >
+          <div className="admin-page">
+            <div className="new-account">
+              <p>Full Name</p>
+              <p>
+                <input
+                  type="text"
+                  name="fullName"
+                  value={newUser.fullName}
+                  onChange={handleStringFieldChange}
+                />
+              </p>
+
+              <p>E-mail Address</p>
+              <p>
+                <input
+                  type="text"
+                  name="email"
+                  value={newUser.email}
+                  onChange={handleStringFieldChange}
+                />
+              </p>
+
+              <p>Password</p>
+              <p>
+                <input
+                  type="password"
+                  name="password"
+                  value={newUser.password}
+                  onChange={handleStringFieldChange}
+                />
+              </p>
+
+              <br />
+              <br />
+              {errorMessage ? (
+                <p className="form-error">{errorMessage}</p>
+              ) : null}
+              <button type="submit" className="new-account-button">
+                Create New Account
+              </button>
+            </div>
+          </div>
+        </form>
+      </main>
     </>
   )
 }

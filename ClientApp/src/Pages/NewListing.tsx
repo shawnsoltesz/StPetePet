@@ -63,141 +63,143 @@ export function NewListing() {
 
   return (
     <>
-      <div className="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-home"></i>{' '}
-              <Link to="/">Home</Link>&nbsp;&nbsp;/&nbsp;&nbsp;
-            </p>
-          </li>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;
-              <Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
-            </p>
-          </li>
-          <li className="is-active">
-            <p aria-current="page">
-              <i className="breadcrumb-icon fas fa-list"></i>&nbsp;New Listing
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <h1 className="listing-name">New Listing</h1>
-      <div className="input-form-instructions">
-        <p>
-          <strong className="asterisks">*</strong>
-          All fields are required
-        </p>
-      </div>
-
-      <form className="new-listing" onSubmit={handleFormSubmit}>
-        <div className="dropdown">
-          <p className="form-input">
-            <label htmlFor="listing-type">Type</label>
-          </p>
-          <select
-            id="listing-type"
-            name="listingType"
-            value={newListing.listingType}
-            onChange={handleStringFieldChange}
-          >
-            <option value="Null">Select</option>
-            <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
-              Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
-            </option>
-            <option value="Dining&nbsp;&amp;&nbsp;Drinks">
-              Dining&nbsp;&amp;&nbsp;Drinks
-            </option>
-            <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
-              Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
-            </option>
-            <option value="For Rent">For&nbsp;Rent</option>
-            <option value="Food&nbsp;&amp;&nbsp;Supplies">
-              Food&nbsp;&amp;&nbsp;Supplies
-            </option>
-            <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
-              Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
-            </option>
-            <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
-            <option value="Shopping">Shopping</option>
-            <option value="Travel">Travel</option>
-            <option value="Veterinarians">Veterinarians</option>
-          </select>
+      <main>
+        <div className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>&nbsp;&nbsp;/&nbsp;&nbsp;
+              </p>
+            </li>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;
+                <Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
+              </p>
+            </li>
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-list"></i>&nbsp;New Listing
+              </p>
+            </li>
+          </ul>
         </div>
 
-        <p className="form-input">
-          <label htmlFor="name">Name</label>
-        </p>
+        <h1 className="listing-name">New Listing</h1>
+        <div className="input-form-instructions">
+          <p>
+            <strong className="asterisks">*</strong>
+            All fields are required
+          </p>
+        </div>
 
-        <input
-          type="text"
-          name="name"
-          value={newListing.name}
-          onChange={handleStringFieldChange}
-        />
+        <form className="new-listing" onSubmit={handleFormSubmit}>
+          <div className="dropdown">
+            <p className="form-input">
+              <label htmlFor="listing-type">Type</label>
+            </p>
+            <select
+              id="listing-type"
+              name="listingType"
+              value={newListing.listingType}
+              onChange={handleStringFieldChange}
+            >
+              <option value="Null">Select</option>
+              <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
+                Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
+              </option>
+              <option value="Dining&nbsp;&amp;&nbsp;Drinks">
+                Dining&nbsp;&amp;&nbsp;Drinks
+              </option>
+              <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
+                Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
+              </option>
+              <option value="For Rent">For&nbsp;Rent</option>
+              <option value="Food&nbsp;&amp;&nbsp;Supplies">
+                Food&nbsp;&amp;&nbsp;Supplies
+              </option>
+              <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
+                Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
+              </option>
+              <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Travel">Travel</option>
+              <option value="Veterinarians">Veterinarians</option>
+            </select>
+          </div>
 
-        <p className="form-input">
-          <label htmlFor="description">Description</label>
-        </p>
+          <p className="form-input">
+            <label htmlFor="name">Name</label>
+          </p>
 
-        <textarea
-          name="description"
-          // placeholder="Include html tagging for Description to appear correctly."
-          value={newListing.description}
-          onChange={handleStringFieldChange}
-        />
+          <input
+            type="text"
+            name="name"
+            value={newListing.name}
+            onChange={handleStringFieldChange}
+          />
 
-        <p className="form-input">
-          <label htmlFor="address">Address</label>
-        </p>
-        <input
-          type="text"
-          name="address"
-          placeholder="123 Central Ave, St Petersburg, FL 33713"
-          value={newListing.address}
-          onChange={handleStringFieldChange}
-        />
+          <p className="form-input">
+            <label htmlFor="description">Description</label>
+          </p>
 
-        <p className="form-input">
-          <label htmlFor="website">Website</label>
-        </p>
-        <input
-          type="text"
-          name="website"
-          placeholder="http://www.stpete.pet"
-          value={newListing.website}
-          onChange={handleStringFieldChange}
-        />
+          <textarea
+            name="description"
+            // placeholder="Include html tagging for Description to appear correctly."
+            value={newListing.description}
+            onChange={handleStringFieldChange}
+          />
 
-        <p className="form-input">
-          <label htmlFor="phoneNumber">Telephone Number</label>
-        </p>
-        <input
-          type="text"
-          name="phoneNumber"
-          placeholder="727-555-1212"
-          value={newListing.phoneNumber}
-          onChange={handleStringFieldChange}
-        />
+          <p className="form-input">
+            <label htmlFor="address">Address</label>
+          </p>
+          <input
+            type="text"
+            name="address"
+            placeholder="123 Central Ave, St Petersburg, FL 33713"
+            value={newListing.address}
+            onChange={handleStringFieldChange}
+          />
 
-        <p className="form-input">
-          <label htmlFor="picture">Picture</label>
-        </p>
+          <p className="form-input">
+            <label htmlFor="website">Website</label>
+          </p>
+          <input
+            type="text"
+            name="website"
+            placeholder="http://www.stpete.pet"
+            value={newListing.website}
+            onChange={handleStringFieldChange}
+          />
 
-        <p className="form-input">
-          Click on the &quot;Browse&quot; button to upload an image: &nbsp;
-          <input className="file-upload" type="file" name="picture" />
-        </p>
+          <p className="form-input">
+            <label htmlFor="phoneNumber">Telephone Number</label>
+          </p>
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="727-555-1212"
+            value={newListing.phoneNumber}
+            onChange={handleStringFieldChange}
+          />
 
-        {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
+          <p className="form-input">
+            <label htmlFor="picture">Picture</label>
+          </p>
 
-        <button type="submit" className="new-listing-button">
-          Create New Listing
-        </button>
-      </form>
+          <p className="form-input">
+            Click on the &quot;Browse&quot; button to upload an image: &nbsp;
+            <input className="file-upload" type="file" name="picture" />
+          </p>
+
+          {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
+
+          <button type="submit" className="new-listing-button">
+            Create New Listing
+          </button>
+        </form>
+      </main>
     </>
   )
 }

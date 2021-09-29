@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export function UpdateUser() {
   return (
     <>
-      <div className="admin-page">
+      <main>
         <div className="breadcrumb" aria-label="breadcrumbs">
           <ul>
             <li>
@@ -34,26 +34,27 @@ export function UpdateUser() {
           <h1 className="listing-name">Update User</h1>
         </div>
 
-        <h2>Update/Delete A User</h2>
-        <div className="new-account">
-          <p>Name: </p>
-          <input type="text" name="username" />
+        <div className="admin-page">
+          <div className="new-account">
+            <p>Name: </p>
+            <input type="text" name="username" />
 
-          <p>E-mail Address:</p>
-          <input type="text" name="email address" />
+            <p>E-mail Address:</p>
+            <input type="text" name="email address" />
 
-          <p>Password:</p>
-          <input type="text" name="password" />
+            <p>Password:</p>
+            <input type="text" name="password" />
 
-          <br />
-          <br />
+            <br />
+            <br />
 
-          <div className="update-listing-buttons">
-            <button className="update-button">Update User</button>
-            <button className="delete-button">Delete User</button>
+            <div className="update-listing-buttons">
+              <button className="update-button">Update User</button>
+              <button className="delete-button">Delete User</button>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   )
 }
