@@ -247,10 +247,10 @@ textarea {
   padding-top: 5px;
   border-radius: 5%;
 }
-
+.listing-heading,
 .listing-type,
 .listing-address {
-  margin: 0;
+  margin-left: 5px;
 }
 
 .listing {
@@ -261,12 +261,13 @@ textarea {
 }
 
 .listing-display {
-  border-color: lawngreen;
+  border-color: rgb(206, 69, 20);
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
   margin-bottom: 5px;
   padding-bottom: 5px;
+  background-color: rgb(253, 255, 224);
 }
 
 .listing-heading a {
@@ -416,11 +417,11 @@ ul.listing {
   padding: 0;
   margin-top: 2rem;
   width: auto;
-  background: linear-gradient(
-    to bottom,
-    var(--background-gradient-top),
-    var(--background-gradient-bottom)
-  );
+  // background: linear-gradient(
+  //   to bottom,
+  //   var(--background-gradient-top),
+  //   var(--background-gradient-bottom)
+  // );
 }
 
 .contact-buttons ul,

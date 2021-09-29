@@ -8,7 +8,7 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
     <li className="listing-display">
       <h3 className="listing-heading">
         <Link to={urlForShowingListing}>{props.listing.name}</Link>&nbsp;-&nbsp;
-        {props.listing.listingType}
+        {props.listing.listingType} <i className="fas fa-bone"></i>
       </h3>
       {/* <p className="listing-type">Type: {props.listing.listingType}</p> */}
       <p className="listing-address">{props.listing.address}</p>
