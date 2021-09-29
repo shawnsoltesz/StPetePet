@@ -24,27 +24,26 @@ export function Listings() {
   return (
     <>
       <main>
-        <header>
-          <div className="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-              <li>
-                <p>
-                  <i className="breadcrumb-icon fas fa-home"></i>{' '}
-                  <u>
-                    <Link to="/">Home</Link>
-                  </u>
-                  &nbsp;/&nbsp;
-                </p>
-              </li>
-              <li className="is-active">
-                <p aria-current="page">
-                  <i className="breadcrumb-icon fas fa-search"></i>&nbsp;Search
-                  Listings
-                </p>
-              </li>
-            </ul>
-          </div>
-        </header>
+        <div className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <u>
+                  <Link to="/">Home</Link>
+                </u>
+                &nbsp;/&nbsp;
+              </p>
+            </li>
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-search"></i>&nbsp;Search
+                Listings
+              </p>
+            </li>
+          </ul>
+        </div>
+
         <h1 className="listing-name">Search Listings</h1>
         <div className="search-options">
           <h2>Search by Name:&nbsp; </h2>

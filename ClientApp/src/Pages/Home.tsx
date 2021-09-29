@@ -5,7 +5,7 @@ export function Home() {
   return (
     <>
       <main>
-        <header>
+        <div className="breadcrumb">
           <ul>
             <li>
               <p>
@@ -14,7 +14,7 @@ export function Home() {
               </p>
             </li>
           </ul>
-        </header>
+        </div>
         <h1 className="listing-name">Hello World</h1>
         <p className="construction">
           <i className="fas fa-hammer">&nbsp;</i>Page under construction&nbsp;

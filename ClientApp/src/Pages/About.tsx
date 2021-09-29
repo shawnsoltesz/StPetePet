@@ -8,9 +8,11 @@ export function About() {
       <div className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <i className="breadcrumb-icon fas fa-home"></i>
-            <Link to="/">Home</Link>
-            &nbsp;/
+            <p>
+              <i className="breadcrumb-icon fas fa-home"></i>
+              <Link to="/">Home</Link>
+              &nbsp;/
+            </p>
           </li>
           <li className="is-active">
             <p aria-current="page">

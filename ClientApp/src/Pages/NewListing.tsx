@@ -85,14 +85,15 @@ export function NewListing() {
             </li>
           </ul>
         </div>
-  
-        </div>
       </div>
 
       <div className="admin-page">
         <h1 className="listing-name">New Listing</h1>
         <div className="input-form-instructions">
-          <p>All fields are required</p>
+          <p>
+            <strong className="asterisks">*</strong>
+            All fields are required
+          </p>
         </div>
 
         <form className="new-listing" onSubmit={handleFormSubmit}>
@@ -191,7 +192,7 @@ export function NewListing() {
 
           <p className="form-input">
             Click on the &quot;Browse&quot; button to upload an image: &nbsp;
-            <input type="file" name="picture" />
+            <input className="file-upload" type="file" name="picture" />
           </p>
 
           {errorMessage ? <p className="form-error">{errorMessage}</p> : null}

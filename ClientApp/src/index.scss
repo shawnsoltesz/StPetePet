@@ -31,19 +31,21 @@ html {
   height: 100%;
 }
 
-body {
+main {
   margin: 0;
   min-height: 100%;
   height: 100vh;
   color: var(--page-text);
   list-style: none;
   font-family: var(--body-font);
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  // border-bottom: 0.5px solid rgb(109, 107, 107);
+  border-bottom: 0.5px solid rgb(225, 225, 225);
   position: sticky;
   position: fixed;
   width: 100%;
@@ -74,13 +76,19 @@ body {
 }
 
 .nav-left {
-  display: flex;
+  display: inline-flex;
   align-content: center;
-  padding-top: 0.5rem;
+  background-color: var(--page-text);
   justify-content: flex-start;
   margin-right: 24px;
   padding-left: 5px;
 }
+
+.nav-left img {
+  background-color: seagreen;
+  align-content: flex-start;
+}
+
 .nav-right {
   margin-left: auto;
   padding-top: 1rem;
@@ -90,8 +98,8 @@ body {
   padding-right: 5px;
 }
 
-nav-right li a {
-  padding-top: 10px;
+.nav-left li a {
+  padding-bottom: 10px;
 }
 
 .nav-right a {
@@ -100,11 +108,41 @@ nav-right li a {
 }
 
 .nav-right a:hover {
-  background-color: lavender;
+  color: rgba(243, 61, 20, 0.92);
 }
 
-button {
-  background-color: tomato;
+button,
+select {
+  box-shadow: 0px 1px 0px 0px #fff6af;
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color: #ffec64;
+  border-radius: 5px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 14px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+.asterisks {
+  color: red;
+}
+
+button:hover,
+select {
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
+}
+button:active,
+select,
+.file-upload {
+  position: relative;
+  top: 1px;
 }
 
 // .nav-button {
@@ -114,6 +152,12 @@ button {
 //   padding-left: 10px;
 //   background-color: slateblue;
 // }
+
+input,
+textarea {
+  background-color: rgb(223, 228, 241);
+  border-radius: 5px;
+}
 
 ul {
   margin: 0;
@@ -135,7 +179,7 @@ ul {
 }
 
 .breadcrumb a:hover {
-  background-color: lavender;
+  color: rgba(243, 61, 20, 0.92);
 }
 
 // button {
@@ -191,10 +235,6 @@ h2 {
   justify-content: center;
   width: 300px;
   height: 250px;
-}
-main {
-  display: flex;
-  justify-content: center;
 }
 
 .about {
