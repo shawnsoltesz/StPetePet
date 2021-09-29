@@ -6,8 +6,8 @@
 
 :root {
   font: 16px / 1 sans-serif;
-  --background-gradient-top: #eee2af;
-  --background-gradient-bottom: #7fc2dd;
+  --background-gradient-top: #fcfbc5;
+  --background-gradient-bottom: #ffffff;
   --form-error-background: rgb(240, 240, 124);
   --img-border: #65bfe2;
   --map-border: rgb(212, 203, 186);
@@ -35,50 +35,85 @@ body {
   margin: 0;
   min-height: 100%;
   height: 100vh;
-  // background: linear-gradient(
-  //   to bottom,
-  //   var(--background-gradient-top),
-  //   var(--background-gradient-bottom)
-  // );
   color: var(--page-text);
   list-style: none;
-  padding-left: 25px;
-  padding-right: 25px;
   font-family: var(--body-font);
 }
 
-header {
+.nav {
   display: flex;
   justify-content: center;
-}
-
-.top-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  // background-color: var(--form-border);
+  // border-bottom: 0.5px solid rgb(109, 107, 107);
+  position: sticky;
+  position: fixed;
+  width: 100%;
   background: linear-gradient(
     to bottom,
     var(--background-gradient-top),
     var(--background-gradient-bottom)
   );
-  // border-radius: 55% 20% / 10% 45%;
-  border-radius: 15%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: var(--h2-font);
+  opacity: 90%;
+}
+
+.nav ul {
+  display: flex;
+  opacity: 80%;
+  font-size: 16px;
+  color: #24292e;
+  line-height: 1.5;
+  align-content: center;
+  padding-top: 16px;
+  top: 0;
+  text-decoration: none;
+}
+
+.nav li {
+  padding-left: 5px;
+  padding-right: 5px;
+  align-content: center;
+}
+
+.nav-left {
+  display: flex;
+  align-content: center;
+  padding-top: 0.5rem;
+  justify-content: flex-start;
+  margin-right: 24px;
+  padding-left: 5px;
+}
+.nav-right {
+  margin-left: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 5px;
+}
+
+nav-right li a {
+  padding-top: 10px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-right a:hover {
+  background-color: lavender;
 }
 
 button {
   background-color: tomato;
 }
 
-.nav-button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: slateblue;
-}
+// .nav-button {
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   padding-right: 10px;
+//   padding-left: 10px;
+//   background-color: slateblue;
+// }
 
 ul {
   margin: 0;
@@ -90,6 +125,17 @@ ul {
   display: flex;
   justify-content: flex-start;
   font-size: small;
+  padding-top: 55px;
+  padding-left: 15px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breadcrumb a:hover {
+  background-color: lavender;
 }
 
 // button {
@@ -389,13 +435,13 @@ footer {
   justify-content: center;
   font-family: var(--h2-font);
   font-size: 12px;
-  // background-color: rgb(245, 138, 120);
-  //new css to experiment with
+  background-color: rgb(245, 138, 120);
+
   position: relative;
   height: 64px;
   margin-top: 68px;
   align-items: center;
-  // position: absolute;
+
   bottom: 0;
   left: 0;
   right: 0;

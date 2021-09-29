@@ -40,100 +40,104 @@ export function ListingDetail() {
 
   return (
     <>
-      <div className="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-home"></i>{' '}
-              <u>
-                <Link to="/">Home</Link>
-              </u>
-              &nbsp;/&nbsp;
-            </p>
-          </li>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-search"></i>
-              &nbsp;<Link to="/listings">Search Listings</Link>
-              &nbsp;/&nbsp;
-            </p>
-          </li>
-          <li className="is-active">
-            <p aria-current="page">
-              <i className="breadcrumb-icon fas fa-list"></i>&nbsp;Listing
-              Detail
-            </p>
-          </li>
-        </ul>
-      </div>
-      <h1 className="listing-name">{listing.name}</h1>
-      <div className="listing-photo">
-        <img src={fortdesoto} alt="cocker spaniel at the beach" />
-      </div>
-
-      <span className="map">
-        <div className="map-image">
-          <img src={StPete} alt="aerial map of St Petersburg, FL" />
+      <main>
+        <header>
+          <div className="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li>
+                <p>
+                  <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                  <u>
+                    <Link to="/">Home</Link>
+                  </u>
+                  &nbsp;/&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i className="breadcrumb-icon fas fa-search"></i>
+                  &nbsp;<Link to="/listings">Search Listings</Link>
+                  &nbsp;/&nbsp;
+                </p>
+              </li>
+              <li className="is-active">
+                <p aria-current="page">
+                  <i className="breadcrumb-icon fas fa-list"></i>&nbsp;Listing
+                  Detail
+                </p>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <h1 className="listing-name">{listing.name}</h1>
+        <div className="listing-photo">
+          <img src={fortdesoto} alt="cocker spaniel at the beach" />
         </div>
-      </span>
 
-      <div className="description">
-        <p>{listing.description}</p>
-      </div>
-      <div className="contact-details">
-        <div className="contact-buttons">
-          <ul>
+        <span className="map">
+          <div className="map-image">
+            <img src={StPete} alt="aerial map of St Petersburg, FL" />
+          </div>
+        </span>
+
+        <div className="description">
+          <p>{listing.description}</p>
+        </div>
+        <div className="contact-details">
+          <div className="contact-buttons">
+            <ul>
+              <li>
+                <button className="map">
+                  <i className="fas fa-map"></i>
+                </button>
+              </li>
+              <li>
+                <button className="phone">
+                  <i className="fas fa-phone">
+                    <a href={`tel:+1${listing.phoneNumber}`} />
+                  </i>
+                </button>
+              </li>
+              <li>
+                <button className="web-search">
+                  <i className="fas fa-globe"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <ul className="address">
             <li>
-              <button className="map">
-                <i className="fas fa-map"></i>
-              </button>
+              <p>
+                <strong>Address: </strong>
+                {listing.address}
+              </p>
             </li>
-            <li>
-              <button className="phone">
-                <i className="fas fa-phone">
-                  <a href={`tel:+1${listing.phoneNumber}`} />
-                </i>
-              </button>
+
+            <li className="phone">
+              <p>
+                <strong>Phone: </strong>
+                {listing.phoneNumber}
+              </p>
             </li>
-            <li>
-              <button className="web-search">
-                <i className="fas fa-globe"></i>
-              </button>
+
+            <li className="website">
+              <p>
+                <strong>Website: </strong>
+                <a href={listing.website}>{listing.name}</a>
+              </p>
             </li>
           </ul>
+          <div className="rating">
+            <p>
+              <i className="useful fas fa-paw"></i> &nbsp;Useful &#40;0&#41;
+            </p>
+            <p>
+              <i className="not-useful fas fa-paw"></i>&nbsp; Not Useful
+              &#40;0&#41;
+            </p>
+          </div>
         </div>
-        <ul className="address">
-          <li>
-            <p>
-              <strong>Address: </strong>
-              {listing.address}
-            </p>
-          </li>
-
-          <li className="phone">
-            <p>
-              <strong>Phone: </strong>
-              {listing.phoneNumber}
-            </p>
-          </li>
-
-          <li className="website">
-            <p>
-              <strong>Website: </strong>
-              <a href={listing.website}>{listing.name}</a>
-            </p>
-          </li>
-        </ul>
-        <div className="rating">
-          <p>
-            <i className="useful fas fa-paw"></i> &nbsp;Useful &#40;0&#41;
-          </p>
-          <p>
-            <i className="not-useful fas fa-paw"></i>&nbsp; Not Useful
-            &#40;0&#41;
-          </p>
-        </div>
-      </div>
+      </main>
     </>
   )
 }

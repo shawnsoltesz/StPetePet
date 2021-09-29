@@ -4,11 +4,23 @@ import React from 'react'
 export function Home() {
   return (
     <>
-      <h1 className="listing-name">Hello World</h1>
-      <p className="construction">
-        <i className="fas fa-hammer">&nbsp;</i>Page under construction&nbsp;
-        <i className="fas fa-tools"></i>
-      </p>
+      <main>
+        <header>
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>
+                Home
+              </p>
+            </li>
+          </ul>
+        </header>
+        <h1 className="listing-name">Hello World</h1>
+        <p className="construction">
+          <i className="fas fa-hammer">&nbsp;</i>Page under construction&nbsp;
+          <i className="fas fa-tools"></i>
+        </p>
+      </main>
     </>
   )
 }
