@@ -19,6 +19,10 @@ namespace StPetePet.Models
         
         [Required(ErrorMessage = "You must enter an Address.")]
         public string Address {get; set;}
+
+        public double Latitude { get; set; }
+
+        public double Longitude { get; set; }
         
         [Required(ErrorMessage = "You must enter a Website.")]
         public string Website {get; set;}
