@@ -44,7 +44,7 @@ export function Listings() {
           </ul>
         </div>
 
-        <h1 className="listing-name">Search Listings</h1>
+        <h1 className="listing-name">Sniff Around</h1>
         <div className="search-options">
           <h2>Search by Name:&nbsp; </h2>
           <form className="search">
@@ -58,7 +58,7 @@ export function Listings() {
             />
           </form>
           <div className="search-dropdown">
-            <h2>Listing Type: &nbsp; </h2>
+            <h2>Type: &nbsp; </h2>
             <form className="search" action={filterText}>
               <select name="listing-type" id="listing-type">
                 <option value="Null">Select</option>

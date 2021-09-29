@@ -9,7 +9,7 @@
   --background-gradient-top: #fcfbc5;
   --background-gradient-bottom: #ffffff;
   --form-error-background: rgb(240, 240, 124);
-  --img-border: #65bfe2;
+  --img-border: rgba(243, 61, 20, 0.92);
   --map-border: rgb(212, 203, 186);
   --page-text: #46230f;
   --heart: rgb(230, 64, 13);
@@ -39,6 +39,7 @@ main {
   color: var(--page-text);
   // list-style: none;
   font-family: var(--body-font);
+  margin-left: 10px;
 }
 
 header {
@@ -61,15 +62,18 @@ body {
 
 .nav ul {
   display: flex;
-  font-size: 16px;
-  color: #24292e;
   align-content: center;
   text-decoration: none;
   margin: 0;
 }
 
+.nav li {
+  font-size: 28px;
+}
+
 .nav li + li {
   padding-left: 1rem;
+  font-size: 28px;
 }
 
 .nav-left img {
@@ -77,12 +81,14 @@ body {
 }
 
 .nav-right {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .nav-right a {
   text-decoration: none;
   color: inherit;
+
+  font-size: 28px;
 }
 
 .nav-right a:hover {
@@ -91,11 +97,11 @@ body {
 
 button,
 select {
-  box-shadow: 0px 1px 0px 0px #fff6af;
-  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-  background-color: #ffec64;
+  box-shadow: 0px 1px 0px 0px #aff3ff;
+  background: linear-gradient(to bottom, #64ceff 5%, #23a7ff 100%);
+  background-color: #64ceff;
   border-radius: 5px;
-  border: 1px solid #ffaa22;
+  border: 1px solid #4d2210;
   display: inline-block;
   cursor: pointer;
   color: #333333;
@@ -104,18 +110,23 @@ select {
   font-weight: bold;
   padding: 6px 14px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffee66;
+  text-shadow: 0px 1px 0px #66edff;
 }
 
 .asterisks {
   color: red;
 }
 
-button:hover,
-select {
+button:hover {
   background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
   background-color: #ffab23;
 }
+
+select {
+  background: linear-gradient(to bottom, #2395ff 5%, #64c6ff 100%);
+  background-color: #ffab23;
+}
+
 button:active,
 select,
 .file-upload {
@@ -148,19 +159,20 @@ ul {
   color: inherit;
 }
 
-.breadcrumb a:hover {
-  color: rgba(243, 61, 20, 0.92);
+.breadcrumb-icon a:hover {
+  color: rgba(126, 37, 17, 0.92);
 }
 
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 45px;
-  padding-bottom: 15px;
-  // border-bottom: 0.5px solid var(--form-border);
-  padding-top: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: center;
 }
 
-h2 {
+h2,
+h3 {
   font-family: var(--h2-font);
 }
 
@@ -222,8 +234,8 @@ textarea {
 .map-image {
   display: flex;
   justify-content: center;
-  width: 225px;
-  height: 225px;
+  width: 300px;
+  height: 300px;
   background-color: var(--background-gradient-bottom);
   border: var(--map-border);
   border-width: 3px;
@@ -402,7 +414,8 @@ footer {
   // border-top: 0.5px solid var(--form-border);
   margin-top: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   font-family: var(--h2-font);
   font-size: 12px;
   background-color: rgb(157, 221, 240);
@@ -417,6 +430,14 @@ footer {
   right: 0;
 }
 
+.footer-left ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-left li + li {
+  padding-left: 1rem;
+}
 .heart {
   color: var(--heart);
 }
@@ -424,6 +445,15 @@ footer {
 .paw {
   color: var(--paw);
   transform: rotate(35deg);
+}
+
+.facebook {
+  color: blue;
+  font-size: 45px;
+}
+.instagram {
+  color: blueviolet;
+  font-size: 45px;
 }
 
 .construction {

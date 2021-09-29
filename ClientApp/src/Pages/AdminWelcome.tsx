@@ -10,7 +10,7 @@ export function AdminWelcome() {
             <ul>
               <li>
                 <p>
-                  <i className="breadcrumb-icon fas fa-home"></i>
+                  <i className="breadcrumb-icon fas fa-home"></i>&nbsp;
                   <Link to="/">Home</Link> &nbsp;&nbsp;/&nbsp;&nbsp;
                 </p>
               </li>

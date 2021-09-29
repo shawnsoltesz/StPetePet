@@ -6,9 +6,9 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
   const urlForShowingListing = `/listings/${props.listing.id}`
   return (
     <li>
-      <h2>
+      <h3>
         <Link to={urlForShowingListing}>{props.listing.name}</Link>
-      </h2>
+      </h3>
       <p>Type: {props.listing.listingType}</p>
       <p>{props.listing.address}</p>
     </li>

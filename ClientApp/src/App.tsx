@@ -42,22 +42,24 @@ export function App() {
 
           <ul className="nav-right">
             <li>
-              <i className="breadcrumb-icon fas fa-home"></i>&nbsp;
-              <Link to="/">Home</Link>
+              <Link to="/">
+                <i className="breadcrumb-icon fas fa-home"></i>
+              </Link>
             </li>
             <li>
-              <i className="breadcrumb-icon fas fa-info-circle"></i>&nbsp;
-              <Link to="/about">About</Link>
+              <Link to="/about">
+                <i className="breadcrumb-icon fas fa-info-circle"></i>
+              </Link>
             </li>
             <li>
-              <i className="breadcrumb-icon fas fa-search"></i>&nbsp;
-              <Link to="/listings">Search Listings</Link>
+              <Link to="/listings">
+                <i className="breadcrumb-icon fas fa-search"></i>
+              </Link>
             </li>
             {isLoggedIn() ? null : (
               <li>
                 <Link to="/login">
                   <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
-                  &nbsp;Login
                 </Link>
               </li>
             )}
@@ -65,7 +67,7 @@ export function App() {
             {isLoggedIn() ? (
               <li>
                 <Link to="/admin">
-                  <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;Admin
+                  <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;
                 </Link>
               </li>
             ) : null}
@@ -79,7 +81,6 @@ export function App() {
                 }}
               >
                 <i className="breadcrumb-icon fas fa-sign-out-alt"></i>&nbsp;
-                Sign out
               </a>
             ) : null}
           </ul>
@@ -107,7 +108,7 @@ export function App() {
         <Route exact path="/admin">
           <AdminWelcome />
         </Route>
-        {isLoggedIn() ? null : <Link to="/admin">Admin</Link>}
+        {isLoggedIn() ? null : <Link to="/admin"></Link>}
         <Route exact path="/admin/adduser">
           <NewUser />
         </Route>
@@ -123,10 +124,27 @@ export function App() {
       </Switch>
 
       <footer>
-        <p>
-          Built with <i className="heart fa fa-heart"></i> in St Petersburg,
-          Florida. <i className="paw fas fa-paw"></i>
-        </p>
+        <div className="footer-left">
+          <ul>
+            <li>
+              <a href="http://www.facebook.com/stpetepet">
+                <i className="facebook fab fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com/stpetepet">
+                <i className="instagram fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer-right">
+          <p>
+            Built with <i className="heart fa fa-heart"></i> in St Petersburg,
+            Florida. <i className="paw fas fa-paw"></i>
+          </p>
+        </div>
       </footer>
     </>
   )
