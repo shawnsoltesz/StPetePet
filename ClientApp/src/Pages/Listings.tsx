@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import ReactMapGL, { Marker, NavigationControl, Popup } from 'react-map-gl'
-import { Link, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { ListingType } from '../types'
 import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
@@ -142,14 +142,7 @@ export function Listings() {
                   aria-label="taco"
                   onClick={() => setSelectedMapListing(listing)}
                 >
-                  <Switch>
-                    {listing.listingType}="Boarding & Pet Sitters" ?
-                    <i className="fas fa-paw"></i>
-                    {listing.listingType}="Dining & Drinks" ?
-                    <i className="fas fa-glass-cheers"></i>
-                    {listing.listingType}="Dog Beaches & Parks" ?
-                    <i className="fas fa-dog"></i>: 🌮
-                  </Switch>
+                  🌮
                 </span>
               </Marker>
             ))}
