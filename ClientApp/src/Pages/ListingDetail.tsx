@@ -28,6 +28,8 @@ const NullListing: ListingType = {
   phoneNumber: '',
   createdDate: new Date(),
   updatedDate: new Date(),
+  latitude: ,
+  longitude: ,
 }
 
 export function ListingDetail() {

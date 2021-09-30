@@ -28,6 +28,8 @@ export function NewListing() {
     phoneNumber: '',
     createdDate: new Date(),
     updatedDate: new Date(),
+    latitude: ,
+    longitude: ,
   })
 
   const [errorMessage, setErrorMessage] = useState('')
