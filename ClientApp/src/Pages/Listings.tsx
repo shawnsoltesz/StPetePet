@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
-
-import StPete from '../images/map/map-stpete-fl.gif'
-import { ListingType } from '../types'
-import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
+import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 import { Link } from 'react-router-dom'
 
+import { ListingType } from '../types'
+import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
+
 export function Listings() {
+  const [viewport, setViewport] = useState({
+    latitude: 27.77101804911986,
+    longitude: -82.66090611749074,
+    zoom: 10.8,
+  })
+
   const [filterText, setFilterText] = useState('')
 
   const { data: listings = [] } = useQuery<ListingType[]>(
@@ -89,11 +95,33 @@ export function Listings() {
             </form>
           </div>
         </div>
-        <span className="map">
-          <div className="map-image">
-            <img src={StPete} alt="aerial map of St Petersburg, FL" />
-          </div>
-        </span>
+        <section className="map">
+          <ReactMapGL
+            {...viewport}
+            style={{ position: 'absolute' }}
+            width="100%"
+            height="100%"
+            onViewportChange={setViewport}
+            mapboxApiAccessToken={
+              import.meta.env.VITE_APP_MAPBOX_TOKEN as string
+            }
+          >
+            <div style={{ position: 'absolute', left: 10 }}>
+              <NavigationControl />
+            </div>
+            {listings.map((listing) => (
+              <Marker
+                key={listing.id}
+                latitude={listing.latitude}
+                longitude={listing.longitude}
+              >
+                <span role="img" aria-label="taco">
+                  🌮
+                </span>
+              </Marker>
+            ))}
+          </ReactMapGL>
+        </section>
         <div>
           <ul className="listing">
             {listings.map(function (listing) {

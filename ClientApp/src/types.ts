@@ -15,6 +15,8 @@ export type ListingType = {
   phoneNumber: string
   createdDate: Date
   updatedDate: Date
+  latitude: number
+  longitude: number
 }
 
 export type APIError = {
