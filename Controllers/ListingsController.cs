@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Geocoding.Microsoft;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using StPetePet.Models;
 
 namespace StPetePet.Controllers
@@ -18,13 +20,16 @@ namespace StPetePet.Controllers
     {
         // This is the variable you use to have access to your database
         private readonly DatabaseContext _context;
+        private readonly string BING_MAPS_KEY;
 
         // Constructor that recives a reference to your database context
         // and stores it in _context for you to use in your API methods
-        public ListingsController(DatabaseContext context)
-        {
-            _context = context;
-        }
+        public ListingsController(DatabaseContext context, IConfiguration config)
+
+{
+    _context = context;
+    BING_MAPS_KEY = config["BING_MAPS_KEY"];
+}
 
         // GET: api/Listings
         //
@@ -131,6 +136,22 @@ namespace StPetePet.Controllers
         [HttpPost]
         public async Task<ActionResult<Listing>> PostListing(Listing listing)
         {
+            // Create a new geocoder
+            var geocoder = new BingMapsGeocoder(BING_MAPS_KEY);
+
+            // Request this address to be geocoded.
+            var geocodedAddresses = await geocoder.GeocodeAsync(listing.Address);
+
+            // ... and pick out the best address sorted by the confidence level
+            var bestGeocodedAddress = geocodedAddresses.OrderBy(address => address.Confidence).FirstOrDefault();
+
+            // If we have a best geocoded address, use the latitude and longitude from that result
+            if (bestGeocodedAddress != null)
+            {
+                listing.Latitude = bestGeocodedAddress.Coordinates.Latitude;
+                listing.Longitude = bestGeocodedAddress.Coordinates.Longitude;
+            }
+
             // Indicate to the database context we want to add this new record
             _context.Listings.Add(listing);
             await _context.SaveChangesAsync();
