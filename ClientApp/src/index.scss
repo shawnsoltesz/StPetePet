@@ -230,19 +230,27 @@ textarea {
   justify-content: center;
 }
 
+.map-button {
+  display: flex;
+  justify-content: center;
+}
+
+.mapboxgl-popup {
+  z-index: 1;
+}
+
 .map {
   margin: 3rem 3rem 2rem;
   position: relative;
   overflow: hidden;
-  height: 0;
-  width: 500px;
-  height: 500px;
+
+  width: 600px;
+  height: 400px;
   background-color: var(--background-gradient-bottom);
   border: var(--map-border);
+  border-color: rgb(240, 47, 26);
   border-width: 3px;
   border-style: solid;
-  padding-bottom: 5px;
-  padding-top: 5px;
   border-radius: 5%;
 }
 .listing-heading,

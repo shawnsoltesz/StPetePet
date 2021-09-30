@@ -28,8 +28,8 @@ const NullListing: ListingType = {
   phoneNumber: '',
   createdDate: new Date(),
   updatedDate: new Date(),
-  latitude: ,
-  longitude: ,
+  latitude: 0,
+  longitude: 0,
 }
 
 export function ListingDetail() {
@@ -129,13 +129,13 @@ export function ListingDetail() {
             </li>
           </ul>
           <div className="rating">
-            <p>
+            {/* <p>
               <i className="useful fas fa-paw"></i> &nbsp;Useful &#40;0&#41;
             </p>
             <p>
               <i className="not-useful fas fa-paw"></i>&nbsp; Not Useful
               &#40;0&#41;
-            </p>
+            </p> */}
           </div>
         </div>
       </main>

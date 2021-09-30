@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
-import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
-import { Link } from 'react-router-dom'
+import ReactMapGL, { Marker, NavigationControl, Popup } from 'react-map-gl'
+import { Link, Switch } from 'react-router-dom'
 
 import { ListingType } from '../types'
 import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
 
 export function Listings() {
+  const [selectedMapListing, setSelectedMapListing] =
+    useState<ListingType | null>(null)
+
   const [viewport, setViewport] = useState({
     latitude: 27.77101804911986,
     longitude: -82.66090611749074,
@@ -50,7 +53,7 @@ export function Listings() {
           </ul>
         </div>
 
-        <h1 className="listing-name">Sniff Around</h1>
+        <h1 className="listing-name">Sniff Around..</h1>
 
         <div className="search-options">
           <div className="search-box">
@@ -109,14 +112,44 @@ export function Listings() {
             <div style={{ position: 'absolute', left: 10 }}>
               <NavigationControl />
             </div>
+
+            {selectedMapListing ? (
+              <Popup
+                latitude={selectedMapListing.latitude}
+                longitude={selectedMapListing.longitude}
+                closeButton={true}
+                closeOnClick={false}
+                onClose={() => setSelectedMapListing(null)}
+                offsetTop={-5}
+              >
+                <div>
+                  <Link to={`/listings/${selectedMapListing.id}`}>
+                    {selectedMapListing.name}
+                  </Link>
+                  {/* <p>{selectedMapListing.description}</p> */}
+                </div>
+              </Popup>
+            ) : null}
+
             {listings.map((listing) => (
               <Marker
                 key={listing.id}
                 latitude={listing.latitude}
                 longitude={listing.longitude}
               >
-                <span role="img" aria-label="taco">
-                  🌮
+                <span
+                  role="img"
+                  aria-label="taco"
+                  onClick={() => setSelectedMapListing(listing)}
+                >
+                  <Switch>
+                    {listing.listingType}="Boarding & Pet Sitters" ?
+                    <i className="fas fa-paw"></i>
+                    {listing.listingType}="Dining & Drinks" ?
+                    <i className="fas fa-glass-cheers"></i>
+                    {listing.listingType}="Dog Beaches & Parks" ?
+                    <i className="fas fa-dog"></i>: 🌮
+                  </Switch>
                 </span>
               </Marker>
             ))}
