@@ -83,10 +83,10 @@ export function Listings() {
                 <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
                   Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
                 </option>
-                <option value="For Rent">For&nbsp;Rent</option>
                 <option value="Food&nbsp;&amp;&nbsp;Supplies">
                   Food&nbsp;&amp;&nbsp;Supplies
                 </option>
+                <option value="For Rent">For&nbsp;Rent</option>
                 <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
                   Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
                 </option>
@@ -98,7 +98,51 @@ export function Listings() {
             </form>
           </div>
         </div>
-        <section className="map">
+
+        <div className="key">
+          <p className="key-header">
+            <h2>Key:&nbsp; </h2>
+          </p>
+
+          <div className="key-icons">
+            <div className="key-left">
+              <p>
+                <i className="pet-sitter fas fa-paw"></i> Boarding & Pet Sitters
+              </p>
+              <p>
+                <i className="dining fas fa-utensils"></i> Dining & Drinks
+              </p>
+              <p>
+                <i className="park fas fa-dog"></i> Dog Beaches & Parks
+              </p>
+              <p>
+                <i className="rent fas fa-home"></i> For Rent
+              </p>
+              <p>
+                <i className="food fas fa-shopping-cart"></i> Food & Supplies
+              </p>
+            </div>
+            <div className="key-right">
+              <p>
+                <i className="grooming fas fa-bath"></i> Grooming & Specialty
+              </p>
+              <p>
+                <i className="adoption fas fa-heart"></i> Pet Adoptions
+              </p>
+              <p>
+                <i className="shopping fas fa-shopping-bag"></i> Shopping
+              </p>
+              <p>
+                <i className="travel fas fa-bed"></i> Travel
+              </p>
+              <p>
+                <i className="medical fas fa-clinic-medical"></i> Veterinarians
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="map">
           <ReactMapGL
             {...viewport}
             style={{ position: 'absolute' }}
@@ -132,7 +176,7 @@ export function Listings() {
             ) : null}
 
             {listings.map((listing) =>
-              listing.listingType === 'Pet Sitter' ? (
+              listing.listingType === 'Boarding & Pet Sitters' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -140,13 +184,13 @@ export function Listings() {
                 >
                   <span
                     role="img"
-                    aria-label="taco"
+                    aria-label="paw print icon"
                     onClick={() => setSelectedMapListing(listing)}
                   >
-                    <i className="fas fa-paw"></i>
+                    <i className="pet-sitter fas fa-paw"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Specialty' ? (
+              ) : listing.listingType === 'Dining & Drinks' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -154,13 +198,13 @@ export function Listings() {
                 >
                   <span
                     role="img"
-                    aria-label="taco"
+                    aria-label="knife and fork icon"
                     onClick={() => setSelectedMapListing(listing)}
                   >
-                    <i className="fas fa-glass-cheers"></i>{' '}
+                    <i className="dining fas fa-utensils"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Park' ? (
+              ) : listing.listingType === 'Dog Beaches & Parks' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -168,10 +212,108 @@ export function Listings() {
                 >
                   <span
                     role="img"
-                    aria-label="taco"
+                    aria-label="dog icon"
                     onClick={() => setSelectedMapListing(listing)}
                   >
-                    <i className="fas fa-dog"></i>
+                    <i className="park fas fa-dog"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Food & Supplies' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="shopping cart icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="food fas fa-shopping-cart"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'For Rent' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="house icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="rent fas fa-home"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Grooming & Specialty Services' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="bathing icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="grooming fas fa-bath"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Pet Adoptions' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="heart icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="adoption fas fa-heart"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Shopping' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="bag icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="shopping fas fa-shopping-bag"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Travel' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="hotel bed icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="travel fas fa-bed"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Veterinarians' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="medical veterinarian icon"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="medical fas fa-clinic-medical"></i>
                   </span>
                 </Marker>
               ) : (
@@ -182,16 +324,16 @@ export function Listings() {
                 >
                   <span
                     role="img"
-                    aria-label="taco"
+                    aria-label="blank icon"
                     onClick={() => setSelectedMapListing(listing)}
                   >
-                    <i className="fas fa-heart"></i>
+                    <i className="fas fa-question"></i>
                   </span>
                 </Marker>
               )
             )}
           </ReactMapGL>
-        </section>
+        </div>
         <div>
           <ul className="listing">
             {listings.map(function (listing) {

@@ -235,6 +235,28 @@ textarea {
   justify-content: center;
 }
 
+.key,
+.map {
+  display: flex;
+  justify-content: center;
+}
+
+.key-icons {
+  display: flex;
+
+  border-color: rgb(206, 69, 20);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  width: 19rem;
+}
+
+.key-left,
+.key-right {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
 .mapboxgl-popup {
   z-index: 1;
 }
@@ -251,8 +273,40 @@ textarea {
   border-color: rgb(240, 47, 26);
   border-width: 3px;
   border-style: solid;
-  border-radius: 5%;
+  border-radius: 5px;
 }
+
+.pet-sitter {
+  color: blue;
+}
+.dining {
+  color: rgb(123, 19, 221);
+}
+.park {
+  color: green;
+}
+.food {
+  color: hotpink;
+}
+.rent {
+  color: rgb(184, 184, 9);
+}
+.grooming {
+  color: purple;
+}
+.adoption {
+  color: red;
+}
+.shopping {
+  color: orange;
+}
+.travel {
+  color: rgb(51, 167, 167);
+}
+.medical {
+  color: darkred;
+}
+
 .listing-heading,
 .listing-type,
 .listing-address {
@@ -261,12 +315,18 @@ textarea {
 
 .listing {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listing li {
   width: 35rem;
+}
+
+.listing ul {
+  display: flex;
+  justify-content: center;
 }
 
 .listing-display {
@@ -345,20 +405,12 @@ textarea {
 }
 
 .admin-page {
-  // background: linear-gradient(
-  //   to bottom,
-  //   var(--background-gradient-top),
-  //   var(--background-gradient-bottom)
-  // );
-
   border-radius: 5px;
   border-width: thin;
-
   border-style: solid;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  border-radius: 5px;
 }
 
 .contact-details {

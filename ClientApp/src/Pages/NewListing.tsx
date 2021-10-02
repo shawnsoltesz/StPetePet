@@ -108,23 +108,17 @@ export function NewListing() {
               onChange={handleStringFieldChange}
             >
               <option value="Null">Select</option>
-              <option value="Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters">
-                Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
+              <option value="Boarding & Pet Sitters">
+                Boarding & Pet Sitters
               </option>
-              <option value="Dining&nbsp;&amp;&nbsp;Drinks">
-                Dining&nbsp;&amp;&nbsp;Drinks
+              <option value="DiningDrinks">Dining & Drinks</option>
+              <option value="Dog Beaches & Parks">Dog Beaches & Parks</option>
+              <option value="For Rent">For Rent</option>
+              <option value="Food & Supplies">Food & Supplies</option>
+              <option value="Grooming & Specialty&nbsp;Services">
+                Grooming & Specialty Services
               </option>
-              <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
-                Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
-              </option>
-              <option value="For Rent">For&nbsp;Rent</option>
-              <option value="Food&nbsp;&amp;&nbsp;Supplies">
-                Food&nbsp;&amp;&nbsp;Supplies
-              </option>
-              <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
-                Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
-              </option>
-              <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+              <option value="Pet Adoptions">Pet Adoptions</option>
               <option value="Shopping">Shopping</option>
               <option value="Travel">Travel</option>
               <option value="Veterinarians">Veterinarians</option>
@@ -181,7 +175,7 @@ export function NewListing() {
           <input
             type="text"
             name="phoneNumber"
-            placeholder="727-555-1212"
+            placeholder="(727) 555-1212"
             value={newListing.phoneNumber}
             onChange={handleStringFieldChange}
           />
