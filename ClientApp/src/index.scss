@@ -34,8 +34,8 @@ html {
 
 main {
   margin: 0;
-  min-height: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  // height: 100vh;
   color: var(--page-text);
   // list-style: none;
   font-family: var(--body-font);
@@ -263,7 +263,10 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: auto;
+}
+
+.listing li {
+  width: 35rem;
 }
 
 .listing-display {
@@ -454,21 +457,22 @@ ul.listing {
 footer {
   // border-top: 0.5px solid var(--form-border);
   margin-top: 15px;
+  margin-bottom: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: var(--h2-font);
-  font-size: 12px;
+  font-size: 14px;
   background-color: rgb(157, 221, 240);
 
   position: relative;
   height: 64px;
-  margin-top: 68px;
+
   align-items: center;
 
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
 }
 
 .footer-left ul {

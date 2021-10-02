@@ -131,21 +131,65 @@ export function Listings() {
               </Popup>
             ) : null}
 
-            {listings.map((listing) => (
-              <Marker
-                key={listing.id}
-                latitude={listing.latitude}
-                longitude={listing.longitude}
-              >
-                <span
-                  role="img"
-                  aria-label="taco"
-                  onClick={() => setSelectedMapListing(listing)}
+            {listings.map((listing) =>
+              listing.listingType === 'Pet Sitter' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
                 >
-                  🌮
-                </span>
-              </Marker>
-            ))}
+                  <span
+                    role="img"
+                    aria-label="taco"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="fas fa-paw"></i>
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Specialty' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="taco"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="fas fa-glass-cheers"></i>{' '}
+                  </span>
+                </Marker>
+              ) : listing.listingType === 'Park' ? (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="taco"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="fas fa-dog"></i>
+                  </span>
+                </Marker>
+              ) : (
+                <Marker
+                  key={listing.id}
+                  latitude={listing.latitude}
+                  longitude={listing.longitude}
+                >
+                  <span
+                    role="img"
+                    aria-label="taco"
+                    onClick={() => setSelectedMapListing(listing)}
+                  >
+                    <i className="fas fa-heart"></i>
+                  </span>
+                </Marker>
+              )
+            )}
           </ReactMapGL>
         </section>
         <div>

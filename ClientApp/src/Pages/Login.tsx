@@ -47,59 +47,63 @@ export function Login() {
 
   return (
     <>
-      <div className="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <p>
-              <i className="breadcrumb-icon fas fa-home"></i>{' '}
-              <Link to="/">Home</Link>
-              &nbsp;&nbsp;/&nbsp;&nbsp;
-            </p>
-          </li>
-          <li className="is-active">
-            <p aria-current="page">
-              <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
-              &nbsp;Login
-            </p>
-          </li>
-        </ul>
+      <main>
+        <div className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <p>
+                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <Link to="/">Home</Link>
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+              </p>
+            </li>
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
+                &nbsp;Login
+              </p>
+            </li>
+          </ul>
 
-        <div>
-          <h1 className="listing-name">Login</h1>
-        </div>
-        <div className="admin-page"></div>
-        <form
-          onSubmit={function (event) {
-            event.preventDefault()
-
-            loginUserMutation.mutate(user)
-          }}
-        >
-          <div className="login">
-            <p>Username </p>
-            <input
-              type="email"
-              name="email"
-              value={user.email}
-              onChange={handleStringFieldChange}
-            />
-
-            <p>Password</p>
-            <input
-              type="password"
-              name="password"
-              value={user.password}
-              onChange={handleStringFieldChange}
-            />
-
-            {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
-
-            <button type="submit" className="login-button">
-              Login
-            </button>
+          <div>
+            <h1 className="listing-name">Login</h1>
           </div>
-        </form>
-      </div>
+          <div className="admin-page"></div>
+          <form
+            onSubmit={function (event) {
+              event.preventDefault()
+
+              loginUserMutation.mutate(user)
+            }}
+          >
+            <div className="login">
+              <p>Username </p>
+              <input
+                type="email"
+                name="email"
+                value={user.email}
+                onChange={handleStringFieldChange}
+              />
+
+              <p>Password</p>
+              <input
+                type="password"
+                name="password"
+                value={user.password}
+                onChange={handleStringFieldChange}
+              />
+
+              {errorMessage ? (
+                <p className="form-error">{errorMessage}</p>
+              ) : null}
+
+              <button type="submit" className="login-button">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
     </>
   )
 }
