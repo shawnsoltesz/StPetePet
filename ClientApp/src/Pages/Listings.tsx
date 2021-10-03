@@ -13,7 +13,7 @@ export function Listings() {
   const [viewport, setViewport] = useState({
     latitude: 27.77101804911986,
     longitude: -82.66090611749074,
-    zoom: 10.8,
+    zoom: 11,
   })
 
   const [filterText, setFilterText] = useState('')
@@ -53,7 +53,7 @@ export function Listings() {
           </ul>
         </div>
 
-        <h1 className="listing-name">Sniff Around..</h1>
+        <h1 className="listing-name">Sniffin Around...</h1>
 
         <div className="search-options">
           <div className="search-box">
