@@ -338,8 +338,8 @@ textarea {
 }
 .mapboxgl-popup-content {
   margin-right: 1px;
-  padding: 5px 5px 10px;
-  background-color: coral;
+  // padding: 5px 5px 10px;
+  // background-color: coral;
 }
 
 .key-icon {
@@ -383,7 +383,8 @@ textarea {
 
 .listing-heading a,
 a.listing-website,
-.map-link a {
+.map-link a,
+.mapboxgl-popup-content a {
   text-decoration: none;
   color: inherit;
   color: rgb(80, 132, 172);
@@ -391,7 +392,8 @@ a.listing-website,
 
 .listing-heading a:hover,
 a.listing-website:hover,
-.map-link a:hover {
+.map-link a:hover,
+.mapboxgl-popup-content a:hover {
   text-decoration: none;
   color: rgb(240, 47, 26);
 }
