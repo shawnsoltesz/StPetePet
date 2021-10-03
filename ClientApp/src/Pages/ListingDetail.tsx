@@ -212,9 +212,7 @@ export function ListingDetail() {
           </div>
         </div>
 
-        <div className="description">
-          <p>{listing.description}</p>
-        </div>
+        <div className="description">{listing.description}</div>
         <div className="contact-details">
           <div className="contact-buttons">
             <ul>

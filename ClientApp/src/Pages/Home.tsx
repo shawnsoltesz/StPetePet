@@ -4,7 +4,7 @@ import ReactMapGL, { Marker, NavigationControl, Popup } from 'react-map-gl'
 import { Link } from 'react-router-dom'
 
 import { ListingType } from '../types'
-import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
+//import { SingleListingFromList } from '../components/Pages/SingleListingFromList'
 
 export function Home() {
   const [selectedMapListing, setSelectedMapListing] =
@@ -16,10 +16,10 @@ export function Home() {
     zoom: 11,
   })
 
-  const [filterText, setFilterText] = useState('')
+  const [filterText] = useState('')
 
   const { data: listings = [] } = useQuery<ListingType[]>(
-    ['listings', filterText],
+    ['listings'],
     async function () {
       const response = await fetch(
         filterText.length === 0

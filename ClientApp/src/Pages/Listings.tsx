@@ -54,95 +54,96 @@ export function Listings() {
         </div>
 
         <h1 className="listing-name">Sniffin Around...</h1>
-
-        <div className="search-options">
-          <div className="search-box">
-            <h2>Search by Name:&nbsp; </h2>
-            <form className="search">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={filterText}
-                onChange={function (event) {
-                  setFilterText(event.target.value)
-                }}
-              />
-            </form>
-          </div>
-          <div className="search-dropdown">
-            <h2>Type: &nbsp; </h2>
-            <form className="search" action={filterText}>
-              <select name="listing-type" id="listing-type">
-                <option value="Null">Select</option>
-                <option value="Boarding & Pet Sitters">
-                  Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
-                </option>
-                <option value="Dining&nbsp;&amp;&nbsp;Drinks">
-                  Dining&nbsp;&amp;&nbsp;Drinks
-                </option>
-                <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
-                  Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
-                </option>
-                <option value="Food&nbsp;&amp;&nbsp;Supplies">
-                  Food&nbsp;&amp;&nbsp;Supplies
-                </option>
-                <option value="For Rent">For&nbsp;Rent</option>
-                <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
-                  Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
-                </option>
-                <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
-                <option value="Shopping">Shopping</option>
-                <option value="Travel">Travel</option>
-                <option value="Veterinarians">Veterinarians</option>
-              </select>
-            </form>
-          </div>
-        </div>
-
-        <div className="key">
-          <div className="key-header">
-            <h2>Key:&nbsp; </h2>
+        <div className="search-nav">
+          <div className="search-options">
+            <div className="search-box">
+              <h2>Search by Name:&nbsp; </h2>
+              <form className="search">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={filterText}
+                  onChange={function (event) {
+                    setFilterText(event.target.value)
+                  }}
+                />
+              </form>
+            </div>
+            <div className="search-dropdown">
+              <h2>Type: &nbsp; </h2>
+              <form className="search" action={filterText}>
+                <select name="listing-type" id="listing-type">
+                  <option value="Null">Select</option>
+                  <option value="Boarding & Pet Sitters">
+                    Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
+                  </option>
+                  <option value="Dining&nbsp;&amp;&nbsp;Drinks">
+                    Dining&nbsp;&amp;&nbsp;Drinks
+                  </option>
+                  <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
+                    Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
+                  </option>
+                  <option value="Food&nbsp;&amp;&nbsp;Supplies">
+                    Food&nbsp;&amp;&nbsp;Supplies
+                  </option>
+                  <option value="For Rent">For&nbsp;Rent</option>
+                  <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
+                    Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
+                  </option>
+                  <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+                  <option value="Shopping">Shopping</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Veterinarians">Veterinarians</option>
+                </select>
+              </form>
+            </div>
           </div>
 
-          <div className="key-icons">
-            <ul>
-              <li>
-                <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp; Pet
-                Sitters
-              </li>
-              <li>
-                <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
-                Drinks
-              </li>
-              <li>
-                <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
-                Parks
-              </li>
-              <li>
-                <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
-                &amp; Supplies
-              </li>
-              <li>
-                <i className="key-icon fas fa-home"></i>&nbsp;For Rent
-              </li>
-              <li>
-                <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
-                Specialty
-              </li>
-              <li>
-                <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
-              </li>
-              <li>
-                <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
-              </li>
-              <li>
-                <i className="key-icon fas fa-bed"></i>&nbsp;Travel
-              </li>
-              <li>
-                <i className="key-icon fas fa-clinic-medical"></i>
-                &nbsp;Veterinarians
-              </li>
-            </ul>
+          <div className="key">
+            <div className="key-header">
+              <h2>Key:&nbsp; </h2>
+            </div>
+
+            <div className="key-icons">
+              <ul>
+                <li>
+                  <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp;
+                  Pet Sitters
+                </li>
+                <li>
+                  <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
+                  Drinks
+                </li>
+                <li>
+                  <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
+                  Parks
+                </li>
+                <li>
+                  <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
+                  &amp; Supplies
+                </li>
+                <li>
+                  <i className="key-icon fas fa-home"></i>&nbsp;For Rent
+                </li>
+                <li>
+                  <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
+                  Specialty
+                </li>
+                <li>
+                  <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
+                </li>
+                <li>
+                  <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
+                </li>
+                <li>
+                  <i className="key-icon fas fa-bed"></i>&nbsp;Travel
+                </li>
+                <li>
+                  <i className="key-icon fas fa-clinic-medical"></i>
+                  &nbsp;Veterinarians
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -170,7 +171,7 @@ export function Listings() {
                 onClose={() => setSelectedMapListing(null)}
                 offsetTop={-5}
               >
-                <div>
+                <div className="map-link">
                   <Link to={`/listings/${selectedMapListing.id}`}>
                     {selectedMapListing.name}
                   </Link>
