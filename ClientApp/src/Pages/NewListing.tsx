@@ -99,7 +99,7 @@ export function NewListing() {
         <form className="new-listing" onSubmit={handleFormSubmit}>
           <div className="dropdown">
             <p className="form-input">
-              <label htmlFor="listing-type">Type</label>
+              <label htmlFor="listing-type">Type&nbsp;</label>
             </p>
             <select
               id="listing-type"

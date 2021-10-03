@@ -175,7 +175,7 @@ h1 {
 h2,
 h3 {
   font-family: var(--h2-font);
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .logo {
@@ -194,10 +194,8 @@ h3 {
 
 .about {
   display: flex;
-  // justify-content: space-around;
-  // flex-wrap: wrap;
-  padding-left: 50px;
-  padding-right: 50px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 input,
@@ -350,7 +348,7 @@ textarea {
 .listing-type,
 .listing-address {
   margin-left: 2rem;
-  margin-right: 2 rem;
+  margin-right: 2rem;
 }
 
 .listing {
@@ -466,6 +464,12 @@ a.listing-website:hover,
   justify-content: center;
   flex-wrap: center;
   align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.login-button {
+  margin-top: 1rem;
 }
 
 .picture-upload {
@@ -477,9 +481,6 @@ a.listing-website:hover,
 }
 
 .admin-page {
-  border-radius: 5px;
-  border-width: thin;
-  border-style: solid;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -540,6 +541,10 @@ a.listing-website:hover,
   margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
+}
+
+.delete-button {
+  margin-left: 10px;
 }
 
 ul.listing {
