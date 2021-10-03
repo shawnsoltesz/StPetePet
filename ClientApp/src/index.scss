@@ -19,9 +19,6 @@
   --h1-font: 'Alegreya Sans SC', sans-serif;
   --h2-font: 'Merienda', cursive;
   margin: 0;
-  // --body-font: 'Poiret One', cursive;
-
-  // font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .breadcrumb-icon {
@@ -35,9 +32,7 @@ html {
 main {
   margin: 0;
   min-height: 100vh;
-  // height: 100vh;
   color: var(--page-text);
-  // list-style: none;
   font-family: var(--body-font);
   margin-left: 10px;
 }
@@ -229,7 +224,6 @@ textarea {
 .search-options {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -247,35 +241,29 @@ textarea {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  // width: auto;
-  height: auto;
   margin-left: 5px;
-  margin-top: 5px;
-  // line-height: 12pt;
 }
 
 .key-icons ul {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
   flex-wrap: wrap;
   margin-right: 1rem;
-  // height: auto;
   border-color: rgb(206, 69, 20);
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-  padding-bottom: 5px;
 }
 
 .key-icons li {
   display: flex;
   justify-content: space-evenly;
-  // flex-wrap: wrap;
-  margin-top: 5px;
-  margin-bottom: 0;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .key-left,
@@ -336,8 +324,6 @@ textarea {
 }
 .mapboxgl-popup-content {
   margin-right: 1px;
-  // padding: 5px 5px 10px;
-  // background-color: coral;
 }
 
 .key-icon {
@@ -375,7 +361,6 @@ textarea {
   margin-bottom: 0.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
-
   background-color: rgb(253, 255, 224);
 }
 
@@ -444,7 +429,6 @@ a.listing-website:hover,
 .logout {
   display: flex;
   align-self: flex-end;
-  // margin-top: 20px;
   margin-left: 5px;
 }
 
@@ -556,11 +540,6 @@ ul.listing {
   padding: 0;
   margin-top: 2rem;
   width: auto;
-  // background: linear-gradient(
-  //   to bottom,
-  //   var(--background-gradient-top),
-  //   var(--background-gradient-bottom)
-  // );
 }
 
 .contact-buttons ul,
@@ -594,15 +573,9 @@ footer {
   font-family: var(--h2-font);
   font-size: 10px;
   background-color: rgb(157, 221, 240);
-
   position: relative;
   height: 64px;
-
   align-items: center;
-
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
 }
 
 .footer-left ul {

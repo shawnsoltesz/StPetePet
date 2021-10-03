@@ -57,7 +57,7 @@ export function Listings() {
         <div className="search-nav">
           <div className="search-options">
             <div className="search-box">
-              <h2>Search by Name:&nbsp; </h2>
+              <h2>Search by Name or Type:&nbsp; </h2>
               <form className="search">
                 <input
                   type="text"
@@ -69,39 +69,37 @@ export function Listings() {
                 />
               </form>
             </div>
-            <div className="search-dropdown">
+            {/* <div className="search-dropdown">
               <h2>Type: &nbsp; </h2>
               <form className="search" action={filterText}>
-                <select name="listing-type" id="listing-type">
+                <select name="listing-type" id="dropdown">
                   <option value="Null">Select</option>
                   <option value="Boarding & Pet Sitters">
-                    Boarding&nbsp;&amp;&nbsp;Pet&nbsp;Sitters
+                    Boarding & Pet Sitters
                   </option>
-                  <option value="Dining&nbsp;&amp;&nbsp;Drinks">
-                    Dining&nbsp;&amp;&nbsp;Drinks
+                  <option value="Dining & Drinks">Dining & Drinks</option>
+                  <option value="Dog Beaches & Parks">
+                    Dog Beaches & Parks
                   </option>
-                  <option value="Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks">
-                    Dog&nbsp;Beaches&nbsp;&amp;&nbsp;Parks
+                  <option value="Food & Supplies">Food & Supplies</option>
+                  <option value="For Rent">For Rent</option>
+                  <option value="Grooming & Specialty Services">
+                    Grooming & Specialty Services
                   </option>
-                  <option value="Food&nbsp;&amp;&nbsp;Supplies">
-                    Food&nbsp;&amp;&nbsp;Supplies
-                  </option>
-                  <option value="For Rent">For&nbsp;Rent</option>
-                  <option value="Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services">
-                    Grooming&nbsp;&amp;&nbsp;Specialty&nbsp;Services
-                  </option>
-                  <option value="Pet&nbsp;Adoptions">Pet&nbsp;Adoptions</option>
+                  <option value="Pet Adoptions">Pet Adoptions</option>
                   <option value="Shopping">Shopping</option>
                   <option value="Travel">Travel</option>
                   <option value="Veterinarians">Veterinarians</option>
                 </select>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="key-types">
           <div className="key-header">
-            <h2>Types:&nbsp; </h2>
+            <p>
+              <strong>Types:&nbsp;</strong>
+            </p>
           </div>
 
           <div className="key-icons">

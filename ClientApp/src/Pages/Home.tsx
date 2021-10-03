@@ -13,7 +13,7 @@ export function Home() {
   const [viewport, setViewport] = useState({
     latitude: 27.776524,
     longitude: -82.678068,
-    zoom: 12,
+    zoom: 11,
   })
 
   const [filterText] = useState('')
@@ -46,7 +46,9 @@ export function Home() {
         <h1 className="listing-name">#PetsWelcomeHere</h1>
         <div className="key-types">
           <div className="key-header">
-            <h2>Types:&nbsp; </h2>
+            <p>
+              <strong>Types:&nbsp;</strong>
+            </p>
           </div>
 
           <div className="key-icons">
