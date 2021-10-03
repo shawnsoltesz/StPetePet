@@ -100,43 +100,49 @@ export function Listings() {
         </div>
 
         <div className="key">
-          <p className="key-header">
+          <div className="key-header">
             <h2>Key:&nbsp; </h2>
-          </p>
+          </div>
 
           <div className="key-icons">
-            <p>
-              <i className="key-icon fas fa-paw"></i> Boarding & Pet Sitters
-            </p>
-            <p>
-              <i className="key-icon fas fa-utensils"></i> Dining & Drinks
-            </p>
-            <p>
-              <i className="key-icon fas fa-dog"></i> Dog Beaches & Parks
-            </p>
-            <p>
-              <i className="key-icon fas fa-shopping-cart"></i> Food & Supplies
-            </p>
-
-            <p>
-              <i className="key-icon fas fa-home"></i> For Rent
-            </p>
-
-            <p>
-              <i className="key-icon fas fa-bath"></i> Grooming & Specialty
-            </p>
-            <p>
-              <i className="key-icon fas fa-heart"></i> Pet Adoptions
-            </p>
-            <p>
-              <i className="key-icon fas fa-shopping-bag"></i> Shopping
-            </p>
-            <p>
-              <i className="key-icon fas fa-bed"></i> Travel
-            </p>
-            <p>
-              <i className="key-icon fas fa-clinic-medical"></i> Veterinarians
-            </p>
+            <ul>
+              <li>
+                <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp; Pet
+                Sitters
+              </li>
+              <li>
+                <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
+                Drinks
+              </li>
+              <li>
+                <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
+                Parks
+              </li>
+              <li>
+                <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
+                &amp; Supplies
+              </li>
+              <li>
+                <i className="key-icon fas fa-home"></i>&nbsp;For Rent
+              </li>
+              <li>
+                <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
+                Specialty
+              </li>
+              <li>
+                <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
+              </li>
+              <li>
+                <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
+              </li>
+              <li>
+                <i className="key-icon fas fa-bed"></i>&nbsp;Travel
+              </li>
+              <li>
+                <i className="key-icon fas fa-clinic-medical"></i>
+                &nbsp;Veterinarians
+              </li>
+            </ul>
           </div>
         </div>
 
