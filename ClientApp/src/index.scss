@@ -384,7 +384,8 @@ textarea {
 .listing-heading a,
 a.listing-website,
 .map-link a,
-.mapboxgl-popup-content a {
+.mapboxgl-popup-content a,
+.phone a {
   text-decoration: none;
   color: inherit;
   color: rgb(80, 132, 172);
@@ -393,7 +394,8 @@ a.listing-website,
 .listing-heading a:hover,
 a.listing-website:hover,
 .map-link a:hover,
-.mapboxgl-popup-content a:hover {
+.mapboxgl-popup-content a:hover,
+.phone a {
   text-decoration: none;
   color: rgb(240, 47, 26);
 }
@@ -498,8 +500,8 @@ a.listing-website:hover,
     var(--background-gradient-bottom)
   );
   width: auto;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .dropdown {

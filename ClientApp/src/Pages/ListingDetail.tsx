@@ -79,7 +79,12 @@ export function ListingDetail() {
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-graphics">
           <div className="listing-photo">
-            <img src={fortdesoto} alt="cocker spaniel at the beach" />
+            <img
+              src={fortdesoto}
+              alt="cocker spaniel at the beach"
+              width="350px"
+              height="450px"
+            />
           </div>
 
           <div className="listing-detail-map">
@@ -212,11 +217,11 @@ export function ListingDetail() {
           </div>
         </div>
 
-        <div className="description">
-          <p>{listing.description}</p>
-        </div>
         <div className="contact-details">
           <ul className="address">
+            <li>
+              <p>{listing.description}</p>
+            </li>
             <li>
               <p>
                 <strong>Address: </strong>
@@ -227,7 +232,7 @@ export function ListingDetail() {
             <li className="phone">
               <p>
                 <strong>Phone: </strong>
-                {listing.phoneNumber}
+                <a href="tel:{listing.phoneNumber}">{listing.phoneNumber}</a>
               </p>
             </li>
 
