@@ -11,9 +11,9 @@ export function Home() {
     useState<ListingType | null>(null)
 
   const [viewport, setViewport] = useState({
-    latitude: 27.77101804911986,
-    longitude: -82.66090611749074,
-    zoom: 11,
+    latitude: 27.776524,
+    longitude: -82.678068,
+    zoom: 12,
   })
 
   const [filterText] = useState('')
@@ -292,13 +292,13 @@ export function Home() {
             })}
           </ul>
         </div> */}
-        <div className="recommendations">
+        {/* <div className="recommendations">
           <h3>Have a suggestion?</h3>
           <p>
             Send it to us so that we can add it!
             <form></form>
           </p>
-        </div>
+        </div> */}
       </main>
     </>
   )

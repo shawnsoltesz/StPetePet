@@ -41,8 +41,8 @@ export function ListingDetail() {
   )
 
   const [viewport, setViewport] = useState({
-    latitude: 27.77101804911986,
-    longitude: -82.66090611749074,
+    latitude: 27.776524,
+    longitude: -82.678068,
     zoom: 11,
   })
 
@@ -232,7 +232,7 @@ export function ListingDetail() {
             <li className="phone">
               <p>
                 <strong>Phone: </strong>
-                <a href="tel:{listing.phoneNumber}">{listing.phoneNumber}</a>
+                {listing.phoneNumber}
               </p>
             </li>
 
