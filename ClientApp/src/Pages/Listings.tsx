@@ -98,52 +98,51 @@ export function Listings() {
               </form>
             </div>
           </div>
+        </div>
+        <div className="key-types">
+          <div className="key-header">
+            <h2>Types:&nbsp; </h2>
+          </div>
 
-          <div className="key">
-            <div className="key-header">
-              <h2>Key:&nbsp; </h2>
-            </div>
-
-            <div className="key-icons">
-              <ul>
-                <li>
-                  <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp;
-                  Pet Sitters
-                </li>
-                <li>
-                  <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
-                  Drinks
-                </li>
-                <li>
-                  <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
-                  Parks
-                </li>
-                <li>
-                  <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
-                  &amp; Supplies
-                </li>
-                <li>
-                  <i className="key-icon fas fa-home"></i>&nbsp;For Rent
-                </li>
-                <li>
-                  <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
-                  Specialty
-                </li>
-                <li>
-                  <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
-                </li>
-                <li>
-                  <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
-                </li>
-                <li>
-                  <i className="key-icon fas fa-bed"></i>&nbsp;Travel
-                </li>
-                <li>
-                  <i className="key-icon fas fa-clinic-medical"></i>
-                  &nbsp;Veterinarians
-                </li>
-              </ul>
-            </div>
+          <div className="key-icons">
+            <ul>
+              <li>
+                <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp; Pet
+                Sitters
+              </li>
+              <li>
+                <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
+                Drinks
+              </li>
+              <li>
+                <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
+                Parks
+              </li>
+              <li>
+                <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
+                &amp; Supplies
+              </li>
+              <li>
+                <i className="key-icon fas fa-home"></i>&nbsp;For Rent
+              </li>
+              <li>
+                <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
+                Specialty
+              </li>
+              <li>
+                <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
+              </li>
+              <li>
+                <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
+              </li>
+              <li>
+                <i className="key-icon fas fa-bed"></i>&nbsp;Travel
+              </li>
+              <li>
+                <i className="key-icon fas fa-clinic-medical"></i>
+                &nbsp;Veterinarians
+              </li>
+            </ul>
           </div>
         </div>
 

@@ -44,9 +44,9 @@ export function Home() {
           </ul>
         </div>
         <h1 className="listing-name">#PetsWelcomeHere</h1>
-        <div className="key">
+        <div className="key-types">
           <div className="key-header">
-            <h2>Key:&nbsp; </h2>
+            <h2>Types:&nbsp; </h2>
           </div>
 
           <div className="key-icons">
