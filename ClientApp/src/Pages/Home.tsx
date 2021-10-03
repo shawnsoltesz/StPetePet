@@ -113,7 +113,7 @@ export function Home() {
                 closeButton={true}
                 closeOnClick={false}
                 onClose={() => setSelectedMapListing(null)}
-                offsetTop={-5}
+                offsetTop={-2}
               >
                 <div>
                   <Link to={`/listings/${selectedMapListing.id}`}>
@@ -292,6 +292,13 @@ export function Home() {
             })}
           </ul>
         </div> */}
+        <div className="recommendations">
+          <h3>Have a suggestion?</h3>
+          <p>
+            Send it to us so that we can add it!
+            <form></form>
+          </p>
+        </div>
       </main>
     </>
   )

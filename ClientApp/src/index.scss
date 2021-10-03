@@ -438,7 +438,7 @@ a.listing-website:hover,
 .description {
   margin-left: 2rem;
   margin-right: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .logout {
@@ -484,21 +484,22 @@ a.listing-website:hover,
 }
 
 .contact-details {
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 5px;
   border: 3px;
   border-color: var(--form-border);
   border-style: solid;
   margin: 10px;
   padding: 23px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: center;
   background: linear-gradient(
     to bottom,
     var(--background-gradient-top),
     var(--background-gradient-bottom)
   );
+  width: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .dropdown {
@@ -584,7 +585,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   font-family: var(--h2-font);
-  font-size: 14px;
+  font-size: 10px;
   background-color: rgb(157, 221, 240);
 
   position: relative;
@@ -616,11 +617,11 @@ footer {
 
 .facebook {
   color: blue;
-  font-size: 45px;
+  font-size: 28px;
 }
 .instagram {
   color: blueviolet;
-  font-size: 45px;
+  font-size: 28px;
 }
 
 .construction {

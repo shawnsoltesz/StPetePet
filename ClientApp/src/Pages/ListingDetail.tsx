@@ -43,7 +43,7 @@ export function ListingDetail() {
   const [viewport, setViewport] = useState({
     latitude: 27.77101804911986,
     longitude: -82.66090611749074,
-    zoom: 10,
+    zoom: 11,
   })
 
   return (
@@ -212,29 +212,10 @@ export function ListingDetail() {
           </div>
         </div>
 
-        <div className="description">{listing.description}</div>
+        <div className="description">
+          <p>{listing.description}</p>
+        </div>
         <div className="contact-details">
-          <div className="contact-buttons">
-            <ul>
-              <li>
-                <button className="map-button">
-                  <i className="fas fa-map"></i>
-                </button>
-              </li>
-              <li>
-                <button className="phone-button">
-                  <i className="fas fa-phone">
-                    <a href={`tel:+1${listing.phoneNumber}`} />
-                  </i>
-                </button>
-              </li>
-              <li>
-                <button className="web-search-button">
-                  <i className="fas fa-globe"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
           <ul className="address">
             <li>
               <p>
