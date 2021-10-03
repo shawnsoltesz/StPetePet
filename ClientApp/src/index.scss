@@ -312,8 +312,8 @@ textarea {
 .map {
   display: flex;
   justify-content: center;
-  margin-left: 2rem;
-  margin-right: 1rem;
+  // margin-left: 2rem;
+  // margin-right: 1rem;
 }
 
 .mapboxgl-popup-close-button {
@@ -347,9 +347,10 @@ textarea {
   width: auto;
 }
 
-.listing ul {
+ul.listing {
   display: flex;
   justify-content: center;
+  margin-left: 1rem;
 }
 
 .listing-display {
@@ -564,17 +565,15 @@ ul.listing {
 }
 
 footer {
-  // border-top: 0.5px solid var(--form-border);
-  margin-top: 15px;
-  margin-bottom: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 5px;
   font-family: var(--h2-font);
-  font-size: 10px;
+  font-size: 11px;
   background-color: rgb(157, 221, 240);
   position: relative;
-  height: 64px;
+  height: 45px;
   align-items: center;
 }
 
