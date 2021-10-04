@@ -11,6 +11,8 @@ export function Home() {
     useState<ListingType | null>(null)
 
   const [viewport, setViewport] = useState({
+    container: 'map',
+    style: 'mapbox://styles/stpetepet/ckubv2sjd8sij17mkzz8l04cr',
     latitude: 27.776524,
     longitude: -82.678068,
     zoom: 11,
@@ -94,196 +96,198 @@ export function Home() {
         </div>
 
         <div className="home-map">
-          <ReactMapGL
-            {...viewport}
-            style={{ position: 'absolute' }}
-            width="100%"
-            height="100%"
-            onViewportChange={setViewport}
-            mapboxApiAccessToken={
-              import.meta.env.VITE_APP_MAPBOX_TOKEN as string
-            }
-          >
-            <div style={{ position: 'absolute', left: 10 }}>
-              <NavigationControl />
-            </div>
+          <div id="map">
+            <ReactMapGL
+              {...viewport}
+              style={{ position: 'absolute' }}
+              width="100%"
+              height="100%"
+              onViewportChange={setViewport}
+              mapboxApiAccessToken={
+                import.meta.env.VITE_APP_MAPBOX_TOKEN as string
+              }
+            >
+              <div style={{ position: 'absolute', left: 10 }}>
+                <NavigationControl />
+              </div>
 
-            {selectedMapListing ? (
-              <Popup
-                latitude={selectedMapListing.latitude}
-                longitude={selectedMapListing.longitude}
-                closeButton={true}
-                closeOnClick={false}
-                onClose={() => setSelectedMapListing(null)}
-                offsetTop={-2}
-              >
-                <div>
-                  <Link to={`/listings/${selectedMapListing.id}`}>
-                    {selectedMapListing.name}
-                  </Link>
-                  {/* <p>{selectedMapListing.description}</p> */}
-                </div>
-              </Popup>
-            ) : null}
+              {selectedMapListing ? (
+                <Popup
+                  latitude={selectedMapListing.latitude}
+                  longitude={selectedMapListing.longitude}
+                  closeButton={true}
+                  closeOnClick={false}
+                  onClose={() => setSelectedMapListing(null)}
+                  offsetTop={-2}
+                >
+                  <div>
+                    <Link to={`/listings/${selectedMapListing.id}`}>
+                      {selectedMapListing.name}
+                    </Link>
+                    {/* <p>{selectedMapListing.description}</p> */}
+                  </div>
+                </Popup>
+              ) : null}
 
-            {listings.map((listing) =>
-              listing.listingType === 'Boarding & Pet Sitters' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="paw print icon"
-                    onClick={() => setSelectedMapListing(listing)}
+              {listings.map((listing) =>
+                listing.listingType === 'Boarding & Pet Sitters' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-paw"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Dining & Drinks' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="knife and fork icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="paw print icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-paw"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Dining & Drinks' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-utensils"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Dog Beaches & Parks' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="dog icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="knife and fork icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-utensils"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Dog Beaches & Parks' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-dog"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Food & Supplies' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="shopping cart icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="dog icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-dog"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Food & Supplies' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-shopping-cart"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'For Rent' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="house icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="shopping cart icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-shopping-cart"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'For Rent' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-home"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Grooming & Specialty Services' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="bathing icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="house icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-home"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Grooming & Specialty Services' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-bath"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Pet Adoptions' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="heart icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="bathing icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-bath"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Pet Adoptions' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-heart"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Shopping' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="bag icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="heart icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-heart"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Shopping' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-shopping-bag"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Travel' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="hotel bed icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="bag icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-shopping-bag"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Travel' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-bed"></i>
-                  </span>
-                </Marker>
-              ) : listing.listingType === 'Veterinarians' ? (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="medical veterinarian icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="hotel bed icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-bed"></i>
+                    </span>
+                  </Marker>
+                ) : listing.listingType === 'Veterinarians' ? (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="key-icon fas fa-clinic-medical"></i>
-                  </span>
-                </Marker>
-              ) : (
-                <Marker
-                  key={listing.id}
-                  latitude={listing.latitude}
-                  longitude={listing.longitude}
-                >
-                  <span
-                    role="img"
-                    aria-label="blank icon"
-                    onClick={() => setSelectedMapListing(listing)}
+                    <span
+                      role="img"
+                      aria-label="medical veterinarian icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="key-icon fas fa-clinic-medical"></i>
+                    </span>
+                  </Marker>
+                ) : (
+                  <Marker
+                    key={listing.id}
+                    latitude={listing.latitude}
+                    longitude={listing.longitude}
                   >
-                    <i className="fas fa-question"></i>
-                  </span>
-                </Marker>
-              )
-            )}
-          </ReactMapGL>
+                    <span
+                      role="img"
+                      aria-label="blank icon"
+                      onClick={() => setSelectedMapListing(listing)}
+                    >
+                      <i className="fas fa-question"></i>
+                    </span>
+                  </Marker>
+                )
+              )}
+            </ReactMapGL>
+          </div>
         </div>
         {/* <div>
           <ul className="listing">

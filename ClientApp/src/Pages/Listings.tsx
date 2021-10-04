@@ -69,7 +69,7 @@ export function Listings() {
                 />
               </form>
             </div>
-            {/* <div className="search-dropdown">
+            <div className="search-dropdown">
               <h2>Type: &nbsp; </h2>
               <form className="search" action={filterText}>
                 <select name="listing-type" id="dropdown">
@@ -92,7 +92,7 @@ export function Listings() {
                   <option value="Veterinarians">Veterinarians</option>
                 </select>
               </form>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="key-types">
