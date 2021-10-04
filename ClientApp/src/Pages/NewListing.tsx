@@ -70,7 +70,7 @@ export function NewListing() {
           <ul>
             <li>
               <p>
-                <i className="breadcrumb-icon fas fa-home"></i>{' '}
+                <i className="breadcrumb-icon fas fa-home"></i>
                 <Link to="/">Home</Link>&nbsp;&nbsp;/&nbsp;&nbsp;
               </p>
             </li>
@@ -108,20 +108,15 @@ export function NewListing() {
               onChange={handleStringFieldChange}
             >
               <option value="null">Select</option>
-              <option value="boarding-pet-sitters">
-                Boarding &amp; Pet Sitters
-              </option>
-              <option value="dining-drinks">Dining &amp; Drinks</option>
-              <option value="beaches-parks">Dog Beaches &amp; Parks</option>
-              <option value="for-rent">For Rent</option>
-              <option value="food-supplies">Food &amp; Supplies</option>
-              <option value="grooming-specialty&nbsp;Services">
-                Grooming &amp; Specialty Services
-              </option>
-              <option value="pet-adoptions">Pet Adoptions</option>
+              <option value="adoptions">Adoptions</option>
+              <option value="dining">Dining Out</option>
+              <option value="grooming">Grooming</option>
+              <option value="medical">Medical</option>
+              <option value="pet-care">Pet Care</option>
+              <option value="recreation">Recreation</option>
+              <option value="residential">Residential</option>
               <option value="shopping">Shopping</option>
-              <option value="travel">Travel</option>
-              <option value="vet">Veterinarians</option>
+              <option value="vacation">Vacation</option>
             </select>
           </div>
 

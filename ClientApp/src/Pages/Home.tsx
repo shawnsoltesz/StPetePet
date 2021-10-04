@@ -56,40 +56,35 @@ export function Home() {
           <div className="key-icons">
             <ul>
               <li>
-                <i className="key-icon fas fa-paw"></i>&nbsp;Boarding &amp; Pet
-                Sitters
+                <i className="adoptions-icon fas fa-heart"></i>&nbsp;Adoptions
               </li>
               <li>
-                <i className="key-icon fas fa-utensils"></i>&nbsp;Dining &amp;
-                Drinks
+                <i className="dining-icon fas fa-utensils"></i>
+                &nbsp;Dining Out
               </li>
               <li>
-                <i className="key-icon fas fa-dog"></i>&nbsp;Dog Beaches &amp;
-                Parks
+                <i className="grooming-icon fas fa-bath"></i>&nbsp;Grooming
               </li>
               <li>
-                <i className="key-icon fas fa-shopping-cart"></i>&nbsp;Food
-                &amp; Supplies
+                <i className="medical-icon fas fa-clinic-medical"></i>
+                &nbsp;Medical
               </li>
               <li>
-                <i className="key-icon fas fa-home"></i>&nbsp;For Rent
+                <i className="pet-care-icon fas fa-paw"></i>&nbsp;Pet Care
               </li>
               <li>
-                <i className="key-icon fas fa-bath"></i>&nbsp;Grooming &amp;
-                Specialty
+                <i className="recreation-icon fas fa-dog"></i>&nbsp;Recreation
               </li>
               <li>
-                <i className="key-icon fas fa-heart"></i>&nbsp;Pet Adoptions
+                <i className="residential-icon fas fa-home"></i>
+                &nbsp;Residential
               </li>
               <li>
-                <i className="key-icon fas fa-shopping-bag"></i>&nbsp;Shopping
+                <i className="shopping-icon fas fa-shopping-cart"></i>
+                &nbsp;Shopping
               </li>
               <li>
-                <i className="key-icon fas fa-bed"></i>&nbsp;Travel
-              </li>
-              <li>
-                <i className="key-icon fas fa-clinic-medical"></i>
-                &nbsp;Veterinarians
+                <i className="travel-icon fas fa-bed"></i>&nbsp;Vacation
               </li>
             </ul>
           </div>
@@ -130,7 +125,7 @@ export function Home() {
               ) : null}
 
               {listings.map((listing) =>
-                listing.listingType === 'Boarding & Pet Sitters' ? (
+                listing.listingType === 'pet-care' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -144,7 +139,7 @@ export function Home() {
                       <i className="key-icon fas fa-paw"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Dining & Drinks' ? (
+                ) : listing.listingType === 'libations' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -158,7 +153,7 @@ export function Home() {
                       <i className="key-icon fas fa-utensils"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Dog Beaches & Parks' ? (
+                ) : listing.listingType === 'recreation' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -172,7 +167,7 @@ export function Home() {
                       <i className="key-icon fas fa-dog"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Food & Supplies' ? (
+                ) : listing.listingType === 'shopping' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -186,7 +181,7 @@ export function Home() {
                       <i className="key-icon fas fa-shopping-cart"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'For Rent' ? (
+                ) : listing.listingType === 'residential' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -200,7 +195,7 @@ export function Home() {
                       <i className="key-icon fas fa-home"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Grooming & Specialty Services' ? (
+                ) : listing.listingType === 'grooming' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -214,7 +209,7 @@ export function Home() {
                       <i className="key-icon fas fa-bath"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Pet Adoptions' ? (
+                ) : listing.listingType === 'adoptions' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -228,21 +223,7 @@ export function Home() {
                       <i className="key-icon fas fa-heart"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Shopping' ? (
-                  <Marker
-                    key={listing.id}
-                    latitude={listing.latitude}
-                    longitude={listing.longitude}
-                  >
-                    <span
-                      role="img"
-                      aria-label="bag icon"
-                      onClick={() => setSelectedMapListing(listing)}
-                    >
-                      <i className="key-icon fas fa-shopping-bag"></i>
-                    </span>
-                  </Marker>
-                ) : listing.listingType === 'Travel' ? (
+                ) : listing.listingType === 'vacation' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -256,7 +237,7 @@ export function Home() {
                       <i className="key-icon fas fa-bed"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'Veterinarians' ? (
+                ) : listing.listingType === 'medical' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
