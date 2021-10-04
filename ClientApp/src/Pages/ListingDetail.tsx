@@ -109,7 +109,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="paw print icon">
-                    <i className="key-icon fas fa-paw"></i>
+                    <i className="pet-care-icon fas fa-paw"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'dining' ? (
@@ -119,7 +119,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="knife and fork icon">
-                    <i className="key-icon fas fa-utensils"></i>
+                    <i className="dining-icon fas fa-utensils"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'recreation' ? (
@@ -139,7 +139,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="shopping cart icon">
-                    <i className="key-icon fas fa-shopping-cart"></i>
+                    <i className="shopping-icon fas fa-shopping-cart"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'residential' ? (
@@ -159,7 +159,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="bathing icon">
-                    <i className="key-icon fas fa-bath"></i>
+                    <i className="grooming-icon fas fa-bath"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'adoptions' ? (
@@ -169,7 +169,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="heart icon">
-                    <i className="key-icon fas fa-heart"></i>
+                    <i className="adoptions-icon fas fa-heart"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'vacation' ? (
@@ -179,7 +179,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="hotel bed icon">
-                    <i className="key-icon fas fa-bed"></i>
+                    <i className="vacation-icon fas fa-bed"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'medical' ? (
@@ -189,7 +189,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="medical veterinarian icon">
-                    <i className="key-icon fas fa-clinic-medical"></i>
+                    <i className="medical-icon fas fa-clinic-medical"></i>
                   </span>
                 </Marker>
               ) : (

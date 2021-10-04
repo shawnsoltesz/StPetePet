@@ -84,7 +84,7 @@ export function Home() {
                 &nbsp;Shopping
               </li>
               <li>
-                <i className="travel-icon fas fa-bed"></i>&nbsp;Vacation
+                <i className="vacation-icon fas fa-bed"></i>&nbsp;Vacation
               </li>
             </ul>
           </div>
