@@ -73,23 +73,21 @@ export function Listings() {
               <h2>Type: &nbsp; </h2>
               <form className="search" action={filterText}>
                 <select name="listing-type" id="dropdown">
-                  <option value="Null">Select</option>
-                  <option value="Boarding & Pet Sitters">
-                    Boarding & Pet Sitters
+                  <option value="null">Select</option>
+                  <option value="boarding-pet-sitters">
+                    Boarding &amp; Pet Sitters
                   </option>
-                  <option value="Dining & Drinks">Dining & Drinks</option>
-                  <option value="Dog Beaches & Parks">
-                    Dog Beaches & Parks
+                  <option value="dining-drinks">Dining &amp; Drinks</option>
+                  <option value="beaches-parks">Dog Beaches &amp; Parks</option>
+                  <option value="food-supplies">Food &amp; Supplies</option>
+                  <option value="for-rent">For Rent</option>
+                  <option value="grooming-specialty">
+                    Grooming &amp; Specialty Services
                   </option>
-                  <option value="Food & Supplies">Food & Supplies</option>
-                  <option value="For Rent">For Rent</option>
-                  <option value="Grooming & Specialty Services">
-                    Grooming & Specialty Services
-                  </option>
-                  <option value="Pet Adoptions">Pet Adoptions</option>
-                  <option value="Shopping">Shopping</option>
-                  <option value="Travel">Travel</option>
-                  <option value="Veterinarians">Veterinarians</option>
+                  <option value="pet-adoptions">Pet Adoptions</option>
+                  <option value="shopping">Shopping</option>
+                  <option value="travel">Travel</option>
+                  <option value="vet">Veterinarians</option>
                 </select>
               </form>
             </div>
@@ -178,7 +176,7 @@ export function Listings() {
             ) : null}
 
             {listings.map((listing) =>
-              listing.listingType === 'Boarding & Pet Sitters' ? (
+              listing.listingType === 'boarding-pet-sitters' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -192,7 +190,7 @@ export function Listings() {
                     <i className="key-icon fas fa-paw"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Dining & Drinks' ? (
+              ) : listing.listingType === 'dining-drinks' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -206,7 +204,7 @@ export function Listings() {
                     <i className="key-icon fas fa-utensils"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Dog Beaches & Parks' ? (
+              ) : listing.listingType === 'beaches-parks' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -220,7 +218,7 @@ export function Listings() {
                     <i className="key-icon fas fa-dog"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Food & Supplies' ? (
+              ) : listing.listingType === 'food-supplies' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -234,7 +232,7 @@ export function Listings() {
                     <i className="key-icon fas fa-shopping-cart"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'For Rent' ? (
+              ) : listing.listingType === 'for-rent' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -248,7 +246,7 @@ export function Listings() {
                     <i className="key-icon fas fa-home"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Grooming & Specialty Services' ? (
+              ) : listing.listingType === 'grooming-specialty' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -262,7 +260,7 @@ export function Listings() {
                     <i className="key-icon fas fa-bath"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Pet Adoptions' ? (
+              ) : listing.listingType === 'pet-adoptions' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -276,7 +274,7 @@ export function Listings() {
                     <i className="key-icon fas fa-heart"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Shopping' ? (
+              ) : listing.listingType === 'shopping' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -290,7 +288,7 @@ export function Listings() {
                     <i className="key-icon fas fa-shopping-bag"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Travel' ? (
+              ) : listing.listingType === 'travel' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}
@@ -304,7 +302,7 @@ export function Listings() {
                     <i className="key-icon fas fa-bed"></i>
                   </span>
                 </Marker>
-              ) : listing.listingType === 'Veterinarians' ? (
+              ) : listing.listingType === 'veterinarians' ? (
                 <Marker
                   key={listing.id}
                   latitude={listing.latitude}

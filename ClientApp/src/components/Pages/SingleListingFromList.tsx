@@ -7,32 +7,33 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
   const listingTypeForShowingIcon = `${props.listing.listingType}`
 
   switch (listingTypeForShowingIcon) {
-    case 'Boarding & Pet Sitters':
+    case 'boarding-pet-sitters':
       return <i className="key-icon fas fa-paw"></i>
-    case 'Dining & Drinks':
+    case 'dining-drinks':
       return <i className="key-icon fas fa-paw"></i>
-    case 'Dog Beaches & Parks':
+    case 'beaches-parks':
       return <i className="key-icon fas fa-dog"></i>
-    case 'Food & Supplies':
+    case 'food-supplies':
       return <i className="key-icon fas fa-shopping-cart"></i>
-    case 'For Rent':
+    case 'for-rent':
       return <i className="key-icon fas fa-home"></i>
-    case 'Grooming & Specialty Services':
+    case 'grooming-specialty':
       return <i className="key-icon fas fa-bath"></i>
-    case 'Pet Adoptions':
+    case 'pet-adoptions':
       return <i className="key-icon fas fa-heart"></i>
-    case 'Shopping':
+    case 'shopping':
       return <i className="key-icon fas fa-shopping-bag"></i>
-    case 'Travel':
+    case 'travel':
       return <i className="key-icon fas fa-bed"></i>
-    case 'Veterinarians':
+    case 'vet':
       return <i className="key-icon fas fa-clinic-medical"></i>
+    default:
   }
 
   return (
     <li className="listing-display">
       <h3 className="listing-heading">
-        <Link to={urlForShowingListing}>{props.listing.name}</Link> -
+        <Link to={urlForShowingListing}>{props.listing.name}</Link>&nbsp;-&nbsp;
         {listingTypeForShowingIcon}
       </h3>
 

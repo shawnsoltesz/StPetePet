@@ -107,21 +107,21 @@ export function NewListing() {
               value={newListing.listingType}
               onChange={handleStringFieldChange}
             >
-              <option value="Null">Select</option>
-              <option value="Boarding & Pet Sitters">
-                Boarding & Pet Sitters
+              <option value="null">Select</option>
+              <option value="boarding-pet-sitters">
+                Boarding &amp; Pet Sitters
               </option>
-              <option value="DiningDrinks">Dining & Drinks</option>
-              <option value="Dog Beaches & Parks">Dog Beaches & Parks</option>
-              <option value="For Rent">For Rent</option>
-              <option value="Food & Supplies">Food & Supplies</option>
-              <option value="Grooming & Specialty&nbsp;Services">
-                Grooming & Specialty Services
+              <option value="dining-drinks">Dining &amp; Drinks</option>
+              <option value="beaches-parks">Dog Beaches &amp; Parks</option>
+              <option value="for-rent">For Rent</option>
+              <option value="food-supplies">Food &amp; Supplies</option>
+              <option value="grooming-specialty&nbsp;Services">
+                Grooming &amp; Specialty Services
               </option>
-              <option value="Pet Adoptions">Pet Adoptions</option>
-              <option value="Shopping">Shopping</option>
-              <option value="Travel">Travel</option>
-              <option value="Veterinarians">Veterinarians</option>
+              <option value="pet-adoptions">Pet Adoptions</option>
+              <option value="shopping">Shopping</option>
+              <option value="travel">Travel</option>
+              <option value="vet">Veterinarians</option>
             </select>
           </div>
 
