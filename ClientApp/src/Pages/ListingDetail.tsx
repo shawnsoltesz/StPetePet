@@ -4,7 +4,7 @@ import { useParams } from 'react-router'
 import { ListingType } from '../types'
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 
-import fortdesoto from '../images/listings/FortDesoto.jpg'
+import mural from '../images/listings/stpetepetmural-web.jpg'
 import { Link } from 'react-router-dom'
 
 async function loadOneListing(id: string) {
@@ -80,8 +80,8 @@ export function ListingDetail() {
         <div className="listing-graphics">
           <div className="listing-photo">
             <img
-              src={fortdesoto}
-              alt="cocker spaniel at the beach"
+              src={mural}
+              alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
               width="350px"
               height="450px"
             />
