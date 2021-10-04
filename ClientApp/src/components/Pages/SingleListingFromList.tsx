@@ -7,26 +7,24 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
   const listingTypeForShowingIcon = `${props.listing.listingType}`
 
   switch (listingTypeForShowingIcon) {
-    case 'boarding-pet-sitters':
-      return <i className="key-icon fas fa-paw"></i>
-    case 'dining-drinks':
-      return <i className="key-icon fas fa-paw"></i>
-    case 'beaches-parks':
-      return <i className="key-icon fas fa-dog"></i>
-    case 'food-supplies':
-      return <i className="key-icon fas fa-shopping-cart"></i>
-    case 'for-rent':
-      return <i className="key-icon fas fa-home"></i>
-    case 'grooming-specialty':
-      return <i className="key-icon fas fa-bath"></i>
-    case 'pet-adoptions':
-      return <i className="key-icon fas fa-heart"></i>
+    case 'pet-care':
+      return <i className="pet-care-icon fas fa-paw"></i>
+    case 'dining':
+      return <i className="dining-icon fas fa-utensils"></i>
+    case 'recreation':
+      return <i className="recreation-icon fas fa-dog"></i>
     case 'shopping':
-      return <i className="key-icon fas fa-shopping-bag"></i>
-    case 'travel':
-      return <i className="key-icon fas fa-bed"></i>
-    case 'vet':
-      return <i className="key-icon fas fa-clinic-medical"></i>
+      return <i className="shopping-icon fas fa-shopping-cart"></i>
+    case 'residential':
+      return <i className="residential-icon fas fa-home"></i>
+    case 'grooming':
+      return <i className="grooming-icon fas fa-bath"></i>
+    case 'adoptions':
+      return <i className="adoptions-icon fas fa-heart"></i>
+    case 'vacation':
+      return <i className="vacation-icon fas fa-bed"></i>
+    case 'medical':
+      return <i className="medical-icon fas fa-clinic-medical"></i>
     default:
   }
 

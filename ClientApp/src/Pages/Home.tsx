@@ -133,13 +133,13 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="paw print icon"
+                      aria-label="pet care paw print icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-paw"></i>
+                      <i className="pet-care-icon fas fa-paw"></i>
                     </span>
                   </Marker>
-                ) : listing.listingType === 'libations' ? (
+                ) : listing.listingType === 'dining' ? (
                   <Marker
                     key={listing.id}
                     latitude={listing.latitude}
@@ -147,10 +147,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="knife and fork icon"
+                      aria-label="dining out knife and fork icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-utensils"></i>
+                      <i className="dining-icon fas fa-utensils"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'recreation' ? (
@@ -161,10 +161,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="dog icon"
+                      aria-label="recreation dog icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-dog"></i>
+                      <i className="recreation-icon fas fa-dog"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'shopping' ? (
@@ -178,7 +178,7 @@ export function Home() {
                       aria-label="shopping cart icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-shopping-cart"></i>
+                      <i className="shopping-icon fas fa-shopping-cart"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'residential' ? (
@@ -189,10 +189,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="house icon"
+                      aria-label="residential house icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-home"></i>
+                      <i className="residential-icon fas fa-home"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'grooming' ? (
@@ -203,10 +203,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="bathing icon"
+                      aria-label="grooming bathing icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-bath"></i>
+                      <i className="grooming-icon fas fa-bath"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'adoptions' ? (
@@ -217,10 +217,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="heart icon"
+                      aria-label="adoptions heart icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-heart"></i>
+                      <i className="adoptions-icon fas fa-heart"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'vacation' ? (
@@ -231,10 +231,10 @@ export function Home() {
                   >
                     <span
                       role="img"
-                      aria-label="hotel bed icon"
+                      aria-label="vacation hotel bed icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-bed"></i>
+                      <i className="vacation-icon fas fa-bed"></i>
                     </span>
                   </Marker>
                 ) : listing.listingType === 'medical' ? (
@@ -248,7 +248,7 @@ export function Home() {
                       aria-label="medical veterinarian icon"
                       onClick={() => setSelectedMapListing(listing)}
                     >
-                      <i className="key-icon fas fa-clinic-medical"></i>
+                      <i className="medical-icon fas fa-clinic-medical"></i>
                     </span>
                   </Marker>
                 ) : (
