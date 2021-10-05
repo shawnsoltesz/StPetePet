@@ -8,7 +8,10 @@ import { authHeader } from '../auth'
 async function submitNewListing(listingToCreate: ListingType) {
   const response = await fetch('/api/Listings', {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: {
+      'content-type': 'application/json',
+      Authorization: authHeader(),
+    },
     body: JSON.stringify(listingToCreate),
   })
   if (response.ok) {

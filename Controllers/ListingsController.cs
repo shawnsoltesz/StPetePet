@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Geocoding.Microsoft;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,10 +29,10 @@ namespace StPetePet.Controllers
         // and stores it in _context for you to use in your API methods
         public ListingsController(DatabaseContext context, IConfiguration config)
 
-{
-    _context = context;
-    BING_MAPS_KEY = config["BING_MAPS_KEY"];
-}
+        {
+            _context = context;
+            BING_MAPS_KEY = config["BING_MAPS_KEY"];
+        }
 
         // GET: api/Listings
         //
@@ -40,15 +43,18 @@ namespace StPetePet.Controllers
         {
             // Uses the database context in `_context` to request all of the Listings, sort
             // them by row id and return them as a JSON array.
-            
-            if (filter == null) {
+
+            if (filter == null)
+            {
                 return await _context.Listings.OrderBy(row => row.Name).ToListAsync();
-        } else {
-            return await _context.Listings.OrderBy(row => row.Name).
-            Where(listing => listing.Name.ToLower().Contains(filter.ToLower()) || 
-            listing.ListingType.ToLower ().Contains(filter.ToLower())).
-            ToListAsync();
-        }
+            }
+            else
+            {
+                return await _context.Listings.OrderBy(row => row.Name).
+                Where(listing => listing.Name.ToLower().Contains(filter.ToLower()) ||
+                listing.ListingType.ToLower().Contains(filter.ToLower())).
+                ToListAsync();
+            }
         }
         // GET: api/Listings/5
         //
@@ -134,6 +140,7 @@ namespace StPetePet.Controllers
         // new values for the record.
         //
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Listing>> PostListing(Listing listing)
         {
             // Create a new geocoder
@@ -151,6 +158,9 @@ namespace StPetePet.Controllers
                 listing.Latitude = bestGeocodedAddress.Coordinates.Latitude;
                 listing.Longitude = bestGeocodedAddress.Coordinates.Longitude;
             }
+
+            // Set the UserID to the current user id, this overrides anything the user specifies.
+            listing.UserId = GetCurrentUserId();
 
             // Indicate to the database context we want to add this new record
             _context.Listings.Add(listing);
@@ -192,6 +202,13 @@ namespace StPetePet.Controllers
         private bool ListingExists(int id)
         {
             return _context.Listings.Any(listing => listing.Id == id);
+        }
+
+        // Private helper method to get the JWT claim related to the user ID
+        private int GetCurrentUserId()
+        {
+            // Get the User Id from the claim and then parse it as an integer.
+            return int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "Id").Value);
         }
     }
 }
