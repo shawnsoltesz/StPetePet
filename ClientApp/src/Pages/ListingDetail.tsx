@@ -80,12 +80,16 @@ export function ListingDetail() {
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-graphics">
           <div className="listing-photo">
-            <img
-              src={mural}
-              alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
-              width="350px"
-              height="450px"
-            />
+            {listing.photoURL ? (
+              <img alt="Listing Photo" width={300} src={listing.photoURL} />
+            ) : (
+              <img
+                src={mural}
+                alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
+                width="350px"
+                height="450px"
+              />
+            )}
           </div>
 
           <div className="listing-detail-map">
