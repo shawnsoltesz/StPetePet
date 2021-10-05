@@ -4,13 +4,16 @@ using Microsoft.AspNetCore.Identity;
 
 namespace StPetePet.Models
 {
-        public class User
+    public class User
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage = "You must provide your name.")]
         public string FullName { get; set; }
+
         [Required(ErrorMessage = "You must provide your email.")]
         public string Email { get; set; }
+
         [JsonIgnore]
         public string HashedPassword { get; set; }
         // Define a property for being able to _set_ a password

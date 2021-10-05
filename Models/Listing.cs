@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace StPetePet.Models
@@ -14,25 +15,19 @@ namespace StPetePet.Models
         [Required(ErrorMessage = "You must enter a Name.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "You must enter a Description.")]
         public string Description { get; set; }
-
-        [Required(ErrorMessage = "You must enter an Address.")]
         public string Address { get; set; }
-
         public double Latitude { get; set; }
-
         public double Longitude { get; set; }
-
-        [Required(ErrorMessage = "You must enter a Website.")]
         public string Website { get; set; }
-
-        [Required(ErrorMessage = "You must enter a Telephone Number.")]
         public string PhoneNumber { get; set; }
-
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
-
         public string PhotoURL { get; set; }
+
+        public List<Review> Reviews { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
