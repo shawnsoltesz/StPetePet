@@ -43,7 +43,7 @@ export function NewUser() {
     (newUser: NewUserType) => submitNewUser(newUser),
     {
       onSuccess: function () {
-        history.push('/admin')
+        history.push('/')
       },
       onError: function (error: APIError) {
         setErrorMessage(Object.values(error.errors).join(' '))

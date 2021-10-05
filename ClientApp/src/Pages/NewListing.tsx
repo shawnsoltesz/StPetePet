@@ -39,7 +39,7 @@ export function NewListing() {
 
   const createNewListing = useMutation(submitNewListing, {
     onSuccess: function () {
-      history.push('/admin')
+      history.push('/')
     },
     onError: function (apiError: APIError) {
       setErrorMessage(Object.values(apiError.errors).join(' '))
