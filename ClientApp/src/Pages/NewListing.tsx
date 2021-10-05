@@ -124,15 +124,15 @@ export function NewListing() {
       setIsUploading(false)
     },
   })
-  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+  let dropZoneMessage =
+    'Click here, or drag a picture for the listing here to upload!'
 
   if (isUploading) {
     dropZoneMessage = 'Uploading...'
   }
 
   if (isDragActive) {
-    dropZoneMessage =
-      'Click here, or drag a picture for the listing here to upload!'
+    dropZoneMessage = 'Drop your picture for the listing here!'
   }
 
   return (

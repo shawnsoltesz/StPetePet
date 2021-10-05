@@ -214,22 +214,29 @@ export function ListingDetail() {
 
         <div className="contact-details">
           <ul className="address">
-            <li>
-              <p>{listing.description}</p>
-            </li>
-            <li>
-              <p>
-                <strong>Address: </strong>
-                {listing.address}
-              </p>
-            </li>
+            {listing.description ? (
+              <li>
+                <p>{listing.description}</p>
+              </li>
+            ) : null}
 
-            <li className="phone">
-              <p>
-                <strong>Phone: </strong>
-                {listing.phoneNumber}
-              </p>
-            </li>
+            {listing.address ? (
+              <li>
+                <p>
+                  <strong>Address: </strong>
+                  {listing.address}
+                </p>
+              </li>
+            ) : null}
+
+            {listing.phoneNumber ? (
+              <li className="phone">
+                <p>
+                  <strong>Phone: </strong>
+                  {listing.phoneNumber}
+                </p>
+              </li>
+            ) : null}
 
             <li className="website">
               <p>
