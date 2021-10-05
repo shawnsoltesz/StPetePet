@@ -59,7 +59,7 @@ namespace StPetePet.Controllers
                 var response = new
                 {
                     status = 400,
-                    errors = new List<string>(){ "User does not exist" }
+                    errors = new List<string>() { "Psssst...Username or Password incorrect" }
                 };
 
                 // Return our error with the custom response
@@ -67,4 +67,4 @@ namespace StPetePet.Controllers
             }
         }
     }
-} 
+}
