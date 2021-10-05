@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { Link, useHistory } from 'react-router-dom'
-import { APIError, ListingType } from '../types'
+import { APIError, ListingType, UploadResponse } from '../types'
+import { useDropzone } from 'react-dropzone'
+import { authHeader } from '../auth'
 
 async function submitNewListing(listingToCreate: ListingType) {
   const response = await fetch('/api/Listings', {
@@ -30,6 +32,7 @@ export function NewListing() {
     updatedDate: new Date(),
     latitude: 0,
     longitude: 0,
+    photoURL: '',
   })
 
   const [errorMessage, setErrorMessage] = useState('')
@@ -62,6 +65,54 @@ export function NewListing() {
 
     setNewListing(updatedListing)
   }
+
+  async function uploadFile(fileToUpload: File) {
+    // Create a formData object so we can send this
+    // to the API that is expecting some form data.
+    const formData = new FormData()
+
+    // Append a field that is the form upload itself
+    formData.append('file', fileToUpload)
+
+    // Use fetch to send an authorization header and
+    // a body containing the form data with the file
+    const response = await fetch('/api/Uploads', {
+      method: 'POST',
+      headers: {
+        Authorization: authHeader(),
+      },
+      body: formData,
+    })
+
+    if (response.ok) {
+      return response.json()
+    } else {
+      throw 'Unable to upload image!'
+    }
+  }
+
+  async function onDropFile(acceptedFiles: File[]) {
+    // Do something with the files
+    const fileToUpload = acceptedFiles[0]
+
+    uploadFileMutation.mutate(fileToUpload)
+  }
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: onDropFile,
+  })
+
+  const uploadFileMutation = useMutation(uploadFile, {
+    onSuccess: function (apiResponse: UploadResponse) {
+      const url = apiResponse.url
+
+      setNewListing({ ...newListing, photoURL: url })
+    },
+
+    onError: function (error: string) {
+      setErrorMessage(error)
+    },
+  })
 
   return (
     <>
@@ -174,15 +225,18 @@ export function NewListing() {
             value={newListing.phoneNumber}
             onChange={handleStringFieldChange}
           />
-
           <p className="form-input">
             <label htmlFor="picture">Picture</label>
           </p>
+          <div className="file-drop-zone">
+            <div {...getRootProps()}>
+              <input {...getInputProps()} />
 
-          <p className="form-input">
-            Click on the &quot;Browse&quot; button to upload an image: &nbsp;
-            <input className="file-upload" type="file" name="picture" />
-          </p>
+              {isDragActive
+                ? 'Drop the files here ...'
+                : 'Drag a picture for the listing here to upload!'}
+            </div>
+          </div>
 
           {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
 

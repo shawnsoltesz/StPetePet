@@ -30,6 +30,7 @@ const NullListing: ListingType = {
   updatedDate: new Date(),
   latitude: 0,
   longitude: 0,
+  photoURL: '',
 }
 
 export function ListingDetail() {

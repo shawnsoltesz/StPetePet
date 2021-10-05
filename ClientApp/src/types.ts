@@ -17,6 +17,7 @@ export type ListingType = {
   updatedDate: Date
   latitude: number
   longitude: number
+  photoURL: string
 }
 
 export type APIError = {
@@ -45,4 +46,8 @@ export type LoginSuccess = {
     fullName: string
     email: string
   }
+}
+
+export type UploadResponse = {
+  url: string
 }
