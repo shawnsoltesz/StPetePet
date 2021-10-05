@@ -11,8 +11,6 @@ export function Home() {
     useState<ListingType | null>(null)
 
   const [viewport, setViewport] = useState({
-    container: 'map',
-    style: 'mapbox://styles/stpetepet/ckubv2sjd8sij17mkzz8l04cr',
     latitude: 27.776524,
     longitude: -82.678068,
     zoom: 11,

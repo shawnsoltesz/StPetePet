@@ -58,6 +58,13 @@ export function App() {
             </li>
             {isLoggedIn() ? null : (
               <li>
+                <Link to="/adduser">
+                  <i className="breadcrumb-icon fas fa-user-plus"></i>
+                </Link>
+              </li>
+            )}
+            {isLoggedIn() ? null : (
+              <li>
                 <Link to="/login">
                   <i className="breadcrumb-icon fas fa-sign-in-alt"></i>
                 </Link>
@@ -102,6 +109,9 @@ export function App() {
         <Route exact path="/listings/:id">
           <ListingDetail />
         </Route>
+        <Route exact path="/adduser">
+          <NewUser />
+        </Route>
         <Route exact path="/login">
           <Login />
         </Route>
@@ -109,9 +119,6 @@ export function App() {
           <AdminWelcome />
         </Route>
         {isLoggedIn() ? null : <Link to="/admin"></Link>}
-        <Route exact path="/admin/adduser">
-          <NewUser />
-        </Route>
         <Route exact path="/admin/updateuser">
           <UpdateUser />
         </Route>

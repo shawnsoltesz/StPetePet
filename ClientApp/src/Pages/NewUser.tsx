@@ -72,7 +72,7 @@ export function NewUser() {
 
             <li className="is-active">
               <p aria-current="page">
-                <i className="breadcrumb-icon fas fa-user"></i> &nbsp;New
+                <i className="breadcrumb-icon fas fa-user-plus"></i> &nbsp;New
                 Account
               </p>
             </li>

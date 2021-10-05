@@ -44,7 +44,7 @@ export function AdminWelcome() {
               <br />
               <h2>Users</h2>
 
-              <Link className="listing-menu" to="/admin/adduser">
+              <Link className="listing-menu" to="/adduser">
                 <button>Add Users</button>
               </Link>
               <br />
