@@ -13,7 +13,7 @@ export function Home() {
   const [viewport, setViewport] = useState({
     latitude: 27.776524,
     longitude: -82.678068,
-    zoom: 11,
+    zoom: 12,
   })
 
   const [filterText] = useState('')
