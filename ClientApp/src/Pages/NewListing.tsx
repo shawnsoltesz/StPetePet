@@ -39,6 +39,7 @@ export function NewListing() {
   })
 
   const [errorMessage, setErrorMessage] = useState('')
+  const [isUploading, setIsUploading] = useState(false)
 
   const createNewListing = useMutation(submitNewListing, {
     onSuccess: function () {
@@ -97,6 +98,9 @@ export function NewListing() {
   async function onDropFile(acceptedFiles: File[]) {
     // Do something with the files
     const fileToUpload = acceptedFiles[0]
+    console.log(fileToUpload)
+
+    setIsUploading(true)
 
     uploadFileMutation.mutate(fileToUpload)
   }
@@ -115,7 +119,21 @@ export function NewListing() {
     onError: function (error: string) {
       setErrorMessage(error)
     },
+
+    onSettled: function () {
+      setIsUploading(false)
+    },
   })
+  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+
+  if (isUploading) {
+    dropZoneMessage = 'Uploading...'
+  }
+
+  if (isDragActive) {
+    dropZoneMessage =
+      'Click here, or drag a picture for the listing here to upload!'
+  }
 
   return (
     <>
@@ -231,13 +249,20 @@ export function NewListing() {
           <p className="form-input">
             <label htmlFor="picture">Picture</label>
           </p>
+          {newListing.photoURL ? (
+            <p>
+              <img
+                alt="Restaurant Photo"
+                width={200}
+                src={newListing.photoURL}
+              />
+            </p>
+          ) : null}
+
           <div className="file-drop-zone">
             <div {...getRootProps()}>
               <input {...getInputProps()} />
-
-              {isDragActive
-                ? 'Drop the files here ...'
-                : 'Drag a picture for the listing here to upload!'}
+              {dropZoneMessage}
             </div>
           </div>
 
