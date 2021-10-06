@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import seal from '../images/stpetepet/stpetepetDraft.png'
+import seal from '../images/stpetepet-seal.png'
 
 export function About() {
   return (
