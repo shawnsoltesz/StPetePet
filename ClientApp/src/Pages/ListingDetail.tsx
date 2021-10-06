@@ -116,6 +116,21 @@ export function ListingDetail() {
           </ul>
         </div>
 
+        <p>
+          {listing.userId === getUserId() ? (
+            <button
+              className="delete-button"
+              onClick={function (event) {
+                event.preventDefault()
+
+                deleteRestaurant.mutate(listing.id)
+              }}
+            >
+              Delete
+            </button>
+          ) : null}
+        </p>
+
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-graphics">
           <div className="listing-photo">
@@ -288,19 +303,6 @@ export function ListingDetail() {
         <p>
           {listing.photoURL ? (
             <img alt="Restaurant Photo" width={200} src={listing.photoURL} />
-          ) : null}
-        </p>
-        <p>
-          {listing.userId === getUserId() ? (
-            <button
-              onClick={function (event) {
-                event.preventDefault()
-
-                deleteRestaurant.mutate(listing.id)
-              }}
-            >
-              Delete
-            </button>
           ) : null}
         </p>
       </main>
