@@ -55,9 +55,9 @@ export function Listings() {
 
         <h1 className="listing-name">Sniffin Around...</h1>
         <div className="search-nav">
-          <div className="search-options">
-            <div className="search-box">
-              <h2>Search:&nbsp; </h2>
+          <ul className="search-options">
+            <li className="search-box">
+              <h2>Search By Name:&nbsp; </h2>
               <form className="search">
                 <input
                   type="text"
@@ -68,9 +68,9 @@ export function Listings() {
                   }}
                 />
               </form>
-            </div>
-            <div className="search-dropdown">
-              <h2>OR &nbsp; </h2>
+            </li>
+            <li className="search-dropdown">
+              <h2>Search By Type: &nbsp; </h2>
               <form className="search">
                 <select
                   name="listing-type"
@@ -92,8 +92,8 @@ export function Listings() {
                   <option value="vacation">Vacation</option>
                 </select>
               </form>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <div className="key-types">
           {/* <div className="key-header">

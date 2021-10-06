@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 import { ListingType } from '../../types'
 
@@ -32,16 +33,18 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
   return (
     <li className="listing-display">
       <div className="listings-photo">
-        {props.listing.photoURL ? (
-          <img alt="Listing Photo" width={200} src={props.listing.photoURL} />
-        ) : (
-          <img
-            src="https://res.cloudinary.com/stpete-pet/image/upload/v1633554229/stpetepet-seal_ew6ltg.png"
-            alt="listing photo"
-            width="225px"
-            height="225px"
-          />
-        )}
+        <Link to={urlForShowingListing}>
+          {props.listing.photoURL ? (
+            <img alt="Listing Photo" width={200} src={props.listing.photoURL} />
+          ) : (
+            <img
+              src="https://res.cloudinary.com/stpete-pet/image/upload/v1633554229/stpetepet-seal_ew6ltg.png"
+              alt="listing photo"
+              width="225px"
+              height="225px"
+            />
+          )}
+        </Link>
       </div>
       <h3 className="listing-heading">
         {icon(props.listing.listingType)}&nbsp;{props.listing.name}
