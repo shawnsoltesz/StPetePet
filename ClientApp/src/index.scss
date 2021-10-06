@@ -31,10 +31,11 @@ html {
 
 main {
   margin: 0;
-  min-height: 100vh;
+  // min-height: 100vh;
   color: var(--page-text);
   font-family: var(--body-font);
   margin-left: 10px;
+  margin-bottom: 50px;
 }
 
 header {
@@ -284,7 +285,10 @@ textarea {
 }
 
 .map {
-  margin: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1 rem;
   position: relative;
   overflow: hidden;
   width: auto;
@@ -298,7 +302,7 @@ textarea {
 }
 
 .home-map {
-  margin: 2rem;
+  margin: 3rem;
   position: relative;
   overflow: hidden;
   width: auto;
@@ -407,7 +411,7 @@ ul.listing {
 }
 
 .map-link {
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
 }
 
 .listing-heading a,
@@ -457,8 +461,7 @@ a.listing-website:hover,
   margin: 1rem;
   position: relative;
   overflow: hidden;
-  width: 350px;
-  height: 300px;
+  margin: 3rem;
   background-color: var(--background-gradient-bottom);
   border-color: rgb(240, 47, 26);
   border-width: 3px;
@@ -617,7 +620,10 @@ footer {
   font-family: var(--h2-font);
   font-size: 11px;
   background-color: rgb(157, 221, 240);
-  position: relative;
+  // position: relative;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   height: 45px;
   align-items: center;
 }
