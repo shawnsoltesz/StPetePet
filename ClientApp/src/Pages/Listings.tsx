@@ -145,6 +145,7 @@ export function Listings() {
             style={{ position: 'absolute' }}
             width="100%"
             height="100%"
+            mapStyle="mapbox://styles/stpetepet/ckubu5u0a2jdr17pv1snzoaqd"
             onViewportChange={setViewport}
             mapboxApiAccessToken={
               import.meta.env.VITE_APP_MAPBOX_TOKEN as string
