@@ -239,12 +239,9 @@ export function ListingDetail() {
             ) : null}
 
             <li className="website">
-              <p>
-                <strong>Website: </strong>
-                <a className="listing-website" href={listing.website}>
-                  {listing.name}
-                </a>
-              </p>
+              <button>
+                <a href={listing.website}>Visit their website!</a>
+              </button>
             </li>
           </ul>
         </div>
