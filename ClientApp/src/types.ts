@@ -6,6 +6,7 @@ export interface CSSStarsProperties extends CSSProperties {
 
 export type ListingType = {
   id: number | undefined
+  userId: number
   isActive: boolean
   listingType: string
   name: string
@@ -19,6 +20,10 @@ export type ListingType = {
   longitude: number
   photoURL: string
 }
+export type NewListingType = Omit<
+  ListingType,
+  'latitude' | 'longitude' | 'userId'
+>
 
 export type APIError = {
   errors: Record<string, string[]>

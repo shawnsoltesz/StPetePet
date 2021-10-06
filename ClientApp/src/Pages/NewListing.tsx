@@ -36,6 +36,7 @@ export function NewListing() {
     latitude: 0,
     longitude: 0,
     photoURL: '',
+    userId: 0,
   })
 
   const [errorMessage, setErrorMessage] = useState('')

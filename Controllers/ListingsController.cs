@@ -178,6 +178,7 @@ namespace StPetePet.Controllers
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> DeleteListing(int id)
         {
             // Find this listing by looking for the specific id
@@ -186,6 +187,22 @@ namespace StPetePet.Controllers
             {
                 // There wasn't a listing with that id so return a `404` not found
                 return NotFound();
+            }
+
+            // If the current user (which we trust the ID since it comes from the JWT)
+            // is exactly the same ID recorded in the restaurant, then allow this.
+            // Otherwise, if they don't match, tell the user "UNAUTHORIZED" and do not proceed.
+            if (listing.UserId != GetCurrentUserId())
+            {
+                // Make a custom error response
+                var response = new
+                {
+                    status = 401,
+                    errors = new List<string>() { "Not Authorized" }
+                };
+
+                // Return our error with the custom response
+                return Unauthorized(response);
             }
 
             // Tell the database we want to remove this record

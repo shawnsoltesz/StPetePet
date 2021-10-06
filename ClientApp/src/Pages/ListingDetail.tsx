@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { useQuery } from 'react-query'
-import { useParams } from 'react-router'
+import { useMutation, useQuery } from 'react-query'
+import { useHistory, useParams } from 'react-router'
 import { ListingType } from '../types'
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
+import { authHeader, getUserId } from '../auth'
 
 import mural from '../images/StPetePetMural-web.jpg'
 import { Link } from 'react-router-dom'
@@ -17,8 +18,34 @@ async function loadOneListing(id: string) {
   }
 }
 
+async function handleDelete(id: number | undefined) {
+  // If we don't know the id, don't do anything.
+  // This could happen because the restaurant might
+  // have an undefined id before it is loaded. In that
+  // case we don't want to call the API since the URL
+  // won't be correct.
+  if (id === undefined) {
+    return
+  }
+
+  const response = await fetch(`/api/Restaurants/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'content-type': 'application/json',
+      Authorization: authHeader(),
+    },
+  })
+
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
+}
+
 const NullListing: ListingType = {
   id: undefined,
+  userId: 0,
   isActive: true,
   listingType: '',
   name: '',
@@ -34,6 +61,18 @@ const NullListing: ListingType = {
 }
 
 export function ListingDetail() {
+  const history = useHistory()
+
+  const deleteRestaurant = useMutation(handleDelete, {
+    onSuccess: function () {
+      history.push('/')
+    },
+    onError: function () {
+      // TODO: Make a better error handling here
+      console.log('ooops')
+    },
+  })
+
   const { id } = useParams<{ id: string }>()
 
   const { data: listing = NullListing } = useQuery<ListingType>(
@@ -245,6 +284,25 @@ export function ListingDetail() {
             </li>
           </ul>
         </div>
+
+        <p>
+          {listing.photoURL ? (
+            <img alt="Restaurant Photo" width={200} src={listing.photoURL} />
+          ) : null}
+        </p>
+        <p>
+          {listing.userId === getUserId() ? (
+            <button
+              onClick={function (event) {
+                event.preventDefault()
+
+                deleteRestaurant.mutate(listing.id)
+              }}
+            >
+              Delete
+            </button>
+          ) : null}
+        </p>
       </main>
     </>
   )
