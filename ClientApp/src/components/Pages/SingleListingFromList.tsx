@@ -32,8 +32,8 @@ export function SingleListingFromList(props: SingleListingFromListProps) {
   return (
     <li className="listing-display">
       <h3 className="listing-heading">
+        {icon(props.listing.listingType)}&nbsp;-&nbsp;
         <Link to={urlForShowingListing}>{props.listing.name}</Link>
-        &nbsp;-&nbsp;{icon(props.listing.listingType)}
       </h3>
 
       <p className="listing-address">{props.listing.address}</p>

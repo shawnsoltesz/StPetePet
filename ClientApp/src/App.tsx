@@ -15,7 +15,7 @@ import { UpdateListing } from './Pages/UpdateListing'
 import { isLoggedIn, logout } from './auth'
 import { Link } from 'react-router-dom'
 
-import logo from './images/SPPlogo.svg'
+import logo from './images/stpeteppet-logo.png'
 
 export function App() {
   function handleLogout() {

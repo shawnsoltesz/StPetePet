@@ -57,11 +57,11 @@ export function Listings() {
         <div className="search-nav">
           <div className="search-options">
             <div className="search-box">
-              <h2>Search by Name:&nbsp; </h2>
+              <h2>Search:&nbsp; </h2>
               <form className="search">
                 <input
                   type="text"
-                  placeholder="Search..."
+                  placeholder="Name or Type"
                   value={filterText}
                   onChange={function (event) {
                     setFilterText(event.target.value)
@@ -70,7 +70,7 @@ export function Listings() {
               </form>
             </div>
             <div className="search-dropdown">
-              <h2>Search by Type: &nbsp; </h2>
+              <h2>OR &nbsp; </h2>
               <form className="search">
                 <select
                   name="listing-type"
@@ -80,7 +80,7 @@ export function Listings() {
                     setFilterText(event.target.value)
                   }}
                 >
-                  <option value="">Select</option>
+                  <option value="">Type</option>
                   <option value="adoptions">Adoptions</option>
                   <option value="dining">Dining Out</option>
                   <option value="grooming">Grooming</option>

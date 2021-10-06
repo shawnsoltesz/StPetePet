@@ -31,7 +31,7 @@ html {
 
 main {
   margin: 0;
-  // min-height: 100vh;
+  min-height: 100vh;
   color: var(--page-text);
   font-family: var(--body-font);
   margin-left: 10px;
@@ -55,9 +55,11 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 8px;
   align-items: center;
   border-bottom: 0.5px solid rgb(225, 225, 225);
-  background-color: khaki;
+  background-color: rgb(255, 255, 255);
 }
 
 .nav ul {
@@ -78,6 +80,7 @@ body {
 
 .nav-left img {
   vertical-align: bottom;
+  margin-left: 10px;
 }
 
 .nav-right {
@@ -306,7 +309,7 @@ textarea {
   position: relative;
   overflow: hidden;
   width: auto;
-  height: 600px;
+  height: 450px;
   background-color: var(--background-gradient-bottom);
   border: var(--map-border);
   border-color: rgb(240, 47, 26);
@@ -388,8 +391,14 @@ textarea {
   flex-wrap: wrap;
 }
 
+// .listing li {
+//   width: auto;
+// }
+
 .listing li {
-  width: auto;
+  background-color: rgb(248, 235, 233);
+  padding: 15px;
+  margin: 10px;
 }
 
 ul.listing {
@@ -409,6 +418,11 @@ ul.listing {
   margin-left: 1rem;
   margin-right: 2rem;
   background-color: rgb(253, 255, 224);
+}
+
+.listing-heading,
+.listing-address {
+  max-width: 250px;
 }
 
 .map-link {
@@ -450,8 +464,8 @@ a.listing-website:hover,
   margin: 1rem;
   display: flex;
   justify-content: center;
-  width: 350px;
-  height: 300px;
+  width: 315px;
+  height: 315px;
   border: var(--img-border);
   border-width: 3px;
   border-radius: 5px;
@@ -463,8 +477,8 @@ a.listing-website:hover,
   position: relative;
   overflow: hidden;
   // margin: 3rem;
-  width: 300px;
-  height: 300px;
+  width: 315px;
+  height: 315px;
   background-color: var(--background-gradient-bottom);
   border-color: rgb(240, 47, 26);
   border-width: 3px;
@@ -583,15 +597,27 @@ a.listing-website:hover,
   margin-left: 10px;
 }
 
+// ul.listing {
+//   border-radius: 5px;
+//   border-width: 2px;
+//   display: flex;
+//   flex-direction: column;
+//   flex-flow: column;
+//   padding: 0;
+//   margin-top: 2rem;
+//   width: auto;
+// }
+
 ul.listing {
-  border-radius: 5px;
-  border-width: 2px;
   display: flex;
-  flex-direction: column;
-  flex-flow: column;
-  padding: 0;
-  margin-top: 2rem;
-  width: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 40px;
+  text-align: center;
+  color: rgb(48, 46, 44);
+  background-color: rgb(223, 203, 90);
 }
 
 .contact-buttons ul,
@@ -623,8 +649,8 @@ footer {
   font-family: var(--h2-font);
   font-size: 11px;
   background-color: rgb(157, 221, 240);
-  // position: relative;
-  position: fixed;
+  position: relative;
+  // position: fixed;
   width: 100%;
   bottom: 0;
   height: 45px;
