@@ -44,7 +44,7 @@ export function ListingDetail() {
   const [viewport, setViewport] = useState({
     latitude: 27.776524,
     longitude: -82.678068,
-    zoom: 11,
+    zoom: 10,
   })
 
   return (
