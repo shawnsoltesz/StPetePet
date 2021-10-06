@@ -113,7 +113,7 @@ export function Home() {
                   onClose={() => setSelectedMapListing(null)}
                   offsetTop={-2}
                 >
-                  <div>
+                  <div className="map-link">
                     <Link to={`/listings/${selectedMapListing.id}`}>
                       {selectedMapListing.name}
                     </Link>

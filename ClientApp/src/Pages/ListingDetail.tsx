@@ -4,7 +4,7 @@ import { useParams } from 'react-router'
 import { ListingType } from '../types'
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 
-import mural from '../images/listings/stpetepetmural-web.jpg'
+import mural from '../images/stpetepetmural-web.jpg'
 import { Link } from 'react-router-dom'
 
 async function loadOneListing(id: string) {
