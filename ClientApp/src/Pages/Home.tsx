@@ -45,12 +45,6 @@ export function Home() {
         </div>
         <h1 className="listing-name">#PetsWelcomeHere</h1>
         <div className="key-types">
-          {/* <div className="key-header">
-            <p>
-              <strong>Types:&nbsp;</strong>
-            </p>
-          </div> */}
-
           <div className="key-icons">
             <ul>
               <li>
