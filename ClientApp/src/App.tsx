@@ -79,16 +79,18 @@ export function App() {
               </li>
             ) : null}
             {isLoggedIn() ? (
-              <a
-                href="/"
-                className="link"
-                onClick={function (event) {
-                  event.preventDefault()
-                  handleLogout()
-                }}
-              >
-                <i className="breadcrumb-icon fas fa-sign-out-alt"></i>&nbsp;
-              </a>
+              <li>
+                <a
+                  href="/"
+                  className="link"
+                  onClick={function (event) {
+                    event.preventDefault()
+                    handleLogout()
+                  }}
+                >
+                  <i className="breadcrumb-icon fas fa-sign-out-alt"></i>&nbsp;
+                </a>
+              </li>
             ) : null}
           </ul>
         </div>

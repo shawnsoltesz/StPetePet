@@ -91,8 +91,6 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 24px;
-  display: block;
-  width: 60;
 }
 
 button a {
@@ -489,12 +487,13 @@ a.listing-website:hover,
 .logout {
   display: flex;
   align-self: flex-end;
-  margin-left: 5px;
+  // margin-left: 5px;
+  font-size: 24px;
 }
 
-.link {
-  margin-left: 1rem;
-}
+// .link {
+//   margin-left: 1rem;
+// }
 
 .delete-button {
   background: red;
