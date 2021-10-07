@@ -54,89 +54,41 @@ export function Listings() {
         </div>
 
         <h1 className="listing-name">Sniffin Around...</h1>
-        <div className="search-nav">
-          <ul className="search-options">
-            <li className="search-box">
-              <h2>Search By Name:&nbsp; </h2>
-              <form className="search">
-                <input
-                  type="text"
-                  placeholder="Name or Type"
-                  value={filterText}
-                  onChange={function (event) {
-                    setFilterText(event.target.value)
-                  }}
-                />
-              </form>
+
+        <div className="key-icons">
+          <ul>
+            <li>
+              <i className="adoptions-icon fas fa-heart"></i>&nbsp;Adoptions
             </li>
-            <li className="search-dropdown">
-              <h2>Search By Type: &nbsp; </h2>
-              <form className="search">
-                <select
-                  name="listing-type"
-                  id="dropdown"
-                  value={filterText}
-                  onChange={function (event) {
-                    setFilterText(event.target.value)
-                  }}
-                >
-                  <option value="">Type</option>
-                  <option value="adoptions">Adoptions</option>
-                  <option value="dining">Dining Out</option>
-                  <option value="grooming">Grooming</option>
-                  <option value="medical">Medical</option>
-                  <option value="pet-care">Pet Care</option>
-                  <option value="recreation">Recreation</option>
-                  <option value="residential">Residential</option>
-                  <option value="shopping">Shopping</option>
-                  <option value="vacation">Vacation</option>
-                </select>
-              </form>
+            <li>
+              <i className="dining-icon fas fa-utensils"></i>
+              &nbsp;Dining Out
+            </li>
+            <li>
+              <i className="grooming-icon fas fa-bath"></i>&nbsp;Grooming
+            </li>
+            <li>
+              <i className="medical-icon fas fa-clinic-medical"></i>
+              &nbsp;Medical
+            </li>
+            <li>
+              <i className="pet-care-icon fas fa-paw"></i>&nbsp;Pet Care
+            </li>
+            <li>
+              <i className="recreation-icon fas fa-dog"></i>&nbsp;Recreation
+            </li>
+            <li>
+              <i className="residential-icon fas fa-home"></i>
+              &nbsp;Residential
+            </li>
+            <li>
+              <i className="shopping-icon fas fa-shopping-cart"></i>
+              &nbsp;Shopping
+            </li>
+            <li>
+              <i className="vacation-icon fas fa-bed"></i>&nbsp;Vacation
             </li>
           </ul>
-        </div>
-        <div className="key-types">
-          {/* <div className="key-header">
-            <p>
-              <strong>Types:&nbsp;</strong>
-            </p>
-          </div> */}
-
-          <div className="key-icons">
-            <ul>
-              <li>
-                <i className="adoptions-icon fas fa-heart"></i>&nbsp;Adoptions
-              </li>
-              <li>
-                <i className="dining-icon fas fa-utensils"></i>
-                &nbsp;Dining Out
-              </li>
-              <li>
-                <i className="grooming-icon fas fa-bath"></i>&nbsp;Grooming
-              </li>
-              <li>
-                <i className="medical-icon fas fa-clinic-medical"></i>
-                &nbsp;Medical
-              </li>
-              <li>
-                <i className="pet-care-icon fas fa-paw"></i>&nbsp;Pet Care
-              </li>
-              <li>
-                <i className="recreation-icon fas fa-dog"></i>&nbsp;Recreation
-              </li>
-              <li>
-                <i className="residential-icon fas fa-home"></i>
-                &nbsp;Residential
-              </li>
-              <li>
-                <i className="shopping-icon fas fa-shopping-cart"></i>
-                &nbsp;Shopping
-              </li>
-              <li>
-                <i className="vacation-icon fas fa-bed"></i>&nbsp;Vacation
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="map">
@@ -318,6 +270,49 @@ export function Listings() {
             )}
           </ReactMapGL>
         </div>
+
+        <div className="search-nav">
+          <ul className="search-options">
+            <li className="search-box">
+              <h2>Search By Name:&nbsp; </h2>
+              <form className="search">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={filterText}
+                  onChange={function (event) {
+                    setFilterText(event.target.value)
+                  }}
+                />
+              </form>
+            </li>
+            <li className="search-dropdown">
+              <h2>Search By Type: &nbsp; </h2>
+              <form className="search">
+                <select
+                  name="listing-type"
+                  id="dropdown"
+                  value={filterText}
+                  onChange={function (event) {
+                    setFilterText(event.target.value)
+                  }}
+                >
+                  <option value="">Type</option>
+                  <option value="adoptions">Adoptions</option>
+                  <option value="dining">Dining Out</option>
+                  <option value="grooming">Grooming</option>
+                  <option value="medical">Medical</option>
+                  <option value="pet-care">Pet Care</option>
+                  <option value="recreation">Recreation</option>
+                  <option value="residential">Residential</option>
+                  <option value="shopping">Shopping</option>
+                  <option value="vacation">Vacation</option>
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+
         <div>
           <ul className="listing">
             {listings.map(function (listing) {

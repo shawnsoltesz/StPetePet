@@ -233,6 +233,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-top: 1rem;
 }
 
 .search-box,
@@ -611,7 +612,7 @@ ul.listing {
   justify-content: space-evenly;
   border-radius: 5px;
   padding: 25px;
-  margin: 35px;
+  margin: 25px;
   text-align: center;
   color: rgb(48, 46, 44);
   background-color: rgb(235, 218, 118);
