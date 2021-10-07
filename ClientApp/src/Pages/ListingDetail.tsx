@@ -300,12 +300,6 @@ export function ListingDetail() {
             </li>
           </ul>
         </div>
-
-        <p>
-          {listing.photoURL ? (
-            <img alt="Restaurant Photo" width={200} src={listing.photoURL} />
-          ) : null}
-        </p>
       </main>
     </>
   )
