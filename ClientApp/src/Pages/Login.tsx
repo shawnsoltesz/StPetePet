@@ -70,36 +70,39 @@ export function Login() {
           </div>
           <div className="admin-page"></div>
           <form
+            className="login-form"
             onSubmit={function (event) {
               event.preventDefault()
 
               loginUserMutation.mutate(user)
             }}
           >
-            <div className="login">
-              <p>Username </p>
-              <input
-                type="email"
-                name="email"
-                value={user.email}
-                onChange={handleStringFieldChange}
-              />
+            <div className="admin-page">
+              <div className="login">
+                <p>Username </p>
+                <input
+                  type="email"
+                  name="email"
+                  value={user.email}
+                  onChange={handleStringFieldChange}
+                />
 
-              <p>Password</p>
-              <input
-                type="password"
-                name="password"
-                value={user.password}
-                onChange={handleStringFieldChange}
-              />
+                <p>Password</p>
+                <input
+                  type="password"
+                  name="password"
+                  value={user.password}
+                  onChange={handleStringFieldChange}
+                />
 
-              {errorMessage ? (
-                <p className="form-error">{errorMessage}</p>
-              ) : null}
+                {errorMessage ? (
+                  <p className="form-error">{errorMessage}</p>
+                ) : null}
 
-              <button type="submit" className="login-button">
-                Login
-              </button>
+                <button type="submit" className="login-button">
+                  Login
+                </button>
+              </div>
             </div>
           </form>
         </div>
