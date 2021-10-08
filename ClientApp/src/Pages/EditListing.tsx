@@ -6,7 +6,7 @@ import { useDropzone } from 'react-dropzone'
 import { authHeader } from '../auth'
 
 export async function submitEditedListing(listingToUpdate: ListingType) {
-  const response = await fetch(`/api/Listing/${listingToUpdate.id}`, {
+  const response = await fetch(`/api/Listings/${listingToUpdate.id}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json',

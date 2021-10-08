@@ -15,7 +15,7 @@ import { EditListing } from './Pages/EditListing'
 import { isLoggedIn, logout } from './auth'
 import { Link } from 'react-router-dom'
 
-import logo from './images/stpeteppet-logo.png'
+import logo from './images/stpetepet-logo.png'
 
 export function App() {
   function handleLogout() {
