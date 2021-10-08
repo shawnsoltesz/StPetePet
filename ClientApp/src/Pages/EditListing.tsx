@@ -1,11 +1,11 @@
-import React, { useState, valueOf } from 'react'
+import React, { useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
 import { Link, useHistory, useParams } from 'react-router-dom'
-import { APIError, ListingType, NewListingType, UploadResponse } from '../types'
+import { APIError, ListingType, UploadResponse } from '../types'
 import { useDropzone } from 'react-dropzone'
 import { authHeader } from '../auth'
 
-export async function submitEditedListing(listingToUpdate: NewListingType) {
+export async function submitEditedListing(listingToUpdate: ListingType) {
   const response = await fetch(`/api/Listing/${listingToUpdate.id}`, {
     method: 'PUT',
     headers: {
@@ -51,7 +51,7 @@ export function EditListing() {
     address: '',
     website: '',
     phoneNumber: '',
-    createdDate: valueOf(),
+    createdDate: new Date(),
     updatedDate: new Date(),
     photoURL: '',
     userId: 0,
@@ -85,15 +85,10 @@ export function EditListing() {
   }
 
   async function uploadFile(fileToUpload: File) {
-    // Create a formData object so we can send this
-    // to the API that is expecting some form data.
     const formData = new FormData()
 
-    // Append a field that is the form upload itself
     formData.append('file', fileToUpload)
 
-    // Use fetch to send an authorization header and
-    // a body containing the form data with the file
     const response = await fetch('/api/Uploads', {
       method: 'POST',
       headers: {
