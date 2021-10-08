@@ -6,8 +6,6 @@ import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 import { authHeader, getUserId } from '../auth'
 
 import mural from '../images/stpete-mural-web.jpg'
-import seal from '../images/stpetepet-seal.png'
-import logo from '../images/stpetepet-logo.png'
 
 import { Link } from 'react-router-dom'
 
@@ -142,34 +140,6 @@ export function ListingDetail() {
             ) : (
               <img
                 src={mural}
-                alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
-                width="350px"
-                height="450px"
-              />
-            )}
-          </div>
-
-          {/* image import test */}
-
-          <div className="listing-photo">
-            {listing.photoURL ? (
-              <img alt="Listing Photo" width={300} src={listing.photoURL} />
-            ) : (
-              <img
-                src={seal}
-                alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
-                width="350px"
-                height="450px"
-              />
-            )}
-          </div>
-
-          <div className="listing-photo">
-            {listing.photoURL ? (
-              <img alt="Listing Photo" width={300} src={listing.photoURL} />
-            ) : (
-              <img
-                src={logo}
                 alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
                 width="350px"
                 height="450px"
