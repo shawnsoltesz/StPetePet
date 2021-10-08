@@ -11,7 +11,7 @@ import { AdminWelcome } from './Pages/AdminWelcome'
 import { NewUser } from './Pages/NewUser'
 import { UpdateUser } from './Pages/UpdateUser'
 import { NewListing } from './Pages/NewListing'
-import { UpdateListing } from './Pages/UpdateListing'
+import { EditListing } from './Pages/EditListing'
 import { isLoggedIn, logout } from './auth'
 import { Link } from 'react-router-dom'
 
@@ -127,8 +127,8 @@ export function App() {
         <Route exact path="/admin/addlisting">
           <NewListing />
         </Route>
-        <Route exact path="/admin/updatelisting">
-          <UpdateListing />
+        <Route exact path="/listings/:id/edit">
+          <EditListing />
         </Route>
       </Switch>
 

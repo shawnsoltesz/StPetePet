@@ -20,10 +20,23 @@ export type ListingType = {
   longitude: number
   photoURL: string
 }
-export type NewListingType = Omit<
-  ListingType,
-  'latitude' | 'longitude' | 'userId'
->
+
+export type NewListingType = {
+  id: number | undefined
+  userId: number
+  isActive: boolean
+  listingType: string
+  name: string
+  description: string
+  address: string
+  website: string
+  phoneNumber: string
+  createdDate: Date
+  updatedDate: Date
+  latitude: number
+  longitude: number
+  photoURL: string
+}
 
 export type APIError = {
   errors: Record<string, string[]>

@@ -35,19 +35,15 @@ export function AdminWelcome() {
                 <button>Add Listing</button>
               </Link>
 
-              {/* <Link className="listing-menu" to="/admin/updatelisting">
-                <button>Update / Delete Listing</button>
-              </Link> */}
+              <Link className="listing-menu" to="/listings/:id/edit">
+                <button>Update Listing</button>
+              </Link>
 
-              {/* <h2>Users</h2> */}
-              {/* 
+              <h2>Users</h2>
+
               <Link className="listing-menu" to="/adduser">
                 <button>Add Users</button>
-              </Link> */}
-
-              {/* <Link className="listing-menu" to="/admin/updateuser">
-                <button>Update / Delete Users</button>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>

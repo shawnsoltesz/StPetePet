@@ -5,7 +5,8 @@ import { ListingType } from '../types'
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 import { authHeader, getUserId } from '../auth'
 
-import mural from '../images/StPetePetMural-web.jpg'
+// import mural from './images/StPetePetMural-web.jpg'
+// import { seal } from './images/stpetepet-seal.png'
 import { Link } from 'react-router-dom'
 
 async function loadOneListing(id: string) {
@@ -125,10 +126,15 @@ export function ListingDetail() {
             </button>
           ) : null}
         </p>
+        <p>
+          <Link className="update-button" to={`/listings/${listing.id}/edit`}>
+            <button>Update</button>
+          </Link>
+        </p>
 
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-graphics">
-          <div className="listing-photo">
+          {/* <div className="listing-photo">
             {listing.photoURL ? (
               <img alt="Listing Photo" width={300} src={listing.photoURL} />
             ) : (
@@ -139,7 +145,22 @@ export function ListingDetail() {
                 height="450px"
               />
             )}
-          </div>
+          </div> */}
+
+          {/* image import test */}
+
+          {/* <div className="listing-photo">
+            {listing.photoURL ? (
+              <img alt="Listing Photo" width={300} src={listing.photoURL} />
+            ) : (
+              <img
+                src={seal}
+                alt="stpete dot pet mural of pet friendly points of interest around St Petersburg Florida"
+                width="350px"
+                height="450px"
+              />
+            )}
+          </div> */}
 
           <div className="listing-detail-map">
             <ReactMapGL
