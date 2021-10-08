@@ -19,16 +19,11 @@ async function loadOneListing(id: string) {
 }
 
 async function handleDelete(id: number | undefined) {
-  // If we don't know the id, don't do anything.
-  // This could happen because the restaurant might
-  // have an undefined id before it is loaded. In that
-  // case we don't want to call the API since the URL
-  // won't be correct.
   if (id === undefined) {
     return
   }
 
-  const response = await fetch(`/api/Restaurants/${id}`, {
+  const response = await fetch(`/api/Listings/${id}`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',
