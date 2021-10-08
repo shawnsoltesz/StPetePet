@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
-import { useMutation } from 'react-query'
-import { Link, useHistory } from 'react-router-dom'
+import React, { useState, valueOf } from 'react'
+import { useMutation, useQuery } from 'react-query'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { APIError, ListingType, NewListingType, UploadResponse } from '../types'
 import { useDropzone } from 'react-dropzone'
 import { authHeader } from '../auth'
 
-async function submitNewListing(listingToCreate: ListingType) {
-  const response = await fetch('/api/Listings', {
-    method: 'POST',
+export async function submitEditedListing(listingToUpdate: NewListingType) {
+  const response = await fetch(`/api/Listing/${listingToUpdate.id}`, {
+    method: 'PUT',
     headers: {
       'content-type': 'application/json',
       Authorization: authHeader(),
     },
-    body: JSON.stringify(listingToCreate),
+    body: JSON.stringify(listingToUpdate),
   })
+
   if (response.ok) {
     return response.json()
   } else {
@@ -21,8 +22,27 @@ async function submitNewListing(listingToCreate: ListingType) {
   }
 }
 
-export function NewListing() {
-  const [newListing, setNewListing] = useState<NewListingType>({
+export async function loadOneListing(id: string) {
+  const response = await fetch(`/api/listings/${id}`)
+
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
+}
+export function EditListing() {
+  const history = useHistory()
+
+  const { id } = useParams<{ id: string }>()
+
+  useQuery<ListingType>(['one-listing', id], () => loadOneListing(id), {
+    onSuccess: function (listingBeingLoaded) {
+      setUpdatingListing(listingBeingLoaded)
+    },
+  })
+
+  const [updatingListing, setUpdatingListing] = useState<ListingType>({
     id: undefined,
     isActive: true,
     listingType: '',
@@ -31,18 +51,18 @@ export function NewListing() {
     address: '',
     website: '',
     phoneNumber: '',
-    createdDate: new Date(),
+    createdDate: valueOf(),
     updatedDate: new Date(),
     photoURL: '',
+    userId: 0,
     latitude: 0,
     longitude: 0,
-    userId: 0,
   })
 
   const [errorMessage, setErrorMessage] = useState('')
   const [isUploading, setIsUploading] = useState(false)
 
-  const createNewListing = useMutation(submitNewListing, {
+  const updateTheListing = useMutation(submitEditedListing, {
     onSuccess: function () {
       history.push('/')
     },
@@ -51,14 +71,6 @@ export function NewListing() {
     },
   })
 
-  const history = useHistory()
-
-  async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
-    createNewListing.mutate(newListing)
-  }
-
   function handleStringFieldChange(
     event: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -66,9 +78,10 @@ export function NewListing() {
   ) {
     const value = event.target.value
     const fieldName = event.target.name
-    const updatedListing = { ...newListing, [fieldName]: value }
 
-    setNewListing(updatedListing)
+    const updatedListing = { ...updatingListing, [fieldName]: value }
+
+    setUpdatingListing(updatedListing)
   }
 
   async function uploadFile(fileToUpload: File) {
@@ -95,8 +108,7 @@ export function NewListing() {
       throw 'Unable to upload image!'
     }
   }
-
-  async function onDropFile(acceptedFiles: File[]) {
+  function onDropFile(acceptedFiles: File[]) {
     // Do something with the files
     const fileToUpload = acceptedFiles[0]
     console.log(fileToUpload)
@@ -114,7 +126,7 @@ export function NewListing() {
     onSuccess: function (apiResponse: UploadResponse) {
       const url = apiResponse.url
 
-      setNewListing({ ...newListing, photoURL: url })
+      setUpdatingListing({ ...updatingListing, photoURL: url })
     },
 
     onError: function (error: string) {
@@ -125,15 +137,15 @@ export function NewListing() {
       setIsUploading(false)
     },
   })
-  let dropZoneMessage =
-    'Click here, or drag a picture for the listing here to upload!'
+
+  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
 
   if (isUploading) {
     dropZoneMessage = 'Uploading...'
   }
 
   if (isDragActive) {
-    dropZoneMessage = 'Drop your picture for the listing here!'
+    dropZoneMessage = 'Drop the files here ...'
   }
 
   return (
@@ -147,21 +159,23 @@ export function NewListing() {
                 <Link to="/">Home</Link>&nbsp;&nbsp;/&nbsp;&nbsp;
               </p>
             </li>
-            <li>
-              <p>
-                <i className="breadcrumb-icon fas fa-paw"></i>&nbsp;
-                <Link to="/admin">StPete.Pet Admin</Link>&nbsp;/&nbsp;
+            <li className="is-active">
+              <p aria-current="page">
+                <i className="breadcrumb-icon fas fa-list"></i>
+                <Link to="/listings/:id/edit">&nbsp;Listing Detail</Link>
               </p>
             </li>
             <li className="is-active">
               <p aria-current="page">
-                <i className="breadcrumb-icon fas fa-list"></i>&nbsp;New Listing
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+                <i className="breadcrumb-icon fas fa-edit"></i>&nbsp;Edit
+                Listing
               </p>
             </li>
           </ul>
         </div>
 
-        <h1 className="listing-name">New Listing</h1>
+        <h1 className="listing-name">Edit Listing</h1>
         <div className="input-form-instructions">
           <p>
             <strong className="asterisks">*</strong>
@@ -169,7 +183,14 @@ export function NewListing() {
           </p>
         </div>
 
-        <form className="new-listing" onSubmit={handleFormSubmit}>
+        <form
+          className="update-listing"
+          onSubmit={(event) => {
+            event.preventDefault()
+            updateTheListing.mutate(updatingListing)
+          }}
+        >
+          {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
           <div className="dropdown">
             <p className="form-input">
               <label htmlFor="listing-type">Type&nbsp;</label>
@@ -177,7 +198,7 @@ export function NewListing() {
             <select
               id="listing-type"
               name="listingType"
-              value={newListing.listingType}
+              value={updatingListing.listingType}
               onChange={handleStringFieldChange}
             >
               <option value="null">Select</option>
@@ -200,7 +221,7 @@ export function NewListing() {
           <input
             type="text"
             name="name"
-            value={newListing.name}
+            value={updatingListing.name}
             onChange={handleStringFieldChange}
           />
 
@@ -211,7 +232,7 @@ export function NewListing() {
           <textarea
             name="description"
             // placeholder="Include html tagging for Description to appear correctly."
-            value={newListing.description}
+            value={updatingListing.description}
             onChange={handleStringFieldChange}
           />
 
@@ -222,7 +243,7 @@ export function NewListing() {
             type="text"
             name="address"
             placeholder="123 Central Ave, St Petersburg, FL 33713"
-            value={newListing.address}
+            value={updatingListing.address}
             onChange={handleStringFieldChange}
           />
 
@@ -233,7 +254,7 @@ export function NewListing() {
             type="text"
             name="website"
             placeholder="http://www.stpete.pet"
-            value={newListing.website}
+            value={updatingListing.website}
             onChange={handleStringFieldChange}
           />
 
@@ -244,19 +265,32 @@ export function NewListing() {
             type="text"
             name="phoneNumber"
             placeholder="(727) 555-1212"
-            value={newListing.phoneNumber}
+            value={updatingListing.phoneNumber}
             onChange={handleStringFieldChange}
           />
           <p className="form-input">
             <label htmlFor="picture">Picture</label>
           </p>
-          {newListing.photoURL ? (
+          {updatingListing.photoURL ? (
             <p>
               <img
                 alt="Restaurant Photo"
                 width={200}
-                src={newListing.photoURL}
+                src={updatingListing.photoURL}
               />
+            </p>
+          ) : null}
+          {updatingListing.photoURL ? (
+            <p>
+              <button
+                onClick={function (event) {
+                  event.preventDefault()
+
+                  setUpdatingListing({ ...updatingListing, photoURL: '' })
+                }}
+              >
+                Remove Photo
+              </button>
             </p>
           ) : null}
 
@@ -270,7 +304,7 @@ export function NewListing() {
           {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
 
           <button type="submit" className="new-listing-button">
-            Create New Listing
+            Submit Edits
           </button>
         </form>
       </main>
