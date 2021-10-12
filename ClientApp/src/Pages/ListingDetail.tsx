@@ -63,10 +63,7 @@ export function ListingDetail() {
     onSuccess: function () {
       history.push('/')
     },
-    onError: function () {
-      // TODO: Make a better error handling here
-      console.log('ooops')
-    },
+    onError: function () {},
   })
 
   const { id } = useParams<{ id: string }>()
@@ -190,7 +187,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="dog icon">
-                    <i className="key-icon fas fa-dog"></i>
+                    <i className="recreation-icon fas fa-dog"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'shopping' ? (
@@ -210,7 +207,7 @@ export function ListingDetail() {
                   longitude={listing.longitude}
                 >
                   <span role="img" aria-label="house icon">
-                    <i className="key-icon fas fa-home"></i>
+                    <i className="residential-icon fas fa-home"></i>
                   </span>
                 </Marker>
               ) : listing.listingType === 'grooming' ? (

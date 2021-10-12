@@ -38,6 +38,10 @@ main {
   margin-bottom: 50px;
 }
 
+.about-icons {
+  margin-left: 10px;
+}
+
 header {
   // Set a z-index so that the header
   // is above all the other stacking
@@ -181,6 +185,10 @@ h3 {
   margin: 1rem;
 }
 
+.about h2 {
+  text-align: center;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -199,6 +207,12 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+img.about-seal {
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
 }
 
 input,
@@ -292,6 +306,10 @@ textarea {
 .about-link:hover {
   text-decoration: none;
   color: rgb(240, 47, 26);
+}
+
+.about-background {
+  display: flex;
 }
 
 .key-left,
