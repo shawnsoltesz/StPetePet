@@ -12,17 +12,14 @@
   --img-border: rgba(243, 61, 20, 0.92);
   --map-border: rgb(212, 203, 186);
   --page-text: #46230f;
-  --heart: rgb(230, 64, 13);
+  --breadcrumb-icons: #2395ff;
+  --red: red;
   --paw: saddlebrown;
   --admin-background-color: rgb(212, 203, 186);
   --form-border: rgba(243, 61, 20, 0.92);
   --h1-font: 'Alegreya Sans SC', sans-serif;
   --h2-font: 'Merienda', cursive;
   margin: 0;
-}
-
-.breadcrumb-icon {
-  color: #2395ff;
 }
 
 html {
@@ -38,22 +35,14 @@ main {
   margin-bottom: 50px;
 }
 
-.about-icons {
-  margin-left: 10px;
+body {
+  margin: 0;
 }
 
 header {
-  // Set a z-index so that the header
-  // is above all the other stacking
-  // contexts. This way maps, etc
-  // will flow UNDER the header.
   z-index: 10;
   position: sticky;
   top: 0;
-}
-
-body {
-  margin: 0;
 }
 
 .nav {
@@ -64,24 +53,23 @@ body {
   align-items: center;
   border-bottom: 0.5px solid rgb(225, 225, 225);
   background-color: rgb(255, 255, 255);
-}
 
-.nav ul {
-  display: flex;
-  align-content: center;
-  text-decoration: none;
-  margin: 0;
-}
+  ul {
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+    margin: 0;
+  }
 
-.nav li {
-  font-size: 28px;
-}
+  li {
+    font-size: 28px;
+  }
 
-.nav li + li {
-  padding-left: 1rem;
-  font-size: 28px;
+  li + li {
+    padding-left: 1rem;
+    font-size: 28px;
+  }
 }
-
 .nav-left img {
   vertical-align: bottom;
   margin-left: 10px;
@@ -89,12 +77,12 @@ body {
 
 .nav-right {
   padding-right: 10px;
-}
 
-.nav-right li a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 24px;
+  li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+  }
 }
 
 button a {
@@ -120,13 +108,15 @@ select {
   text-shadow: 0px 1px 0px #66edff;
 }
 
-.asterisks {
-  color: red;
-}
-
 button:hover {
   background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
   background-color: #ffab23;
+}
+
+button:active,
+select,
+.file-upload {
+  top: 1px;
 }
 
 select {
@@ -134,11 +124,8 @@ select {
   background-color: #ffab23;
 }
 
-button:active,
-select,
-.file-upload {
-  // position: relative;
-  top: 1px;
+.asterisks {
+  color: var(--red);
 }
 
 input,
@@ -153,21 +140,27 @@ ul {
   padding: 0;
 }
 
-.breadcrumb ul {
-  display: flex;
-  justify-content: flex-start;
-  font-size: small;
-  padding-top: 5px;
-  padding-left: 15px;
+.breadcrumb {
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    font-size: small;
+    padding-top: 5px;
+    padding-left: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
-.breadcrumb a {
-  text-decoration: none;
-  color: inherit;
-}
+.breadcrumb-icon {
+  color: var(--breadcrumb-icons);
 
-.breadcrumb-icon a:hover {
-  color: rgba(126, 37, 17, 0.92);
+  a:hover {
+    color: rgba(231, 81, 47, 0.92);
+  }
 }
 
 h1 {
@@ -185,8 +178,37 @@ h3 {
   margin: 1rem;
 }
 
-.about h2 {
-  text-align: center;
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.about-background {
+  display: flex;
+}
+
+.about-icons {
+  margin-left: 10px;
+
+  li {
+    padding-bottom: 15px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.about-link {
+  text-decoration: none;
+  color: inherit;
+  color: rgb(80, 132, 172);
+}
+
+.about-link:hover {
+  text-decoration: none;
+  color: rgb(240, 47, 26);
 }
 
 .logo {
@@ -203,12 +225,6 @@ h3 {
   height: 250px;
 }
 
-.about {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 img.about-seal {
   width: 200px;
   height: 200px;
@@ -221,7 +237,6 @@ textarea {
 }
 
 textarea {
-  max-width: 500px;
   height: 4rem;
   margin-top: 10px;
 }
@@ -265,51 +280,32 @@ textarea {
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-left: 5px;
-}
 
-.key-icons ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-wrap: wrap;
-  margin-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-color: rgb(206, 69, 20);
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 5px;
-}
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-color: rgb(206, 69, 20);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+  }
 
-.key-icons li {
-  display: flex;
-  justify-content: space-evenly;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-.about-icons li {
-  padding-bottom: 15px;
-}
-
-.about-link {
-  text-decoration: none;
-  color: inherit;
-  color: rgb(80, 132, 172);
-}
-
-.about-link:hover {
-  text-decoration: none;
-  color: rgb(240, 47, 26);
-}
-
-.about-background {
-  display: flex;
+  li {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
 }
 
 .key-left,
@@ -361,8 +357,6 @@ textarea {
 .map {
   display: flex;
   justify-content: center;
-  // margin-left: 2rem;
-  // margin-right: 1rem;
 }
 
 .mapboxgl-popup-close-button {
@@ -416,12 +410,12 @@ textarea {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
 
-.listing li {
-  background-color: rgb(248, 235, 233);
-  padding: 15px;
-  margin: 10px;
+  li {
+    background-color: rgb(248, 235, 233);
+    padding: 15px;
+    margin: 10px;
+  }
 }
 
 ul.listing {
@@ -502,7 +496,6 @@ a.listing-website:hover,
   margin: 1rem;
   position: relative;
   overflow: hidden;
-  // margin: 3rem;
   width: 315px;
   height: 315px;
   background-color: var(--background-gradient-bottom);
@@ -521,16 +514,12 @@ a.listing-website:hover,
 .logout {
   display: flex;
   align-self: flex-end;
-  // margin-left: 5px;
   font-size: 24px;
 }
 
-// .link {
-//   margin-left: 1rem;
-// }
-
 .delete-button {
-  background: red;
+  background: var(--red);
+  margin-left: 10px;
 }
 
 .login,
@@ -624,21 +613,6 @@ a.listing-website:hover,
   justify-content: space-evenly;
 }
 
-.delete-button {
-  margin-left: 10px;
-}
-
-// ul.listing {
-//   border-radius: 5px;
-//   border-width: 2px;
-//   display: flex;
-//   flex-direction: column;
-//   flex-flow: column;
-//   padding: 0;
-//   margin-top: 2rem;
-//   width: auto;
-// }
-
 ul.listing {
   display: flex;
   flex-wrap: wrap;
@@ -657,14 +631,6 @@ ul.listing {
   justify-content: space-around;
 }
 
-.useful {
-  color: rgb(27, 120, 104);
-}
-.not-useful {
-  color: rgb(228, 83, 57);
-  transform: rotate(180deg);
-}
-
 .contact-buttons ul li {
   text-align: center;
   text-decoration: none;
@@ -675,13 +641,11 @@ ul.listing {
 footer {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin-top: 5px;
   font-family: var(--h2-font);
   font-size: 11px;
   background-color: rgb(157, 221, 240);
   position: relative;
-  // position: fixed;
   width: 100%;
   bottom: 0;
   height: 45px;
@@ -691,10 +655,10 @@ footer {
 .footer-left ul {
   display: flex;
   justify-content: space-around;
-}
 
-.footer-left li + li {
-  padding-left: 1rem;
+  li + li {
+    padding-left: 1rem;
+  }
 }
 
 .footer-right {
@@ -702,7 +666,7 @@ footer {
 }
 
 .heart {
-  color: var(--heart);
+  color: var(--red);
 }
 
 .paw {
@@ -717,12 +681,6 @@ footer {
 .instagram {
   color: blueviolet;
   font-size: 28px;
-}
-
-.construction {
-  display: flex;
-  justify-content: center;
-  color: rgb(228, 83, 57);
 }
 
 @media only screen and (max-width: 768px) {
