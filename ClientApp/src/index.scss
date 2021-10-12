@@ -279,6 +279,21 @@ textarea {
   margin-bottom: 2px;
 }
 
+.about-icons li {
+  padding-bottom: 15px;
+}
+
+.about-link {
+  text-decoration: none;
+  color: inherit;
+  color: rgb(80, 132, 172);
+}
+
+.about-link:hover {
+  text-decoration: none;
+  color: rgb(240, 47, 26);
+}
+
 .key-left,
 .key-right {
   margin: 2rem;
@@ -663,6 +678,11 @@ footer {
 .footer-left li + li {
   padding-left: 1rem;
 }
+
+.footer-right {
+  text-align: center;
+}
+
 .heart {
   color: var(--heart);
 }
