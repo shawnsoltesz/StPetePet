@@ -109,25 +109,30 @@ export function ListingDetail() {
           </ul>
         </div>
 
-        <p>
-          {listing.userId === getUserId() ? (
-            <button
-              className="delete-button"
-              onClick={function (event) {
-                event.preventDefault()
+        {listing.userId === getUserId() ? (
+          <>
+            <p>
+              <button
+                className="delete-button"
+                onClick={function (event) {
+                  event.preventDefault()
 
-                deleteRestaurant.mutate(listing.id)
-              }}
-            >
-              Delete
-            </button>
-          ) : null}
-        </p>
-        <p>
-          <Link className="update-button" to={`/listings/${listing.id}/edit`}>
-            <button>Update</button>
-          </Link>
-        </p>
+                  deleteRestaurant.mutate(listing.id)
+                }}
+              >
+                Delete
+              </button>
+            </p>
+            <p>
+              <Link
+                className="update-button"
+                to={`/listings/${listing.id}/edit`}
+              >
+                <button>Update</button>
+              </Link>
+            </p>
+          </>
+        ) : null}
 
         <h1 className="listing-name">{listing.name}</h1>
         <div className="listing-graphics">
