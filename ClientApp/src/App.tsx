@@ -56,13 +56,13 @@ export function App() {
                 <i className="breadcrumb-icon fas fa-search"></i>
               </Link>
             </li>
-            {isLoggedIn() ? null : (
+<!--             {isLoggedIn() ? null : (
               <li>
                 <Link to="/adduser">
                   <i className="breadcrumb-icon fas fa-user-plus"></i>
                 </Link>
               </li>
-            )}
+            )} -->
             {isLoggedIn() ? null : (
               <li>
                 <Link to="/login">
