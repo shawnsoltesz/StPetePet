@@ -44,6 +44,20 @@ export function Home() {
           </ul>
         </div>
         <h1 className="listing-name">#PetsWelcomeHere</h1>
+        <div className="intro">
+          <p>
+            Curious of local businesses or points of interest where your pets
+            are welcome? We&apos;re sniffing around town and compiling this
+            resource for you. Please send your suggestions to&nbsp;
+            <a href="mailto:hello@stpete.pet">hello@stpete.pet</a>.
+          </p>
+          <p>
+            <strong>Interactive Map:</strong> Zoom and move the map to the area
+            of St Peterburg and click an icon on the map to learn more. Or go to
+            the Search page to narrow by Name or Type.
+          </p>
+        </div>
+
         <div className="key-types">
           <div className="key-icons">
             <ul>

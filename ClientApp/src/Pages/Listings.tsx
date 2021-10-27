@@ -54,7 +54,20 @@ export function Listings() {
         </div>
 
         <h1 className="listing-name">Sniffin Around...</h1>
-
+        <div className="intro">
+          <p>
+            Curious of local businesses or points of interest where your pets
+            are welcome? We&apos;re sniffing around town and compiling this
+            resource for you. Please send your suggestions to&nbsp;
+            <a href="mailto:hello@stpete.pet">hello@stpete.pet</a>.
+          </p>
+          <p>
+            <strong>Interactive Map:</strong> Zoom and move the map to the area
+            of St Peterburg and click an icon on the map to learn more. <br />
+            <strong>Search:</strong> Enter Name or Type of business or point of
+            interest.
+          </p>
+        </div>
         <div className="key-icons">
           <ul>
             <li>
