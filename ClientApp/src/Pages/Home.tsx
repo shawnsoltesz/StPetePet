@@ -48,7 +48,7 @@ export function Home() {
           <p>
             Curious of local businesses or points of interest where your pets
             are welcome? We&apos;re sniffing around town and compiling this
-            resource for you. Please send your suggestions to&nbsp;
+            directory for you. Please send your suggestions to&nbsp;
             <a className="about-link" href="mailto:hello@stpete.pet">
               hello@stpete.pet
             </a>

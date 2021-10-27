@@ -1,4 +1,11 @@
 {
   "cSpell.ignoreWords": ["predeploy", "vite", "vitejs"],
-  "cSpell.words": ["addlisting", "adduser", "fortdesoto", "updateuser"]
+  "cSpell.words": [
+    "addlisting",
+    "adduser",
+    "fortdesoto",
+    "gtag",
+    "petswelcomehere",
+    "updateuser"
+  ]
 }
