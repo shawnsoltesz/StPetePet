@@ -57,15 +57,20 @@ export function Listings() {
         <div className="intro">
           <p>
             Curious of local businesses or points of interest where your pets
-            are welcome? We&apos;re sniffing around town and compiling this
-            resource for you. Please send your suggestions to&nbsp;
-            <a href="mailto:hello@stpete.pet">hello@stpete.pet</a>.
+            are welcome in St Petersburg, FL? We&apos;re sniffing around town
+            and compiling this directory for you. Please send your suggestions
+            to&nbsp;
+            <a className="about-link" href="mailto:hello@stpete.pet">
+              hello@stpete.pet
+            </a>
+            .
           </p>
           <p>
             <strong>Interactive Map:</strong> Zoom and move the map to the area
-            of St Peterburg and click an icon on the map to learn more. <br />
+            of St Petersburg and click an icon on the map to learn more. <br />
             <strong>Search:</strong> Enter Name or Type of business or point of
-            interest.
+            interest. Click on the icon on the map, or the Explore button in the
+            search results.
           </p>
         </div>
         <div className="key-icons">
