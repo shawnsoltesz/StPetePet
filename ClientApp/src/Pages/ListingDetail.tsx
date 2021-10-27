@@ -109,7 +109,7 @@ export function ListingDetail() {
           </ul>
         </div>
 
-       {listing.userId === getUserId() ? (
+        {listing.userId === getUserId() ? (
           <>
             <p>
               <button
@@ -303,6 +303,19 @@ export function ListingDetail() {
             </li>
           </ul>
         </div>
+        <p className="listing-social-media">
+          We invite you to connect with us on&nbsp;
+          <a className="about-link" href="http://www.facebook.com/stpetepet">
+            Facebook
+          </a>
+          &nbsp;and&nbsp;
+          <a className="about-link" href="http://www.instagram.com/stpetepet">
+            Instagram
+          </a>
+          . In fact, share your adventures and experiences with our community by
+          tagging us <strong>@stpetepet</strong> in your photos and posts along
+          with <strong>#PetsWelcomeHere</strong>.
+        </p>
       </main>
     </>
   )
