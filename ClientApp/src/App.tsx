@@ -56,6 +56,9 @@ export function App() {
                 <i className="breadcrumb-icon fas fa-search"></i>
               </Link>
             </li>
+            
+             {/* Removing this functionality temporarily */}
+            
 <!--             {isLoggedIn() ? null : (
               <li>
                 <Link to="/adduser">
