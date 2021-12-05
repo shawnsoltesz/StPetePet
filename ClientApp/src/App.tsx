@@ -13,6 +13,7 @@ import { NewUser } from './Pages/NewUser'
 import { UpdateUser } from './Pages/UpdateUser'
 import { NewListing } from './Pages/NewListing'
 import { EditListing } from './Pages/EditListing'
+import { Privacy } from './Pages/Privacy'
 
 import logo from './images/stpetepet-logo.png'
 
@@ -119,6 +120,9 @@ export function App() {
         <Route exact path="/login">
           <Login />
         </Route>
+        <Route exact path="/privacy">
+          <Privacy />
+        </Route>
         <Route exact path="/admin">
           <AdminWelcome />
         </Route>
@@ -132,6 +136,7 @@ export function App() {
         <Route exact path="/listings/:id/edit">
           <EditListing />
         </Route>
+        
       </Switch>
 
       <footer>

@@ -45,58 +45,56 @@ export function Home() {
         </div>
         <h1 className="listing-name">#PetsWelcomeHere</h1>
         <div className="intro">
-          <p>
-            Curious of local businesses or points of interest where your pets
-            are welcome? We&apos;re sniffing around town and compiling this
-            directory for you. Please send your suggestions to&nbsp;
-            <a className="about-link" href="mailto:hello@stpete.pet">
-              hello@stpete.pet
-            </a>
-            .
+          <p className="intro">
+            Curious of local businesses or points of interest around our beloved
+            St Petersburg, FL where your pets are welcome? We&apos;re sniffing
+            around town and compiling this directory and community for you. What
+            are you looking for? Use the following icons to locate exactly what
+            you&apos;re seeking.
           </p>
-          <p>
-            <strong>Interactive Map:</strong> Zoom and move the map to the area
-            of St Petersburg and click an icon on the map to learn more. Or go
-            to the Search page to narrow by Name or Type.
-          </p>
-        </div>
 
-        <div className="key-types">
-          <div className="key-icons">
-            <ul>
-              <li>
-                <i className="adoptions-icon fas fa-heart"></i>&nbsp;Adoptions
-              </li>
-              <li>
-                <i className="dining-icon fas fa-utensils"></i>
-                &nbsp;Dining Out
-              </li>
-              <li>
-                <i className="grooming-icon fas fa-bath"></i>&nbsp;Grooming
-              </li>
-              <li>
-                <i className="medical-icon fas fa-clinic-medical"></i>
-                &nbsp;Medical
-              </li>
-              <li>
-                <i className="pet-care-icon fas fa-paw"></i>&nbsp;Pet Care
-              </li>
-              <li>
-                <i className="recreation-icon fas fa-dog"></i>&nbsp;Recreation
-              </li>
-              <li>
-                <i className="residential-icon fas fa-home"></i>
-                &nbsp;Residential
-              </li>
-              <li>
-                <i className="shopping-icon fas fa-shopping-cart"></i>
-                &nbsp;Shopping
-              </li>
-              <li>
-                <i className="vacation-icon fas fa-bed"></i>&nbsp;Vacation
-              </li>
-            </ul>
+          <div className="key-types">
+            <div className="key-icons">
+              <ul>
+                <li>
+                  <i className="adoptions-icon fas fa-heart"></i>&nbsp;Adoptions
+                </li>
+                <li>
+                  <i className="dining-icon fas fa-utensils"></i>
+                  &nbsp;Dining Out
+                </li>
+                <li>
+                  <i className="grooming-icon fas fa-bath"></i>&nbsp;Grooming
+                </li>
+                <li>
+                  <i className="medical-icon fas fa-clinic-medical"></i>
+                  &nbsp;Medical
+                </li>
+                <li>
+                  <i className="pet-care-icon fas fa-paw"></i>&nbsp;Pet Care
+                </li>
+                <li>
+                  <i className="recreation-icon fas fa-dog"></i>&nbsp;Recreation
+                </li>
+                <li>
+                  <i className="residential-icon fas fa-home"></i>
+                  &nbsp;Residential
+                </li>
+                <li>
+                  <i className="shopping-icon fas fa-shopping-cart"></i>
+                  &nbsp;Shopping
+                </li>
+                <li>
+                  <i className="vacation-icon fas fa-bed"></i>&nbsp;Vacation
+                </li>
+              </ul>
+            </div>
           </div>
+          <p className="intro">
+            <strong>Interactive Map:</strong> Zoom and move the map to the area
+            of St Petersburg, FL and click an icon on the map to learn more. Or
+            go to the Search page to narrow by Name or Type.
+          </p>
         </div>
 
         <div className="home-map">
@@ -279,6 +277,16 @@ export function Home() {
               )}
             </ReactMapGL>
           </div>
+        </div>
+        <div className="home-footer">
+          <p className="intro">
+            Know of a best kept secret that we are not showcasing? Please send
+            us your suggestions at&nbsp;
+            <a className="about-link" href="mailto:hello@stpete.pet">
+              hello@stpete.pet
+            </a>
+            .
+          </p>
         </div>
         {/* <div>
           <ul className="listing">

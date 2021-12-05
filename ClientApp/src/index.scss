@@ -173,7 +173,7 @@ h1 {
 }
 
 .intro {
-  margin-left: 15px;
+  margin: 15px;
 }
 
 h2,
@@ -644,6 +644,21 @@ ul.listing {
   text-decoration: none;
   font-size: 16px;
   padding-bottom: 5px;
+}
+
+.privacy {
+  margin: 15px;
+
+  p {
+    margin: 25px;
+  }
+
+  ul {
+    // text-decoration: bullet;
+    margin: 15px 40px;
+    list-style: disc;
+    padding-left: 10px;
+  }
 }
 
 footer {
