@@ -1,8 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function Privacy() {
   return (
     <main>
+      <div className="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <p>
+              <i className="breadcrumb-icon fas fa-home"></i>
+              <Link to="/">&nbsp;Home</Link>
+              &nbsp;&nbsp;/&nbsp;&nbsp;
+            </p>
+          </li>
+          <li className="is-active">
+            <p aria-current="page">
+              <i className="breadcrumb-icon fas fa-user-shield"></i>
+              &nbsp;Privacy Policy
+            </p>
+          </li>
+        </ul>
+      </div>
       <div className="privacy">
         <h1>Privacy Policy</h1>
         <p>

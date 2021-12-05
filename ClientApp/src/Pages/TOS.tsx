@@ -1,8 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function Terms() {
   return (
     <main>
+      <div className="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <p>
+              <i className="breadcrumb-icon fas fa-home"></i>
+              <Link to="/">&nbsp;Home</Link>
+              &nbsp;&nbsp;/&nbsp;&nbsp;
+            </p>
+          </li>
+          <li className="is-active">
+            <p aria-current="page">
+              <i className="breadcrumb-icon fas fa-file-contract"></i>
+              &nbsp;Terms of Service
+            </p>
+          </li>
+        </ul>
+      </div>
       <div className="tos">
         <h1>Terms Of Service</h1>
         <h2>OVERVIEW</h2>
@@ -40,7 +58,7 @@ export function Terms() {
           continued use of or access to the website following the posting of any
           changes constitutes acceptance of those changes.
         </p>
-        <h3>SECTION 1 - ONLINE STORE TERMS</h3>
+        <h3>SECTION 1 - ONLINE TERMS</h3>
         <p>
           By agreeing to these Terms of Service, you represent that you are at
           least the age of majority in your state or province of residence, or
@@ -100,21 +118,21 @@ export function Terms() {
           quantities and are subject to return or exchange only according to our
           Return Policy. We have made every effort to display as accurately as
           possible the colors and images of our products that appear at the
-          store. We cannot guarantee that your computer monitor&apos;s display of any
-          color will be accurate. We reserve the right, but are not obligated,
-          to limit the sales of our products or Services to any person,
-          geographic region or jurisdiction. We may exercise this right on a
-          case-by-case basis. We reserve the right to limit the quantities of
-          any products or services that we offer. All descriptions of products
-          or product pricing are subject to change at anytime without notice, at
-          the sole discretion of us. We reserve the right to discontinue any
-          product at any time. Any offer for any product or service made on this
-          site is void where prohibited. We do not warrant that the quality of
-          any products, services, information, or other material purchased or
-          obtained by you will meet your expectations, or that any errors in the
-          Service will be corrected.
+          store. We cannot guarantee that your computer monitor&apos;s display
+          of any color will be accurate. We reserve the right, but are not
+          obligated, to limit the sales of our products or Services to any
+          person, geographic region or jurisdiction. We may exercise this right
+          on a case-by-case basis. We reserve the right to limit the quantities
+          of any products or services that we offer. All descriptions of
+          products or product pricing are subject to change at anytime without
+          notice, at the sole discretion of us. We reserve the right to
+          discontinue any product at any time. Any offer for any product or
+          service made on this site is void where prohibited. We do not warrant
+          that the quality of any products, services, information, or other
+          material purchased or obtained by you will meet your expectations, or
+          that any errors in the Service will be corrected.
         </p>
-        <h3>SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION</h3>
+        <h3>SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION (if applicable)</h3>
         <p>
           We reserve the right to refuse any order you place with us. We may, in
           our sole discretion, limit or cancel quantities purchased per person,
@@ -134,7 +152,6 @@ export function Terms() {
           email address and credit card numbers and expiration dates, so that we
           can complete your transactions and contact you as needed.
         </p>
-        <p>For more detail, please review our Returns Policy.</p>
         <h3>SECTION 7 - OPTIONAL TOOLS</h3>
         <p>
           We may provide you with access to third-party tools over which we
@@ -170,8 +187,8 @@ export function Terms() {
           We are not liable for any harm or damages related to the purchase or
           use of goods, services, resources, content, or any other transactions
           made in connection with any third-party websites. Please review
-          carefully the third-party&apos;s policies and practices and make sure you
-          understand them before you engage in any transaction. Complaints,
+          carefully the third-party&apos;s policies and practices and make sure
+          you understand them before you engage in any transaction. Complaints,
           claims, concerns, or questions regarding third-party products should
           be directed to the third-party.
         </p>
@@ -180,12 +197,13 @@ export function Terms() {
           If, at our request, you send certain specific submissions (for example
           contest entries) or without a request from us you send creative ideas,
           suggestions, proposals, plans, or other materials, whether online, by
-          email, by postal mail, or otherwise (collectively, &apos;comments&apos;), you
-          agree that we may, at any time, without restriction, edit, copy,
-          publish, distribute, translate and otherwise use in any medium any
-          comments that you forward to us. We are and shall be under no
-          obligation (1) to maintain any comments in confidence; (2) to pay
-          compensation for any comments; or (3) to respond to any comments.
+          email, by postal mail, or otherwise (collectively,
+          &apos;comments&apos;), you agree that we may, at any time, without
+          restriction, edit, copy, publish, distribute, translate and otherwise
+          use in any medium any comments that you forward to us. We are and
+          shall be under no obligation (1) to maintain any comments in
+          confidence; (2) to pay compensation for any comments; or (3) to
+          respond to any comments.
         </p>
         <p>
           We may, but have no obligation to, monitor, edit or remove content
@@ -210,7 +228,7 @@ export function Terms() {
         <h3>SECTION 10 - PERSONAL INFORMATION</h3>
         <p>
           Your submission of personal information through the store is governed
-          by our Privacy Policy. To view our Privacy Policy.
+          by our Privacy Policy.
         </p>
         <h3> SECTION 11 - ERRORS, INACCURACIES AND OMISSIONS</h3>
         <p>
@@ -269,11 +287,11 @@ export function Terms() {
           You expressly agree that your use of, or inability to use, the service
           is at your sole risk. The service and all products and services
           delivered to you through the service are (except as expressly stated
-          by us) provided &apos;as is&apos; and &apos;as available&apos; for your use, without any
-          representation, warranties or conditions of any kind, either express
-          or implied, including all implied warranties or conditions of
-          merchantability, merchantable quality, fitness for a particular
-          purpose, durability, title, and non-infringement.
+          by us) provided &apos;as is&apos; and &apos;as available&apos; for
+          your use, without any representation, warranties or conditions of any
+          kind, either express or implied, including all implied warranties or
+          conditions of merchantability, merchantable quality, fitness for a
+          particular purpose, durability, title, and non-infringement.
         </p>
         <p>
           In no case shall StPete.pet, our directors, officers, employees,
