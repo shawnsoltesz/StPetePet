@@ -160,7 +160,7 @@ export function App() {
             Built with <i className="heart fa fa-heart"></i> in St Petersburg,
             Florida. <i className="paw fas fa-paw"></i>
           </p>
-          <p>&#169;2021 StPete.pet - Privacy Policy - Terms of Service</p>
+          <p>&#169;2021 StPete.pet - <Link to="/privacy">Privacy Policy</Link> - Terms of Service</p>
         </div>
       </footer>
     </>
