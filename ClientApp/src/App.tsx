@@ -14,6 +14,7 @@ import { UpdateUser } from './Pages/UpdateUser'
 import { NewListing } from './Pages/NewListing'
 import { EditListing } from './Pages/EditListing'
 import { Privacy } from './Pages/Privacy'
+import { Terms } from './Pages/TOS'
 
 import logo from './images/stpetepet-logo.png'
 
@@ -123,6 +124,9 @@ export function App() {
         <Route exact path="/privacy">
           <Privacy />
         </Route>
+        <Route exact path="/tos">
+          <Terms />
+        </Route>
         <Route exact path="/admin">
           <AdminWelcome />
         </Route>
@@ -136,7 +140,6 @@ export function App() {
         <Route exact path="/listings/:id/edit">
           <EditListing />
         </Route>
-        
       </Switch>
 
       <footer>
@@ -160,7 +163,11 @@ export function App() {
             Built with <i className="heart fa fa-heart"></i> in St Petersburg,
             Florida. <i className="paw fas fa-paw"></i>
           </p>
-          <p>&#169;2021 StPete.pet - <Link to="/privacy">Privacy Policy</Link> - Terms of Service</p>
+          <p>
+            &#169;2021 StPete.pet -&nbsp;
+            <Link to="/privacy">Privacy Policy</Link> -&nbsp;
+            <Link to="/tos">Terms of Service</Link>
+          </p>
         </div>
       </footer>
     </>
