@@ -1,7 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
+import { isLoggedIn, logout } from './auth'
+import { Link } from 'react-router-dom'
 
-// import Navbar from './components/Nav/Navbar'
 import { Home } from './Pages/Home'
 import { About } from './Pages/About'
 import { Listings } from './Pages/Listings'
@@ -12,8 +13,8 @@ import { NewUser } from './Pages/NewUser'
 import { UpdateUser } from './Pages/UpdateUser'
 import { NewListing } from './Pages/NewListing'
 import { EditListing } from './Pages/EditListing'
-import { isLoggedIn, logout } from './auth'
-import { Link } from 'react-router-dom'
+import { Privacy } from './Pages/Privacy'
+import { Terms } from './Pages/TOS'
 
 import logo from './images/stpetepet-logo.png'
 
@@ -56,16 +57,15 @@ export function App() {
                 <i className="breadcrumb-icon fas fa-search"></i>
               </Link>
             </li>
-            
-             {/* Removing this functionality temporarily */}
-            
-<!--             {isLoggedIn() ? null : (
+{/* Removing this functionality temporarily */}
+
+            {/* {isLoggedIn() ? null : (
               <li>
                 <Link to="/adduser">
                   <i className="breadcrumb-icon fas fa-user-plus"></i>
                 </Link>
               </li>
-            )} -->
+            )} */}
             {isLoggedIn() ? null : (
               <li>
                 <Link to="/login">
@@ -97,7 +97,6 @@ export function App() {
             ) : null}
           </ul>
         </div>
-        <div className="breadcumb"></div>
       </header>
 
       <Switch>
@@ -119,6 +118,12 @@ export function App() {
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/privacy">
+          <Privacy />
+        </Route>
+        <Route exact path="/tos">
+          <Terms />
         </Route>
         <Route exact path="/admin">
           <AdminWelcome />
@@ -156,7 +161,11 @@ export function App() {
             Built with <i className="heart fa fa-heart"></i> in St Petersburg,
             Florida. <i className="paw fas fa-paw"></i>
           </p>
-          <p>&#169;2021 StPete.pet - Privacy Policy - Terms of Service</p>
+          <p>
+            &#169;2021 StPete.pet -&nbsp;
+            <Link to="/privacy">Privacy Policy</Link> -&nbsp;
+            <Link to="/tos">Terms of Service</Link>
+          </p>
         </div>
       </footer>
     </>
