@@ -45,6 +45,7 @@ export function Home() {
         </div>
         <h1 className="listing-name">#PetsWelcomeHere</h1>
         <div className="intro">
+
           <p className="intro">
             Curious of local businesses or points of interest around our beloved
             St Petersburg, FL where your pets are welcome? We&apos;re sniffing
